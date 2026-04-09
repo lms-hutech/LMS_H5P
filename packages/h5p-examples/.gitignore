@@ -1,0 +1,5 @@
+.env
+h5p/content/
+h5p/user-data/
+h5p/temporary-storage/
+test-results/

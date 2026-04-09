@@ -1,0 +1,224 @@
+{
+  "semantics": [
+    {
+      "label": "Phương tiện",
+      "fields": [
+        {
+          "label": "Loại",
+          "description": "Phương tiện hiển thị tùy chọn phía trên nhiệm vụ."
+        },
+        {
+          "label": "Tắt phóng to hình ảnh"
+        }
+      ]
+    },
+    {
+      "label": "Mô tả nhiệm vụ",
+      "placeholder": "Mô tả những gì người học cần làm ...",
+      "description": "Những gì người học cần biết."
+    },
+    {
+      "label": "Đoạn văn",
+      "entity": "Đoạn văn",
+      "field": {
+        "label": "Đoạn văn"
+      }
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Xác định phản hồi cho từng khoảng điểm",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm nhiều khoảng tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+          "entity": "Khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho khoảng điểm tương ứng",
+                "placeholder": "Nhập phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này kiểm soát cách nhiệm vụ hoạt động.",
+      "fields": [
+        {
+          "label": "Chế độ chấm điểm",
+          "description": "Chọn cách tính điểm: theo từng đoạn đặt đúng vị trí chính xác hoặc theo thứ tự đúng.",
+          "options": [
+            {
+              "label": "Thứ tự đúng"
+            },
+            {
+              "label": "Đoạn đặt đúng vị trí"
+            }
+          ]
+        },
+        {
+          "label": "Trừ điểm",
+          "description": "Chọn để trừ một điểm cho mỗi đoạn không đúng vị trí."
+        },
+        {
+          "label": "Các đoạn giống nhau có thể hoán đổi",
+          "description": "Nếu chọn, các đoạn có cùng nội dung có thể hoán đổi cho nhau khi kiểm tra."
+        },
+        {
+          "label": "Hiện nút di chuyển",
+          "description": "Trên thiết bị di động, các nút di chuyển đoạn văn có thể cải thiện trợ năng. Bạn cũng có thể tắt chúng tại đây."
+        },
+        {
+          "label": "Hiện nút \"Làm lại\""
+        },
+        {
+          "label": "Hiện nút \"Xem đáp án\""
+        }
+      ]
+    },
+    {
+      "label": "Giao diện",
+      "fields": [
+        {
+          "label": "Nhãn nút \"Kiểm tra\"",
+          "default": "Kiểm tra"
+        },
+        {
+          "label": "Nhãn nút \"Gửi bài\"",
+          "default": "Gửi bài"
+        },
+        {
+          "label": "Nhãn nút \"Làm lại\"",
+          "default": "Làm lại"
+        },
+        {
+          "label": "Nhãn nút \"Xem đáp án\"",
+          "default": "Xem đáp án"
+        },
+        {
+          "label": "Nhãn nút \"Di lên\"",
+          "default": "Di lên"
+        },
+        {
+          "label": "Nhãn nút \"Di xuống\"",
+          "default": "Di xuống"
+        },
+        {
+          "label": "Nhãn cho nút bị vô hiệu hóa",
+          "default": "Đã vô hiệu hóa"
+        }
+      ]
+    },
+    {
+      "label": "Trình đọc màn hình",
+      "fields": [
+        {
+          "label": "Mô tả trình đọc màn hình cho nút \"Kiểm tra\"",
+          "default": "Kiểm tra câu trả lời. Câu trả lời sẽ được đánh dấu đúng hoặc sai."
+        },
+        {
+          "label": "Mô tả trình đọc màn hình cho nút \"Xem đáp án\"",
+          "default": "Hiển thị đáp án. Đáp án đúng sẽ được hiển thị."
+        },
+        {
+          "label": "Mô tả trình đọc màn hình cho nút \"Làm lại\"",
+          "default": "Làm lại bài tập. Đặt lại tất cả và bắt đầu lại."
+        },
+        {
+          "label": "Kết quả của bạn",
+          "description": "@score sẽ được thay bằng điểm đạt được. @total sẽ được thay bằng điểm tối đa.",
+          "default": "Bạn đạt @score trên @total điểm"
+        },
+        {
+          "label": "Mô tả danh sách",
+          "default": "Danh sách đoạn văn có thể sắp xếp."
+        },
+        {
+          "label": "Mô tả danh sách (chế độ kiểm tra)",
+          "default": "Danh sách đoạn văn với kết quả."
+        },
+        {
+          "label": "Mô tả danh sách (chế độ xem đáp án)",
+          "default": "Danh sách đoạn văn với đáp án."
+        },
+        {
+          "label": "Đoạn văn",
+          "default": "Đoạn văn"
+        },
+        {
+          "label": "Đúng",
+          "default": "đúng"
+        },
+        {
+          "label": "Sai",
+          "default": "sai"
+        },
+        {
+          "description": "@score sẽ được thay bằng 1 hoặc -1.",
+          "label": "Giải thích cách tính điểm",
+          "default": "@score điểm"
+        },
+        {
+          "label": "Đánh số đoạn văn",
+          "default": "@current trên @total",
+          "description": "@current sẽ được thay bằng số đoạn hiện tại. @total sẽ được thay bằng tổng số đoạn."
+        },
+        {
+          "label": "Vị trí hiện tại trong danh sách",
+          "default": "Vị trí hiện tại trong danh sách",
+          "description": "Theo sau bởi \"Đánh số đoạn văn\"."
+        },
+        {
+          "label": "Hướng dẫn khi chọn đoạn văn",
+          "default": "Nhấn phím cách để sắp xếp lại"
+        },
+        {
+          "label": "Hướng dẫn khi di chuyển đoạn văn",
+          "default": "Nhấn phím mũi tên lên xuống để thay đổi vị trí, phím cách để thả, Escape để hủy"
+        },
+        {
+          "label": "Đã chọn để di chuyển",
+          "default": "Đã chọn để di chuyển"
+        },
+        {
+          "label": "Đã di chuyển",
+          "default": "Đã di chuyển"
+        },
+        {
+          "label": "Đã thả",
+          "default": "Đã thả"
+        },
+        {
+          "label": "Đã hủy sắp xếp",
+          "default": "Đã hủy sắp xếp"
+        },
+        {
+          "description": "Theo sau bởi \"Đánh số đoạn văn\".",
+          "label": "Vị trí cuối",
+          "default": "Vị trí cuối"
+        },
+        {
+          "label": "Đoạn văn tiếp theo",
+          "default": "Đoạn văn tiếp theo",
+          "description": "Theo sau bởi \"đúng\" hoặc \"sai\"."
+        },
+        {
+          "label": "Đoạn văn đúng",
+          "description": "Theo sau bởi \"Đánh số đoạn văn\".",
+          "default": "Đoạn văn đúng ở vị trí"
+        }
+      ]
+    }
+  ]
+}

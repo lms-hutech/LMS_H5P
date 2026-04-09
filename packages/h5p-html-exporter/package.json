@@ -1,0 +1,69 @@
+{
+    "name": "@lumieducation/h5p-html-exporter",
+    "version": "10.0.4",
+    "description": "A community re-implementation of the H5P server",
+    "license": "GPL-3.0-or-later",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Lumieducation/H5P-Nodejs-library"
+    },
+    "scripts": {
+        "build:watch": "npx tsc -w -p ./tsconfig.build.json",
+        "build": "npx tsc -p ./tsconfig.build.json && cp src/*.js build",
+        "clean": "rm -rf build && rm -rf coverage && rm -rf node_modules",
+        "test:watch": "vitest --config vitest.config.ts",
+        "test": "vitest run --config vitest.config.ts"
+    },
+    "release": {
+        "branch": "master"
+    },
+    "contributors": [
+        {
+            "name": "Sebastian Rettig",
+            "email": "serettig@posteo.de"
+        },
+        {
+            "name": "Nikolas Martens"
+        },
+        {
+            "name": "Jan Philip Schellenberg",
+            "email": "jps@Lumi.education",
+            "url": "http://Lumi.education"
+        },
+        {
+            "name": "Bo Biene",
+            "email": "biene@inray.de",
+            "url": "https://www.qm-team.de/mymento-kursportal/"
+        },
+        {
+            "name": "jdavidavendano"
+        },
+        {
+            "name": "jankapunkt"
+        }
+    ],
+    "dependencies": {
+        "@lumieducation/h5p-server": "^10.0.4",
+        "esbuild": "^0.27.0",
+        "mime-types": "^3.0.0",
+        "postcss": "^8.4.23",
+        "postcss-clean": "^1.2.2",
+        "postcss-import": "^16.0.0",
+        "postcss-safe-parser": "^7.0.0",
+        "postcss-url": "^10.1.3",
+        "upath": "^2.0.1"
+    },
+    "main": "./build/HtmlExporter.js",
+    "types": "./build/HtmlExporter.d.ts",
+    "devDependencies": {
+        "@types/postcss-import": "^14.0.0",
+        "promisepipe": "3.0.0",
+        "puppeteer": "^24.16.2",
+        "tmp-promise": "3.0.3"
+    },
+    "files": [
+        "build",
+        "CHANGELOG.md",
+        "README.md"
+    ]
+}

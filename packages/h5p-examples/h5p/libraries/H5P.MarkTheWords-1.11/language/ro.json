@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Media opțională de afișat deasupra întrebării."
+        },
+        {
+          "label": "Dezactivează mărirea imaginii"
+        }
+      ]
+    },
+    {
+      "label": "Descrierea sarcinii",
+      "description": "Descrieți cum ar trebui utilizatorul să rezolve sarcina.",
+      "placeholder": "Apasă pe toate verbele din textul care urmează."
+    },
+    {
+      "label": "Câmp de text",
+      "placeholder": "Acesta este un răspuns: *răspuns*.",
+      "important": {
+        "description": "<ul><li>Cuvintele marcate se adaugă cu un asterisc (*).</li><li>Asteriscurile pot fi adăugate în interiorul cuvintelor marcate adăugând un alt asterisc, *cuvântcorect*** =&gt; cuvântcorect*.</li></ul>",
+        "example": "Cuvintele corecte sunt marcate astfel: *cuvântcorect*, un asterisc se scrie astfel: *cuvântcorect***."
+      }
+    },
+    {
+      "label": "Feedback general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Implicit"
+            }
+          ],
+          "label": "Definiți feedback personalizat pentru orice interval de punctaj",
+          "description": "Apăsați butonul „Adaugă interval” pentru a adăuga câte intervale aveți nevoie. Exemplu: 0-20% Punctaj slab, 21-91% Punctaj mediu, 91-100% Punctaj excelent!",
+          "entity": "interval",
+          "field": {
+            "fields": [
+              {
+                "label": "Interval de punctaj"
+              },
+              {},
+              {
+                "label": "Feedback pentru intervalul de punctaj definit",
+                "placeholder": "Completați feedback-ul"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text pentru butonul „Verifică”",
+      "default": "Verifică"
+    },
+    {
+      "label": "Text pentru butonul „Trimite”",
+      "default": "Trimite"
+    },
+    {
+      "label": "Text pentru butonul „Reîncearcă”",
+      "default": "Reîncearcă"
+    },
+    {
+      "label": "Text pentru butonul „Arată soluția”",
+      "default": "Arată soluția"
+    },
+    {
+      "label": "Setări de comportament.",
+      "description": "Aceste opțiuni vă vor permite să controlați cum se comportă sarcina.",
+      "fields": [
+        {
+          "label": "Activează „Reîncearcă”"
+        },
+        {
+          "label": "Activează butonul „Arată soluția”"
+        },
+        {
+          "label": "Activează butonul „Verifică”"
+        },
+        {
+          "label": "Afișează punctele obținute",
+          "description": "Afișează punctele câștigate pentru fiecare răspuns."
+        }
+      ]
+    },
+    {
+      "label": "Text pentru răspuns corect",
+      "default": "Corect!",
+      "description": "Text folosit pentru a indica faptul că un răspuns este corect"
+    },
+    {
+      "label": "Text pentru răspuns incorect",
+      "default": "Incorect!",
+      "description": "Text folosit pentru a indica faptul că un răspuns este incorect"
+    },
+    {
+      "label": "Text pentru răspuns omis",
+      "default": "Răspuns negăsit!",
+      "description": "Text folosit pentru a indica faptul că un răspuns lipsește"
+    },
+    {
+      "label": "Descriere pentru Afișare Soluție",
+      "default": "Sarcina este actualizată pentru a conține soluția.",
+      "description": "Acest text îi spune utilizatorului că sarcina a fost actualizată cu soluția."
+    },
+    {
+      "label": "Reprezentarea textuală a barei de scor pentru cei care folosesc un cititor de ecran",
+      "default": "Ai obținut :num din :total puncte"
+    },
+    {
+      "label": "Etichetă pentru textul complet lizibil pentru tehnologiile asistive",
+      "default": "Text complet lizibil"
+    },
+    {
+      "label": "Etichetă pentru textul unde cuvintele pot fi marcate pentru tehnologiile asistive",
+      "default": "Text complet unde cuvintele pot fi marcate"
+    },
+    {
+      "label": "Antet mod soluție pentru tehnologiile asistive",
+      "default": "Mod soluție"
+    },
+    {
+      "label": "Antet mod verificare pentru tehnologiile asistive",
+      "default": "Mod verificare"
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă a butonului „Verifică”",
+      "default": "Verifică răspunsurile. Răspunsurile vor fi marcate ca fiind corecte, incorecte sau fără răspuns."
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă a butonului „Arată soluția”",
+      "default": "Arată soluția. Sarcina va fi marcată cu soluția sa corectă."
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă a butonului „Reîncearcă”",
+      "default": "Reîncearcă sarcina. Resetează toate răspunsurile și reia sarcina de la început."
+    }
+  ]
+}

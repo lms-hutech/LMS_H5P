@@ -1,0 +1,20 @@
+{
+  "libraryStrings": {
+    "insertElement": "Adaugă :type",
+    "done": "Gata",
+    "remove": "Elimină",
+    "image": "Imagine",
+    "text": "Text",
+    "noTaskSize": "Vă rugăm să specificați mai întâi dimensiunea sarcinii.",
+    "confirmRemoval": "Sunteți sigur că doriți să eliminați acest element?",
+    "backgroundOpacityOverridden": "Opacitatea fundalului este suprascrisă",
+    "advancedtext": "Text",
+    "dropzone": "Zonă de plasare",
+    "selectAll": "Selectează tot",
+    "deselectAll": "Deselectează tot",
+    "deleteTaskTitle": "Ștergere sarcină",
+    "cancel": "Anulează",
+    "confirm": "Confirmă",
+    "ok": "Ok"
+  }
+}

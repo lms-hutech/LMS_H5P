@@ -1,0 +1,49 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Generated output
+build/
+**/build/
+build-ide/
+coverage/
+typedoc/
+dist/
+
+# Local environment and credentials
+.env
+**/.env
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Downloaded and generated test data
+test/data/hub-content/*
+test/data/content-type-cache/real-content-types.json
+test/data/hub-content-extracted/*
+packages/h5p-html-exporter/test/data/content/*
+
+# Local runtime data for the example server
+packages/h5p-examples/h5p/content/
+packages/h5p-examples/h5p/user-data/
+packages/h5p-examples/h5p/temporary-storage/
+packages/h5p-examples/test-results/
+
+# Local tooling artifacts
+.DS_Store
+microsoft.gpg
+google_translate.json
+.json-autotranslate-cache
+.dccache
+.agent/
+openspec/
+.claude/
+.gitnexus/
+.vscode/

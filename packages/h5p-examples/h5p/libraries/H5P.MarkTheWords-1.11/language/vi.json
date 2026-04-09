@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Phương tiện",
+      "fields": [
+        {
+          "label": "Loại",
+          "description": "Phương tiện tùy chọn hiển thị phía trên câu hỏi."
+        },
+        {
+          "label": "Tắt phóng to hình ảnh"
+        }
+      ]
+    },
+    {
+      "label": "Mô tả bài tập",
+      "description": "Mô tả cách người dùng nên giải bài tập.",
+      "placeholder": "Nhấp vào tất cả các động từ trong đoạn văn sau."
+    },
+    {
+      "label": "Ô văn bản",
+      "placeholder": "Đây là câu trả lời: *đáp án*.",
+      "important": {
+        "description": "<ul><li>Từ được đánh dấu bằng dấu sao (*).</li><li>Có thể thêm dấu sao trong từ đã đánh dấu bằng cách thêm dấu sao nữa, *từđúng*** =&gt; từđúng*.</li></ul>",
+        "example": "Các từ đúng được đánh dấu như sau: *từđúng*, dấu sao được viết như sau: *từđúng***."
+      }
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Định nghĩa phản hồi tùy chỉnh cho bất kỳ khoảng điểm nào",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm nhiều khoảng điểm tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm giỏi!",
+          "entity": "khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho khoảng điểm đã định",
+                "placeholder": "Điền phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Văn bản cho \"Kiểm tra\" button",
+      "default": "Kiểm tra"
+    },
+    {
+      "label": "Văn bản cho \"Nộp\" button",
+      "default": "Nộp"
+    },
+    {
+      "label": "Văn bản cho \"Thử lại\" button",
+      "default": "Thử lại"
+    },
+    {
+      "label": "Văn bản cho \"Xem đáp án\" button",
+      "default": "Xem đáp án"
+    },
+    {
+      "label": "Cài đặt hành vi.",
+      "description": "Các tùy chọn này cho phép bạn kiểm soát hành vi bài tập.",
+      "fields": [
+        {
+          "label": "Bật \"Thử lại\""
+        },
+        {
+          "label": "Bật nút \"Xem đáp án\""
+        },
+        {
+          "label": "Bật nút \"Kiểm tra\""
+        },
+        {
+          "label": "Hiển thị điểm",
+          "description": "Hiện điểm đạt được cho mỗi câu trả lời."
+        }
+      ]
+    },
+    {
+      "label": "Văn bản đáp án đúng",
+      "default": "Chính xác!",
+      "description": "Văn bản chỉ ra rằng đáp án đúng"
+    },
+    {
+      "label": "Văn bản đáp án sai",
+      "default": "Sai!",
+      "description": "Văn bản chỉ ra rằng đáp án sai"
+    },
+    {
+      "label": "Văn bản đáp án bị bỏ lỡ",
+      "default": "Không tìm thấy đáp án!",
+      "description": "Văn bản chỉ ra rằng đáp án bị thiếu"
+    },
+    {
+      "label": "Mô tả cho Hiện lời giải",
+      "default": "Bài tập đã được cập nhật để chứa lời giải.",
+      "description": "Văn bản này cho người dùng biết bài tập đã được cập nhật lời giải."
+    },
+    {
+      "label": "Biểu diễn văn bản của thanh điểm cho người dùng trình đọc màn hình",
+      "default": "Bạn đạt :num trên :total điểm"
+    },
+    {
+      "label": "Nhãn cho the full readable text for assistive technologies",
+      "default": "Văn bản đầy đủ có thể đọc"
+    },
+    {
+      "label": "Nhãn cho the text where words can be marked for assistive technologies",
+      "default": "Văn bản đầy đủ nơi các từ có thể được đánh dấu"
+    },
+    {
+      "label": "Tiêu đề chế độ lời giải cho công nghệ hỗ trợ",
+      "default": "Chế độ lời giải"
+    },
+    {
+      "label": "Tiêu đề chế độ kiểm tra cho công nghệ hỗ trợ",
+      "default": "Chế độ kiểm tra"
+    },
+    {
+      "label": "Mô tả công nghệ hỗ trợ cho \"Kiểm tra\" button",
+      "default": "Kiểm tra đáp án. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Mô tả công nghệ hỗ trợ cho \"Xem đáp án\" button",
+      "default": "Xem đáp án. Bài tập sẽ được đánh dấu với đáp án đúng."
+    },
+    {
+      "label": "Mô tả công nghệ hỗ trợ cho \"Thử lại\" button",
+      "default": "Thử lại bài tập. Đặt lại tất cả câu trả lời và làm lại từ đầu."
+    }
+  ]
+}

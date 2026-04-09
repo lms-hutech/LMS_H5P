@@ -1,0 +1,36 @@
+{
+  "semantics":[
+    {
+      "label":"Panelek",
+      "entity":"panel",
+      "field":{
+        "label":"Tartalom",
+        "entity":"tartalom",
+        "fields":[
+          {
+            "label":"Cím"
+          },
+          {
+            "label":"Tartalom típus",
+            "entity":"tartalom"
+          }
+        ]
+      }
+    },
+    {
+      "label":"Címkék H tag-jei (nem befolyásolja a címke méretét)",
+      "description":"A címkéknél használt H tag. Általában H2, de ha egy H2 címsor alá kerül, akkor H3-at érdemes használni. Nem befolyásolja a címkék méretét, kizárólag szemantikai célokat szolgál.",
+      "options":[
+        {
+          "label":"H2"
+        },
+        {
+          "label":"H3"
+        },
+        {
+          "label":"H4"
+        }
+      ]
+    }
+  ]
+}

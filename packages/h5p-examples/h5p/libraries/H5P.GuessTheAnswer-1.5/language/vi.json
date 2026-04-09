@@ -1,0 +1,26 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả nhiệm vụ",
+      "description": "Mô tả cách người học nên giải bài tập. Hiển thị phía trên phương tiện."
+    },
+    {
+      "label": "Phương tiện",
+      "fields": [
+        {
+          "label": "Loại phương tiện",
+          "description": "Phương tiện tùy chọn hiển thị phía trên câu hỏi."
+        }
+      ]
+    },
+    {
+      "label": "Nhãn nút \"Xem đáp án\"",
+      "default": "Nhấn để xem đáp án.",
+      "description": "Văn bản có thể nhấn, tại vị trí đó đáp án sẽ xuất hiện."
+    },
+    {
+      "label": "Văn bản đáp án",
+      "description": "Đáp án cho bài tập hoặc phương tiện."
+    }
+  ]
+}

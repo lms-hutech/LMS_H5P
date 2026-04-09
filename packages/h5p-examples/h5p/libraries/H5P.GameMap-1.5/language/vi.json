@@ -1,0 +1,1028 @@
+{
+  "semantics": [
+    {
+      "label": "Hiện màn hình tiêu đề",
+      "description": "Nếu chọn, màn hình tiêu đề sẽ được hiển thị ở đầu."
+    },
+    {
+      "label": "Màn hình tiêu đề",
+      "fields": [
+        {
+          "label": "Giới thiệu",
+          "placeholder": "Chào mừng đến với ..."
+        },
+        {
+          "label": "Phương tiện màn hình tiêu đề"
+        }
+      ]
+    },
+    {
+      "label": "Tiêu đề",
+      "description": "Tiêu đề tùy chọn cho thanh tiêu đề."
+    },
+    {
+      "label": "Trình soạn thảo bản đồ trò chơi",
+      "fields": [
+        {
+          "label": "Hình nền",
+          "fields": [
+            {
+              "label": "Hình nền",
+              "description": "Chọn hình nền cho bản đồ trò chơi."
+            },
+            {
+              "label": "Màu nền",
+              "description": "Chọn màu nền cho bản đồ trò chơi."
+            }
+          ]
+        },
+        {
+          "label": "Bản đồ trò chơi",
+          "fields": [
+            {},
+            {
+              "label": "Phần tử",
+              "entity": "Phần tử",
+              "field": {
+                "label": "Phần tử",
+                "fields": [
+                  {
+                    "label": "Id"
+                  },
+                  {
+                    "label": "Loại"
+                  },
+                  {
+                    "label": "Nhãn chặng",
+                    "description": "Nhãn này sẽ hiển thị phía trên nhiệm vụ và giúp bạn kết nối các chặng khác nhau."
+                  },
+                  {
+                    "label": "Người dùng có thể bắt đầu tại đây",
+                    "description": "Nếu chọn, người dùng có thể bắt đầu tại chặng này. Nếu không có chặng nào hoặc nhiều hơn một chặng được chọn, chặng bắt đầu sẽ được chọn ngẫu nhiên."
+                  },
+                  {
+                    "label": "Giới hạn thời gian",
+                    "description": "Đặt giới hạn thời gian.",
+                    "fields": [
+                      {
+                        "label": "Giới hạn thời gian",
+                        "description": "Bạn có thể tùy chọn đặt giới hạn thời gian tính bằng giây. Nếu người dùng vượt quá giới hạn, nhiệm vụ sẽ bị đóng và đặt lại, đồng thời người dùng mất một mạng nếu mạng bị giới hạn."
+                      },
+                      {
+                        "label": "Cảnh báo giới hạn thời gian",
+                        "description": "Bạn có thể tùy chọn đặt khi nào âm thanh cảnh báo phát ra (số giây còn lại). Cần có tệp âm thanh trong cài đặt âm thanh."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Hạn chế truy cập",
+                    "description": "Xác định điều kiện mở khóa.",
+                    "fields": [
+                      {
+                        "label": "Tất cả hoặc ít nhất một nhóm điều kiện",
+                        "description": "Chọn liệu tất cả hoặc ít nhất một nhóm điều kiện sau phải được đáp ứng.",
+                        "options": [
+                          {
+                            "label": "Tất cả"
+                          },
+                          {
+                            "label": "Ít nhất một"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Nhóm điều kiện",
+                        "entity": "Nhóm điều kiện",
+                        "widgets": [
+                          {
+                            "label": "Mặc định"
+                          }
+                        ],
+                        "field": {
+                          "label": "Nhóm điều kiện",
+                          "fields": [
+                            {
+                              "label": "Tất cả hoặc ít nhất một điều kiện",
+                              "description": "Chọn liệu tất cả hoặc ít nhất một điều kiện sau phải được đáp ứng.",
+                              "options": [
+                                {
+                                  "label": "Tất cả"
+                                },
+                                {
+                                  "label": "Ít nhất một"
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Điều kiện",
+                              "entity": "Điều kiện",
+                              "field": {
+                                "label": "Điều kiện",
+                                "fields": [
+                                  {
+                                    "label": "Tiêu chí",
+                                    "options": [
+                                      {
+                                        "label": "Tổng điểm"
+                                      },
+                                      {
+                                        "label": "Điểm chặng"
+                                      },
+                                      {
+                                        "label": "Tiến độ chặng"
+                                      },
+                                      {
+                                        "label": "Thời điểm"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Tổng điểm",
+                                    "fields": [
+                                      {
+                                        "label": "Toán tử so sánh cho tổng điểm",
+                                        "options": [
+                                          {
+                                            "label": "nhỏ hơn"
+                                          },
+                                          {
+                                            "label": "bằng"
+                                          },
+                                          {
+                                            "label": "không bằng"
+                                          },
+                                          {
+                                            "label": "lớn hơn"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Giá trị so sánh với tổng điểm"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Điểm chặng",
+                                    "fields": [
+                                      {
+                                        "label": "Chặng để so sánh điểm"
+                                      },
+                                      {
+                                        "label": "Toán tử so sánh cho điểm chặng",
+                                        "options": [
+                                          {
+                                            "label": "nhỏ hơn"
+                                          },
+                                          {
+                                            "label": "bằng"
+                                          },
+                                          {
+                                            "label": "không bằng"
+                                          },
+                                          {
+                                            "label": "lớn hơn"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Giá trị so sánh với điểm chặng"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Tiến độ chặng",
+                                    "fields": [
+                                      {
+                                        "label": "Chặng để so sánh tiến độ"
+                                      },
+                                      {
+                                        "label": "Toán tử cho tiến độ chặng",
+                                        "options": [
+                                          {
+                                            "label": "là"
+                                          },
+                                          {
+                                            "label": "không phải là"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Tiến độ để so sánh",
+                                        "options": [
+                                          {
+                                            "label": "chưa bắt đầu"
+                                          },
+                                          {
+                                            "label": "đã bắt đầu"
+                                          },
+                                          {
+                                            "label": "đã hoàn thành"
+                                          },
+                                          {
+                                            "label": "hoàn thành thành công"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "label": "Thời điểm",
+                                    "fields": [
+                                      {
+                                        "label": "Toán tử so sánh cho thời điểm hiện tại",
+                                        "options": [
+                                          {
+                                            "label": "trước"
+                                          },
+                                          {
+                                            "label": "là"
+                                          },
+                                          {
+                                            "label": "không phải là"
+                                          },
+                                          {
+                                            "label": "sau"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "label": "Thời điểm để so sánh"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "label": "biến giữ chỗ"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Nội dung",
+                    "entity": "Nội dung",
+                    "widgets": [
+                      {
+                        "label": "Mặc định"
+                      }
+                    ],
+                    "field": {
+                      "label": "Nội dung",
+                      "fields": [
+                        {
+                          "label": "Nội dung chặng",
+                          "description": "Chọn loại nội dung bạn muốn thêm vào chặng."
+                        },
+                        {
+                          "label": "Biến giữ chỗ"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Loại chặng đặc biệt",
+                    "options": [
+                      {
+                        "label": "Kết thúc"
+                      },
+                      {
+                        "label": "Thêm mạng"
+                      },
+                      {
+                        "label": "Thêm thời gian"
+                      },
+                      {
+                        "label": "Liên kết ngoài"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Số mạng thêm",
+                    "description": "Xác định số mạng người dùng nhận được khi mở chặng này."
+                  },
+                  {
+                    "label": "Số giây thêm",
+                    "description": "Xác định số giây người dùng nhận thêm cho tổng thời gian khi mở chặng này."
+                  },
+                  {
+                    "label": "URL nội dung bên ngoài",
+                    "description": "Xác định nơi người dùng được chuyển đến khi nhấn liên kết."
+                  },
+                  {
+                    "label": "Nơi mở liên kết",
+                    "options": [
+                      {
+                        "label": "Tab mới"
+                      },
+                      {
+                        "label": "Tab hiện tại"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Luôn hiển thị",
+                    "description": "Nếu chọn, chặng này sẽ luôn hiển thị. Điều này áp dụng ngay cả khi cài đặt tầm nhìn của bản đồ quy định khác."
+                  },
+                  {
+                    "label": "Ghi đè biểu tượng khóa",
+                    "description": "Nếu chọn, chặng bị khóa sẽ không dùng biểu tượng khóa mà dùng biểu tượng của loại chặng đặc biệt."
+                  },
+                  {
+                    "label": "Chặng kết nối"
+                  },
+                  {
+                    "label": "Telemetry"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Đường đi",
+              "entity": "đường đi",
+              "field": {
+                "label": "Đường đi",
+                "fields": [
+                  {
+                    "label": "Từ"
+                  },
+                  {
+                    "label": "Đến"
+                  },
+                  {
+                    "label": "Cài đặt hiển thị",
+                    "options": [
+                      {
+                        "label": "Dùng cài đặt chung"
+                      },
+                      {
+                        "label": "Dùng cài đặt riêng"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Cài đặt hiển thị riêng",
+                    "fields": [
+                      {
+                        "label": "Màu đường đi"
+                      },
+                      {
+                        "label": "Độ rộng đường đi",
+                        "options": [
+                          {
+                            "label": "mảnh"
+                          },
+                          {
+                            "label": "trung bình"
+                          },
+                          {
+                            "label": "dày"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Kiểu đường đi",
+                        "options": [
+                          {
+                            "label": "Liền"
+                          },
+                          {
+                            "label": "Chấm"
+                          },
+                          {
+                            "label": "Gạch ngang"
+                          },
+                          {
+                            "label": "Đôi"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Màn hình kết thúc",
+      "fields": [
+        {
+          "label": "Người dùng không thành công",
+          "fields": [
+            {
+              "label": "Thông báo (không thành công)",
+              "placeholder": "Lần này bạn chưa thành công ..."
+            },
+            {
+              "label": "Phương tiện màn hình kết thúc (không thành công)"
+            }
+          ]
+        },
+        {
+          "label": "Người dùng thành công",
+          "fields": [
+            {
+              "label": "Thông báo (thành công)",
+              "placeholder": "Hoàn thành ..."
+            },
+            {
+              "label": "Phương tiện màn hình kết thúc (thành công)"
+            }
+          ]
+        },
+        {
+          "label": "Phản hồi tổng thể",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Mặc định"
+                }
+              ],
+              "label": "Xác định phản hồi cho từng khoảng điểm",
+              "description": "Nhấn nút \"Thêm khoảng\" để thêm nhiều khoảng tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+              "entity": "Khoảng",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Khoảng điểm"
+                  },
+                  {},
+                  {
+                    "label": "Phản hồi cho khoảng điểm tương ứng",
+                    "placeholder": "Nhập phản hồi"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Hiển thị",
+      "fields": [
+        {
+          "label": "Chặng",
+          "fields": [
+            {
+              "label": "Màu chặng chưa ghé thăm"
+            },
+            {
+              "label": "Màu chặng bị khóa"
+            },
+            {
+              "label": "Màu chặng đã hoàn thành"
+            },
+            {
+              "label": "Hiện sao cho điểm",
+              "description": "Chọn liệu và khi nào sao được hiển thị trên bản đồ cho điểm của chặng. Lưu ý rằng chặng không có nhiệm vụ tính điểm cũng không hiện sao.",
+              "options": [
+                {
+                  "label": "Không bao giờ"
+                },
+                {
+                  "label": "Khi di chuột"
+                },
+                {
+                  "label": "Luôn luôn"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Đường đi",
+          "fields": [
+            {
+              "label": "Hiện đường đi",
+              "description": "Chọn liệu đường đi có hiển thị trên bản đồ. Lưu ý: trong trình soạn thảo, đường đi luôn hiển thị."
+            },
+            {
+              "label": "Kiểu",
+              "fields": [
+                {
+                  "label": "Màu đường đi"
+                },
+                {
+                  "label": "Màu đường đi đã hoàn thành"
+                },
+                {
+                  "label": "Độ rộng đường đi",
+                  "options": [
+                    {
+                      "label": "mảnh"
+                    },
+                    {
+                      "label": "trung bình"
+                    },
+                    {
+                      "label": "dày"
+                    }
+                  ]
+                },
+                {
+                  "label": "Kiểu đường đi",
+                  "options": [
+                    {
+                      "label": "Liền"
+                    },
+                    {
+                      "label": "Chấm"
+                    },
+                    {
+                      "label": "Gạch ngang"
+                    },
+                    {
+                      "label": "Đôi"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Khác",
+          "fields": [
+            {
+              "label": "Hiệu ứng bản đồ",
+              "description": "Chọn liệu bản đồ có hiệu ứng hoạt hình. Dù bật, loại nội dung này vẫn tôn trọng cài đặt trình duyệt nếu người dùng muốn ít hoạt hình hơn."
+            },
+            {
+              "label": "Biến giữ chỗ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Âm thanh",
+      "fields": [
+        {
+          "label": "Nhạc nền",
+          "fields": [
+            {
+              "label": "Nhạc nền"
+            },
+            {
+              "label": "Tắt tiếng trong nhiệm vụ"
+            }
+          ]
+        },
+        {
+          "label": "Sự kiện",
+          "fields": [
+            {
+              "label": "Nhấn vào chặng bị khóa",
+              "description": "Phát khi nhấn vào chặng bị khóa trên bản đồ."
+            },
+            {
+              "label": "Kiểm tra nhiệm vụ (chưa đạt điểm tối đa)",
+              "description": "Phát khi câu trả lời được kiểm tra và người dùng chưa đạt điểm tối đa."
+            },
+            {
+              "label": "Kiểm tra nhiệm vụ (đạt điểm tối đa)",
+              "description": "Phát khi câu trả lời được kiểm tra và người dùng đạt điểm tối đa."
+            },
+            {
+              "label": "Chặng được mở khóa",
+              "description": "Phát khi một chặng được mở khóa."
+            },
+            {
+              "label": "Nhiệm vụ đã mở",
+              "description": "Phát khi nhiệm vụ được mở."
+            },
+            {
+              "label": "Nhiệm vụ đã đóng",
+              "description": "Phát khi nhiệm vụ bị đóng."
+            },
+            {
+              "label": "Hiện hộp thoại",
+              "description": "Phát khi hộp thoại xác nhận được mở."
+            },
+            {
+              "label": "Đạt điểm tối đa",
+              "description": "Phát khi người dùng đạt điểm tối đa cho bản đồ."
+            },
+            {
+              "label": "Mất mạng",
+              "description": "Phát khi người dùng mất một mạng."
+            },
+            {
+              "label": "Nhận mạng",
+              "description": "Phát khi người dùng nhận một mạng."
+            },
+            {
+              "label": "Kết thúc trò chơi",
+              "description": "Phát khi trò chơi kết thúc và người dùng không thể tiếp tục."
+            },
+            {
+              "label": "Nhận thêm thời gian",
+              "description": "Phát khi người dùng nhận thêm thời gian."
+            },
+            {
+              "label": "Cảnh báo hết thời gian",
+              "description": "Phát khi người dùng sắp hết thời gian cho nhiệm vụ hoặc bản đồ."
+            },
+            {
+              "label": "Màn hình kết thúc (chưa đạt điểm tối đa)",
+              "description": "Phát trên màn hình kết thúc khi người dùng chưa đạt điểm tối đa."
+            },
+            {
+              "label": "Màn hình kết thúc (đạt điểm tối đa)",
+              "description": "Phát trên màn hình kết thúc khi người dùng đạt điểm tối đa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "fields": [
+        {
+          "label": "Mạng sống",
+          "description": "Đặt số mạng sống người dùng nhận được, hoặc để trống cho không giới hạn. Người dùng mất mạng khi không đạt điểm tối đa hoặc hết thời gian."
+        },
+        {
+          "label": "Giới hạn thời gian toàn cục",
+          "description": "Bạn có thể tùy chọn đặt giới hạn thời gian tính bằng giây. Nếu vượt quá, trò chơi kết thúc ngay."
+        },
+        {
+          "label": "Cảnh báo giới hạn thời gian",
+          "description": "Bạn có thể tùy chọn đặt khi nào âm thanh cảnh báo phát ra (số giây còn lại). Cần có tệp âm thanh trong cài đặt âm thanh."
+        },
+        {
+          "label": "Điểm để hoàn thành",
+          "description": "Điểm tùy chọn có thể nhỏ hơn tổng điểm khả dụng, để người dùng có thể đạt điểm tối đa mà không cần hoàn thành tất cả chặng."
+        },
+        {
+          "label": "Hiện nút \"Làm lại\""
+        },
+        {
+          "label": "Hiện nút \"Xem đáp án\""
+        },
+        {
+          "label": "Bản đồ",
+          "fields": [
+            {
+              "label": "Hiện nhãn chặng",
+              "description": "Chọn liệu nhãn chặng có hiển thị khi di chuột. Nhãn không hiển thị trên thiết bị cảm ứng."
+            },
+            {
+              "label": "Di chuyển tự do",
+              "description": "Chọn liệu người dùng có thể tự do ghé thăm các chặng, phải hoàn thành để mở khóa chặng liền kề, hay phải hoàn thành thành công mới được tiếp tục.",
+              "options": [
+                {
+                  "label": "Di chuyển tự do"
+                },
+                {
+                  "label": "Hoàn thành để mở khóa"
+                },
+                {
+                  "label": "Hoàn thành thành công để mở khóa"
+                }
+              ]
+            },
+            {
+              "label": "Tầm nhìn",
+              "description": "Chọn người dùng có thể nhìn xa bao nhiêu",
+              "options": [
+                {
+                  "label": "Tất cả chặng đều hiển thị"
+                },
+                {
+                  "label": "Chặng đã mở và chặng liền kề hiển thị"
+                },
+                {
+                  "label": "Chỉ chặng đã mở hiển thị"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Giao diện",
+      "fields": [
+        {
+          "label": "Bắt đầu",
+          "default": "Bắt đầu"
+        },
+        {
+          "label": "Tiếp tục",
+          "default": "Tiếp tục"
+        },
+        {
+          "label": "Khởi động lại",
+          "default": "Khởi động lại"
+        },
+        {
+          "label": "Xem đáp án",
+          "default": "Xem đáp án"
+        },
+        {
+          "label": "Đã hoàn thành bản đồ",
+          "default": "Bạn đã hoàn thành bản đồ!"
+        },
+        {
+          "label": "Đạt điểm tối đa nhưng hết mạng",
+          "default": "Bạn đã đạt điểm tối đa nhưng mất hết mạng!"
+        },
+        {
+          "label": "Đạt điểm tối đa nhưng hết thời gian",
+          "default": "Bạn đã đạt điểm tối đa nhưng đã hết thời gian!"
+        },
+        {
+          "label": "Tiêu đề hộp thoại hoàn thành bản đồ",
+          "default": "Kết thúc bản đồ?"
+        },
+        {
+          "label": "Nội dung hộp thoại hoàn thành bản đồ: Chung",
+          "default": "Nếu dừng bây giờ, bạn không thể tiếp tục khám phá bản đồ."
+        },
+        {
+          "label": "Nội dung hộp thoại hoàn thành bản đồ: Gửi",
+          "default": "Điểm của bạn sẽ được gửi."
+        },
+        {
+          "label": "Nội dung hộp thoại hoàn thành bản đồ: Câu hỏi",
+          "default": "Bạn có thực sự muốn kết thúc bản đồ không?"
+        },
+        {
+          "label": "Tiêu đề hộp thoại truy cập bị từ chối",
+          "default": "Chặng bị khóa"
+        },
+        {
+          "label": "Nội dung hộp thoại truy cập bị từ chối: Chung",
+          "default": "Để mở chặng này, bạn cần đáp ứng một số điều kiện."
+        },
+        {
+          "label": "Có",
+          "default": "Có"
+        },
+        {
+          "label": "Không",
+          "default": "Không"
+        },
+        {
+          "label": "Tiêu đề hộp thoại kết thúc trò chơi",
+          "default": "Kết thúc trò chơi!"
+        },
+        {
+          "label": "Nội dung hộp thoại kết thúc trò chơi",
+          "default": "Bạn đã mất hết mạng. Hãy thử lại!"
+        },
+        {
+          "label": "Nội dung hộp thoại kết thúc trò chơi do hết thời gian",
+          "default": "Bạn đã hết thời gian. Hãy thử lại!"
+        },
+        {
+          "label": "Tiêu đề hộp thoại hết thời gian",
+          "default": "Hết thời gian!"
+        },
+        {
+          "label": "Nội dung hộp thoại hết thời gian",
+          "default": "Thời gian cho nhiệm vụ đã hết."
+        },
+        {
+          "label": "Nội dung hộp thoại hết thời gian (mất mạng)",
+          "default": "Thời gian cho nhiệm vụ đã hết, và bạn đã mất một mạng."
+        },
+        {
+          "label": "Tiêu đề hộp thoại chưa đạt điểm tối đa",
+          "default": "Chưa đạt điểm tối đa!"
+        },
+        {
+          "label": "Nội dung hộp thoại chưa đạt điểm tối đa (mất mạng)",
+          "default": "Bạn chưa đạt điểm tối đa, và bạn đã mất một mạng."
+        },
+        {
+          "label": "Tiêu đề hộp thoại đạt điểm tối đa",
+          "default": "Bạn đã đạt điểm tối đa!"
+        },
+        {
+          "label": "Nội dung hộp thoại đạt điểm tối đa",
+          "default": "Bạn đã thu thập đủ điểm để hoàn thành bản đồ với điểm tối đa, nhưng bạn có thể tiếp tục khám phá phần còn lại nếu muốn. Điểm sẽ được gửi khi bạn kết thúc bản đồ."
+        },
+        {
+          "label": "Nội dung hộp thoại đạt điểm tối đa (mở rộng, nếu có mạng)",
+          "default": "Nhưng hãy cẩn thận! Bạn vẫn có thể mất mạng!"
+        },
+        {
+          "label": "OK",
+          "default": "OK"
+        },
+        {
+          "label": "Không có chặng nào được đặt",
+          "default": "Không có chặng hợp lệ nào được đặt cho bản đồ."
+        },
+        {
+          "label": "Cài đặt",
+          "default": "Cài đặt"
+        },
+        {
+          "label": "Âm lượng nhạc",
+          "default": "Âm lượng nhạc"
+        },
+        {
+          "label": "Âm lượng hiệu ứng âm thanh",
+          "default": "Âm lượng hiệu ứng âm thanh"
+        },
+        {
+          "label": "Chặng không khả dụng, trừ khi",
+          "default": "Chặng không khả dụng, trừ khi:"
+        },
+        {
+          "label": "Chặng không khả dụng, trừ khi ít nhất một điều kiện được đáp ứng",
+          "default": "Chặng không khả dụng, trừ khi ít nhất một điều kiện được đáp ứng:"
+        },
+        {
+          "label": "Tất cả điều kiện:",
+          "default": "Tất cả điều kiện:"
+        },
+        {
+          "label": "Ít nhất một điều kiện:",
+          "default": "Ít nhất một điều kiện:"
+        },
+        {
+          "label": "Tổng điểm nhỏ hơn",
+          "default": "Bạn có tổng điểm nhỏ hơn @value."
+        },
+        {
+          "label": "Tổng điểm bằng",
+          "default": "Bạn có tổng điểm bằng @value."
+        },
+        {
+          "label": "Tổng điểm không bằng",
+          "default": "Bạn có tổng điểm không bằng @value."
+        },
+        {
+          "label": "Tổng điểm lớn hơn",
+          "default": "Bạn có tổng điểm lớn hơn @value."
+        },
+        {
+          "label": "Điểm chặng nhỏ hơn",
+          "default": "Điểm của bạn ở chặng @label nhỏ hơn @value."
+        },
+        {
+          "label": "Điểm chặng bằng",
+          "default": "Điểm của bạn ở chặng @label là @value."
+        },
+        {
+          "label": "Điểm chặng không bằng",
+          "default": "Điểm của bạn ở chặng @label không phải @value."
+        },
+        {
+          "label": "Điểm chặng lớn hơn",
+          "default": "Điểm của bạn ở chặng @label lớn hơn @value."
+        },
+        {
+          "label": "Tiến độ chặng là",
+          "default": "Tiến độ của chặng @label là @value."
+        },
+        {
+          "label": "Tiến độ chặng không phải",
+          "default": "Tiến độ của chặng @label không phải @value."
+        },
+        {
+          "label": "Thời điểm trước",
+          "default": "Thời điểm hiện tại trước @value."
+        },
+        {
+          "label": "Thời điểm là",
+          "default": "Thời điểm hiện tại là @value."
+        },
+        {
+          "label": "Thời điểm không phải",
+          "default": "Thời điểm hiện tại không phải @value."
+        },
+        {
+          "label": "Thời điểm sau",
+          "default": "Thời điểm hiện tại sau @value."
+        },
+        {
+          "label": "Chưa bắt đầu",
+          "default": "chưa bắt đầu"
+        },
+        {
+          "label": "Đã bắt đầu",
+          "default": "đã bắt đầu"
+        },
+        {
+          "label": "Đã hoàn thành",
+          "default": "đã hoàn thành"
+        },
+        {
+          "label": "Hoàn thành thành công",
+          "default": "hoàn thành thành công"
+        },
+        {
+          "label": "Thiếu nội dung",
+          "default": "Chưa có nội dung nào được đặt cho chặng này!"
+        }
+      ]
+    },
+    {
+      "label": "Văn bản trợ năng",
+      "fields": [
+        {
+          "label": "Kết thúc",
+          "default": "Kết thúc"
+        },
+        {
+          "label": "Nút âm thanh (bật)",
+          "default": "Tắt âm thanh. Hiện đang bật."
+        },
+        {
+          "label": "Nút âm thanh (tắt)",
+          "default": "Bật âm thanh. Hiện đang tắt."
+        },
+        {
+          "label": "Đóng",
+          "default": "Đóng"
+        },
+        {
+          "label": "Kết quả của bạn",
+          "description": "@score sẽ được thay bằng điểm đạt được. @total sẽ được thay bằng điểm tối đa.",
+          "default": "Bạn đạt @score trên @total điểm"
+        },
+        {
+          "label": "Bản đồ đã mở",
+          "default": "Bản đồ đã mở."
+        },
+        {
+          "label": "Bản đồ đã mở (chế độ xem đáp án)",
+          "default": "Bản đồ đã mở ở chế độ xem đáp án."
+        },
+        {
+          "label": "Màn hình tiêu đề đã mở",
+          "default": "Màn hình tiêu đề đã mở."
+        },
+        {
+          "label": "Màn hình kết thúc đã mở",
+          "default": "Màn hình kết thúc đã mở."
+        },
+        {
+          "label": "Nhãn cho bài tập",
+          "description": "@stagelabel là biến và sẽ được thay bằng nhãn tương ứng.",
+          "default": ". Bài tập cho @stagelabel"
+        },
+        {
+          "label": "Nhãn nút chặng",
+          "description": "@stagelabel là biến và sẽ được thay bằng nhãn tương ứng.",
+          "default": "Chặng: @stagelabel"
+        },
+        {
+          "label": "Nhãn chặng liền kề",
+          "description": "@stagelabelOrigin và @stagelabelNeighbor là biến và sẽ được thay bằng nhãn tương ứng.",
+          "default": "Chặng liền kề của @stagelabelOrigin: @stagelabelNeighbor"
+        },
+        {
+          "label": "Đã khóa",
+          "default": "Đã khóa"
+        },
+        {
+          "label": "Đã hoàn thành",
+          "default": "Đã hoàn thành"
+        },
+        {
+          "label": "Mô tả điều hướng bản đồ",
+          "default": "Sử dụng phím cách hoặc Enter để kích hoạt chặng hiện tại. Sử dụng phím mũi tên để chọn chặng liền kề. Sử dụng phím cách hoặc Enter trên chặng liền kề để đi đến đó."
+        },
+        {
+          "label": "Mô tả bản đồ",
+          "default": "Bản đồ"
+        },
+        {
+          "label": "Đã đi đến chặng",
+          "description": "@stagelabel là biến và sẽ được thay bằng nhãn tương ứng.",
+          "default": "Đã đi đến chặng @stagelabel"
+        },
+        {
+          "label": "Chặng đã được mở khóa",
+          "description": "@stagelabel là biến và sẽ được thay bằng nhãn tương ứng.",
+          "default": "Chặng @stagelabel đã được mở khóa."
+        },
+        {
+          "label": "Nhãn thanh công cụ quay lại",
+          "default": "Bản đồ trò chơi"
+        },
+        {
+          "label": "Bật chế độ toàn màn hình",
+          "default": "Vào chế độ toàn màn hình"
+        },
+        {
+          "label": "Tắt chế độ toàn màn hình",
+          "default": "Thoát chế độ toàn màn hình"
+        }
+      ]
+    }
+  ]
+}

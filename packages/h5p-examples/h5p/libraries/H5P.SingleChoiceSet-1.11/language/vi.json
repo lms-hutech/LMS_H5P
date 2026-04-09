@@ -1,0 +1,180 @@
+{
+  "semantics": [
+    {
+      "label": "Danh sách câu hỏi",
+      "entity": "Câu hỏi",
+      "widgets": [
+        {
+          "label": "Biểu mẫu nhập liệu"
+        },
+        {
+          "label": "Nhập dạng văn bản"
+        }
+      ],
+      "field": {
+        "label": "Câu hỏi & Lựa chọn",
+        "fields": [
+          {
+            "label": "Câu hỏi"
+          },
+          {
+            "label": "Các lựa chọn - lựa chọn đầu tiên là đáp án đúng.",
+            "entity": "Câu trả lời",
+            "field": {
+              "label": "Lựa chọn"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Xác định phản hồi cho từng khoảng điểm",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm bao nhiêu khoảng tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+          "entity": "Khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho khoảng điểm đã định",
+                "placeholder": "Điền phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "fields": [
+        {
+          "label": "Tự động chuyển tiếp",
+          "description": "Tự động chuyển sang câu hỏi tiếp theo khi đã chọn một lựa chọn. Tùy chọn này phải được tắt để nội dung hoàn toàn hỗ trợ tiếp cận cho trình đọc màn hình."
+        },
+        {
+          "label": "Thời gian chờ khi trả lời đúng",
+          "description": "Thời gian tính bằng mili giây"
+        },
+        {
+          "label": "Thời gian chờ khi trả lời sai",
+          "description": "Thời gian tính bằng mili giây"
+        },
+        {
+          "label": "Bật hiệu ứng âm thanh"
+        },
+        {
+          "label": "Hiển thị nút \"Thử lại\""
+        },
+        {
+          "label": "Cho phép \"Xem đáp án\"",
+          "description": "Tính năng này không áp dụng khi bật giao diện mới."
+        },
+        {
+          "label": "Phần trăm để đạt",
+          "description": "Phần trăm tổng điểm cần thiết để đạt bài kiểm tra."
+        }
+      ]
+    },
+    {
+      "label": "Tùy chỉnh ngôn ngữ cho bộ câu hỏi trắc nghiệm",
+      "fields": [
+        {
+          "label": "Nhãn nút \"Tiếp theo\"",
+          "default": "Tiếp theo"
+        },
+        {
+          "label": "Nhãn hiển thị cho nút \"Tiếp theo\"",
+          "default": "Tiếp theo"
+        },
+        {
+          "label": "Nhãn nút \"Xem kết quả\"",
+          "default": "Xem kết quả"
+        },
+        {
+          "label": "Nhãn nút \"Thử lại\"",
+          "default": "Thử lại"
+        },
+        {
+          "label": "Tiêu đề trang xem đáp án",
+          "default": "Đáp án"
+        },
+        {
+          "label": "Văn bản trình đọc màn hình cho câu trả lời đúng",
+          "default": "Đúng!"
+        },
+        {
+          "label": "Văn bản trình đọc màn hình cho câu trả lời sai",
+          "default": "Sai!"
+        },
+        {
+          "label": "Lựa chọn đáng lẽ phải được chọn",
+          "default": "Đáng lẽ phải được chọn"
+        },
+        {
+          "label": "Lựa chọn không nên được chọn",
+          "default": "Không nên được chọn"
+        },
+        {
+          "label": "Nhãn nút \"Tắt tiếng\"",
+          "default": "Tắt tiếng"
+        },
+        {
+          "label": "Nhãn nút \"Đóng\"",
+          "default": "Đóng"
+        },
+        {
+          "label": "Văn bản số trang",
+          "description": "Hiển thị số trang hiện tại và tổng số trang. Các chỗ giữ chỗ là :num và :total.",
+          "default": "Trang :num / :total"
+        },
+        {
+          "label": "Văn bản thanh điểm cho trình đọc màn hình (Hỗ trợ tiếp cận)",
+          "default": "Bạn đạt :num trên :total điểm."
+        },
+        {
+          "label": "Nhãn số câu hỏi trong danh sách đáp án",
+          "description": "Đọc số thứ tự câu hỏi hiện tại trong danh sách đáp án. :num là chỗ giữ chỗ",
+          "default": "Câu hỏi :num"
+        },
+        {
+          "label": "Mô tả nút \"Xem đáp án\" (cho hỗ trợ tiếp cận)",
+          "default": "Xem đáp án. Các đáp án đúng sẽ được hiển thị trong bài tập."
+        },
+        {
+          "label": "Mô tả nút \"Thử lại\" (cho hỗ trợ tiếp cận)",
+          "default": "Thử lại bài tập. Tất cả các lần thử sẽ được đặt lại và bài tập bắt đầu lại."
+        },
+        {
+          "label": "Tiêu đề chính trên màn hình kết quả",
+          "default": "Kết quả của bạn:"
+        },
+        {
+          "label": "Tiêu đề cột điểm trên màn hình kết quả",
+          "default": ":score / :maxScore đúng"
+        },
+        {
+          "label": "Tiêu đề cột câu hỏi trên màn hình kết quả",
+          "default": "Câu hỏi"
+        },
+        {
+          "label": "Tiêu đề cột điểm trong bảng trên màn hình kết quả",
+          "default": "Điểm"
+        },
+        {
+          "label": "Giới thiệu cho câu trả lời đúng",
+          "default": "Đáp án đúng"
+        }
+      ]
+    }
+  ]
+}

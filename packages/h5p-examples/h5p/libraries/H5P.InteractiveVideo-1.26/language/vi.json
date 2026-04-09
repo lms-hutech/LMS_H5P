@@ -1,0 +1,508 @@
+{
+  "semantics": [
+    {
+      "label": "Trình soạn thảo video tương tác",
+      "fields": [
+        {
+          "label": "Tải lên/nhúng video",
+          "fields": [
+            {
+              "label": "Tệp video",
+              "description": "Chọn các tệp video sẽ được sử dụng trong video tương tác. Để hỗ trợ tốt nhất mọi trình duyệt, cần thêm ít nhất một phiên bản video ở định dạng webm và một ở định dạng mp4."
+            },
+            {
+              "label": "Tùy chọn màn hình bắt đầu (không hỗ trợ cho video YouTube)",
+              "fields": [
+                {
+                  "label": "Tiêu đề video tương tác",
+                  "default": "Video tương tác",
+                  "description": "Được sử dụng trong tóm tắt, thống kê v.v."
+                },
+                {
+                  "label": "Ẩn tiêu đề trên màn hình bắt đầu"
+                },
+                {
+                  "label": "Mô tả ngắn (tùy chọn)",
+                  "description": "Hiển thị mô tả ngắn trên màn hình bắt đầu của video."
+                },
+                {
+                  "label": "Hình thu nhỏ",
+                  "description": "Hình ảnh hiển thị trước khi video được phát. Không hoạt động với video YouTube."
+                }
+              ]
+            },
+            {
+              "label": "Phụ đề (không hỗ trợ cho video YouTube)",
+              "fields": [
+                {
+                  "label": "Phụ đề có sẵn",
+                  "entity": "Bản phụ đề",
+                  "field": {
+                    "label": "Bản phụ đề",
+                    "fields": [
+                      {
+                        "label": "Nhãn bản phụ đề",
+                        "description": "Được sử dụng khi người dùng chọn từ nhiều bản phụ đề. \"Phụ đề tiếng Tây Ban Nha\" có thể là nhãn cho bản phụ đề tiếng Tây Ban Nha.",
+                        "default": "Phụ đề"
+                      },
+                      {
+                        "label": "Loại phụ đề",
+                        "options": [
+                          {
+                            "label": "Phụ đề (subtitles)"
+                          },
+                          {
+                            "label": "Phụ đề cho người khiếm thính (captions)"
+                          },
+                          {
+                            "label": "Mô tả cho trình đọc màn hình (descriptions)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Ngôn ngữ phụ đề",
+                        "default": "vi",
+                        "description": "Phải là thẻ ngôn ngữ BCP 47 hợp lệ. Nếu loại phụ đề là \"Phụ đề (subtitles)\", ngôn ngữ phải được xác định."
+                      },
+                      {
+                        "label": "Tệp phụ đề (WebVTT)"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Bản phụ đề mặc định",
+                  "description": "Nếu để trống hoặc không khớp với nhãn nào, bản phụ đề đầu tiên sẽ được sử dụng."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Thêm tương tác",
+          "fields": [
+            {
+              "field": {
+                "fields": [
+                  {
+                    "label": "Thời gian hiển thị"
+                  },
+                  {
+                    "label": "Tạm dừng video khi đến thời điểm bắt đầu"
+                  },
+                  {
+                    "label": "Hiển thị dưới dạng",
+                    "description": "<b>Nút</b> là tương tác thu gọn mà người dùng cần nhấn để mở. <b>Cửa sổ bật lên</b> hiển thị trực tiếp trên video",
+                    "options": [
+                      {
+                        "label": "Nút"
+                      },
+                      {
+                        "label": "Cửa sổ bật lên"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Luôn hiển thị dạng nút trên màn hình nhỏ"
+                  },
+                  {
+                    "label": "Nhãn",
+                    "description": "Nhãn bên cạnh biểu tượng tương tác."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Phản ứng với đầu vào người dùng",
+                    "fields": [
+                      {
+                        "label": "Hành động khi tất cả đúng",
+                        "fields": [
+                          {
+                            "label": "Nhảy đến",
+                            "description": "Nhập vị trí theo định dạng P:GG"
+                          },
+                          {
+                            "label": "Cho phép người dùng không nhảy mà tiếp tục video"
+                          },
+                          {
+                            "label": "Thông báo"
+                          },
+                          {
+                            "label": "Nhãn nút nhảy"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Hành động khi sai",
+                        "fields": [
+                          {
+                            "label": "Nhảy đến",
+                            "description": "Nhập vị trí theo định dạng P:GG"
+                          },
+                          {
+                            "label": "Cho phép người dùng không nhảy mà tiếp tục video"
+                          },
+                          {
+                            "label": "Thông báo"
+                          },
+                          {
+                            "label": "Nhãn nút nhảy"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Chỉ tiếp tục khi đạt điểm tối đa",
+                        "description": "Để hoạt động tốt nhất, nên kết hợp với tùy chọn \"Không cho tua video\"."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Hiển thị",
+                    "fields": [
+                      {
+                        "label": "Màu nền",
+                        "default": "rgb(255, 255, 255)"
+                      },
+                      {
+                        "label": "Hiện bóng đổ",
+                        "description": "Thêm bóng đổ nhẹ cho khung tương tác. Tắt cho khung tương tác hoàn toàn trong suốt"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Đi đến khi nhấn",
+                    "fields": [
+                      {
+                        "label": "Loại đích",
+                        "options": [
+                          {
+                            "label": "Vị trí trong video"
+                          },
+                          {
+                            "label": "Trang web khác (URL)"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Nhảy đến",
+                        "description": "Vị trí trong video sẽ được tua đến khi nhấn hotspot. Nhập theo định dạng P:GG."
+                      },
+                      {
+                        "label": "URL",
+                        "fields": [
+                          {
+                            "label": "Giao thức",
+                            "options": [
+                              {
+                                "label": "http://"
+                              },
+                              {
+                                "label": "https://"
+                              },
+                              {
+                                "label": "(đường dẫn tương đối trên tên miền hiện tại)"
+                              },
+                              {
+                                "label": "khác"
+                              }
+                            ]
+                          },
+                          {
+                            "label": "URL"
+                          }
+                        ]
+                      },
+                      {
+                        "label": "Hiển thị là có thể nhấn",
+                        "description": "Thêm viền và biểu tượng để cho thấy tương tác có thể nhấn được"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {},
+            {}
+          ]
+        },
+        {
+          "label": "Bài tập tổng kết",
+          "fields": [
+            {},
+            {
+              "label": "Hiển thị lúc",
+              "description": "Số giây trước khi video kết thúc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "fields": [
+        {
+          "label": "Bắt đầu video tại",
+          "description": "Nhập vị trí theo định dạng P:GG"
+        },
+        {
+          "label": "Tự động phát video",
+          "description": "Video sẽ tự động bắt đầu khi được mở"
+        },
+        {
+          "label": "Phát video lặp lại",
+          "description": "Bật nếu video cần được phát lặp lại"
+        },
+        {
+          "label": "Ghi đè tùy chọn hiển thị nút \"Xem đáp án\"",
+          "description": "Tùy chọn này xác định nút \"Xem đáp án\" được hiện, ẩn hay cấu hình riêng cho mỗi câu hỏi.",
+          "options": [
+            {
+              "label": "Luôn hiện"
+            },
+            {
+              "label": "Luôn ẩn"
+            }
+          ]
+        },
+        {
+          "label": "Ghi đè tùy chọn hiển thị nút \"Làm lại\"",
+          "description": "Tùy chọn này xác định nút \"Làm lại\" được hiện, ẩn hay cấu hình riêng cho mỗi câu hỏi.",
+          "options": [
+            {
+              "label": "Luôn hiện"
+            },
+            {
+              "label": "Luôn ẩn"
+            }
+          ]
+        },
+        {
+          "label": "Mở menu dấu trang khi bắt đầu",
+          "description": "Tính năng này không khả dụng trên iPad khi video từ YouTube."
+        },
+        {
+          "label": "Hiện nút tua lại 10 giây"
+        },
+        {
+          "label": "Ngăn tua video",
+          "description": "Các tùy chọn này ngăn tua video theo hướng tương ứng.",
+          "options": [
+            {
+              "label": "Không hạn chế"
+            },
+            {
+              "label": "Tua tới"
+            },
+            {
+              "label": "Tua tới và tua lại"
+            }
+          ]
+        },
+        {
+          "label": "Tắt âm thanh",
+          "description": "Chọn để tắt âm thanh."
+        }
+      ]
+    },
+    {
+      "label": "Nhãn và mô tả",
+      "fields": [
+        {
+          "label": "Tên tương tác",
+          "default": "Tương tác"
+        },
+        {
+          "label": "Nhãn nút \"Phát\"",
+          "default": "Phát"
+        },
+        {
+          "label": "Nhãn nút \"Tạm dừng\"",
+          "default": "Tạm dừng"
+        },
+        {
+          "label": "Nhãn nút \"Tắt tiếng\"",
+          "default": "Tắt tiếng, hiện đang bật"
+        },
+        {
+          "label": "Nhãn nút \"Bật tiếng\"",
+          "default": "Bật tiếng, hiện đang tắt"
+        },
+        {
+          "label": "Nhãn nút \"Chất lượng video\"",
+          "default": "Chất lượng video"
+        },
+        {
+          "label": "Nhãn phụ đề video",
+          "default": "Phụ đề"
+        },
+        {
+          "label": "Văn bản nút \"Đóng\"",
+          "default": "Đóng"
+        },
+        {
+          "label": "Nhãn nút \"Toàn màn hình\"",
+          "default": "Toàn màn hình"
+        },
+        {
+          "label": "Nhãn nút \"Thoát toàn màn hình\"",
+          "default": "Thoát toàn màn hình"
+        },
+        {
+          "label": "Tiêu đề tóm tắt",
+          "default": "Mở tóm tắt"
+        },
+        {
+          "label": "Nhãn nút \"Dấu trang\"",
+          "default": "Dấu trang"
+        },
+        {
+          "label": "Tên màn hình gửi bài",
+          "default": "Màn hình gửi bài"
+        },
+        {
+          "label": "Nhãn nút \"Tiếp tục video\" khi nhảy theo phản hồi",
+          "default": "Tiếp tục"
+        },
+        {
+          "label": "Nhãn mặc định nút \"Tiếp tục video\"",
+          "default": "Tiếp tục video"
+        },
+        {
+          "label": "Nhãn mặc định nút \"Thêm tùy chọn phát\"",
+          "default": "Thêm tùy chọn phát"
+        },
+        {
+          "label": "Đặt tốc độ phát",
+          "default": "Tốc độ phát"
+        },
+        {
+          "label": "Nhãn \"Tua lại 10 giây\"",
+          "default": "Tua lại 10 giây"
+        },
+        {
+          "label": "Nhãn \"Tua tới và lùi bị tắt\"",
+          "default": "Tua tới và lùi bị tắt"
+        },
+        {
+          "label": "Văn bản \"Tua tới bị tắt\"",
+          "default": "Tua tới bị tắt"
+        },
+        {
+          "label": "Ghi chú âm thanh bị tắt",
+          "default": "Âm thanh bị tắt"
+        },
+        {
+          "label": "Cảnh báo phải trả lời đúng mới tiếp tục",
+          "default": "Bạn cần trả lời đúng tất cả câu hỏi để tiếp tục."
+        },
+        {
+          "label": "Nhãn nút \"Quay lại\"",
+          "default": "Quay lại"
+        },
+        {
+          "label": "Thời lượng tính bằng giờ",
+          "default": "Giờ"
+        },
+        {
+          "label": "Thời lượng tính bằng phút",
+          "default": "Phút"
+        },
+        {
+          "label": "Thời lượng tính bằng giây",
+          "default": "Giây"
+        },
+        {
+          "label": "Nhãn thời gian hiện tại",
+          "default": "Thời gian hiện tại:"
+        },
+        {
+          "label": "Nhãn tổng thời gian",
+          "default": "Tổng thời gian:"
+        },
+        {
+          "label": "Văn bản khi một tương tác xuất hiện",
+          "default": "Tương tác đã xuất hiện:"
+        },
+        {
+          "label": "Văn bản khi nhiều tương tác xuất hiện",
+          "default": "Nhiều tương tác đã xuất hiện."
+        },
+        {
+          "label": "Thông báo video đã tạm dừng",
+          "default": "Video đã tạm dừng"
+        },
+        {
+          "label": "Nhãn cho \"Nội dung\"",
+          "default": "Nội dung"
+        },
+        {
+          "label": "Văn bản cho biết số câu hỏi đã trả lời (@answered được thay bằng số câu đã trả lời)",
+          "default": "@answered đã trả lời"
+        },
+        {
+          "label": "Tiêu đề màn hình gửi bài",
+          "default": "Đã trả lời @answered câu hỏi",
+          "description": "@answered được thay bằng số câu đã trả lời."
+        },
+        {
+          "label": "Thông tin màn hình gửi bài khi nút gửi bị tắt",
+          "default": "Bạn đã trả lời @answered câu hỏi.",
+          "description": "@answered được thay bằng số câu đã trả lời."
+        },
+        {
+          "label": "Văn bản trên màn hình gửi bài",
+          "default": "Bạn đã trả lời @answered câu hỏi. Nhấn bên dưới để gửi kết quả.",
+          "description": "@answered được thay bằng số câu đã trả lời."
+        },
+        {
+          "label": "Màn hình gửi bài: Ghi chú khi chưa trả lời",
+          "default": "Bạn chưa trả lời câu hỏi nào."
+        },
+        {
+          "label": "Màn hình gửi bài: Hướng dẫn tiếp theo",
+          "default": "Bạn cần trả lời ít nhất một câu hỏi để gửi kết quả."
+        },
+        {
+          "label": "Màn hình gửi bài: Nút \"Gửi\"",
+          "default": "Gửi câu trả lời"
+        },
+        {
+          "label": "Màn hình gửi bài: Ghi chú khi đã gửi",
+          "default": "Câu trả lời của bạn đã được gửi!"
+        },
+        {
+          "label": "Màn hình gửi bài, tiêu đề cột: Câu hỏi đã trả lời",
+          "default": "Câu hỏi đã trả lời"
+        },
+        {
+          "label": "Màn hình gửi bài, tiêu đề cột: Điểm",
+          "default": "Điểm"
+        },
+        {
+          "label": "Màn hình gửi bài: Văn bản cho bài không tính điểm",
+          "default": "đã trả lời"
+        },
+        {
+          "label": "Màn hình gửi bài: Tóm tắt dòng có điểm (cho trình đọc màn hình)",
+          "default": "Bạn đạt @score trên @total điểm cho @question xuất hiện lúc @minutes phút @seconds giây."
+        },
+        {
+          "label": "Màn hình gửi bài: Tóm tắt dòng không có điểm (cho trình đọc màn hình)",
+          "default": "Bạn đã trả lời @question xuất hiện lúc @minutes phút @seconds giây."
+        },
+        {
+          "label": "Thanh tiến trình video",
+          "default": "Tiến trình video"
+        },
+        {
+          "label": "Mô tả cách tạo tương tác",
+          "default": "Phát video để bắt đầu tạo tương tác"
+        }
+      ]
+    }
+  ]
+}

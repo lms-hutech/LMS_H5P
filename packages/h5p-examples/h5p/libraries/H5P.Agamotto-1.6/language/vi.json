@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Tiêu đề",
+      "placeholder": "Bạn có thể nhập tiêu đề tùy chọn tại đây.",
+      "description": "Tiêu đề hiển thị phía trên hình ảnh"
+    },
+    {
+      "label": "Các phần tử",
+      "entity": "Phần tử",
+      "widgets": [
+        {
+          "label": "Biểu mẫu nhập liệu"
+        }
+      ],
+      "field": {
+        "label": "Phần tử",
+        "fields": [
+          {
+            "label": "Hình ảnh"
+          },
+          {
+            "label": "Nhãn",
+            "description": "Nhãn tùy chọn cho vị trí hình ảnh. Hãy đảm bảo nhãn không quá dài, nếu không sẽ không hiển thị được."
+          },
+          {
+            "label": "Mô tả",
+            "placeholder": "Mô tả hình ảnh của tôi...",
+            "description": "Mô tả tùy chọn cho hình ảnh"
+          },
+          {
+            "label": "File âm thanh",
+            "description": "File âm thanh tùy chọn sẽ phát khi hình ảnh được hiển thị."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này kiểm soát cách hoạt động của bài tập.",
+      "fields": [
+        {
+          "label": "Hình ảnh bắt đầu",
+          "description": "Đặt số thứ tự của hình ảnh bắt đầu."
+        },
+        {
+          "label": "Thanh trượt bắt dính",
+          "description": "Nếu bật, thanh trượt sẽ bắt dính tại các vị trí hình ảnh."
+        },
+        {
+          "label": "Hiển thị vị trí hình ảnh",
+          "description": "Nếu bật, các vị trí hình ảnh sẽ được đánh dấu trên thanh trượt."
+        },
+        {
+          "label": "Hiển thị nhãn",
+          "description": "Nếu bật, nhãn sẽ hiển thị bổ sung/thay thế cho các vị trí hình ảnh trên thanh trượt."
+        },
+        {
+          "label": "Màu thay thế cho vùng trong suốt",
+          "description": "Đặt màu sẽ thay thế các vùng trong suốt trong hình ảnh."
+        },
+        {
+          "label": "Tỷ lệ hình ảnh trong chế độ toàn màn hình",
+          "description": "Nếu bạn đã thêm mô tả cho hình ảnh, đặt phần trăm không gian mà hình ảnh chiếm trong chế độ toàn màn hình."
+        }
+      ]
+    },
+    {
+      "label": "Trình đọc màn hình (Hỗ trợ tiếp cận)",
+      "fields": [
+        {
+          "label": "Hình ảnh",
+          "default": "Hình ảnh"
+        },
+        {
+          "label": "Thanh trượt hình ảnh",
+          "default": "Thanh trượt hình ảnh"
+        },
+        {
+          "label": "Nhãn nút \"Tắt tiếng\"",
+          "default": "Tắt tiếng, đang bật âm"
+        },
+        {
+          "label": "Nhãn nút \"Bật tiếng\"",
+          "default": "Bật tiếng, đang tắt âm"
+        },
+        {
+          "label": "Tiêu đề nút toàn màn hình (bật)",
+          "default": "Vào chế độ toàn màn hình"
+        },
+        {
+          "label": "Tiêu đề nút toàn màn hình (tắt)",
+          "default": "Thoát chế độ toàn màn hình"
+        }
+      ]
+    }
+  ]
+}

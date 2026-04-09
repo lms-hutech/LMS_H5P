@@ -1,0 +1,168 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Típus",
+          "description": "Opcionális média, ami a kérdés felett jelenik meg."
+        },
+        {
+          "label": "Képnagyítás tiltása"
+        }
+      ]
+    },
+    {
+      "label": "Feladat leírása",
+      "description": "Ismertesse, hogy a felhasználónak hogyan kell megoldania a feladatot!",
+      "default": "Húzza a szavakat a megfelelő mezőkbe"
+    },
+    {
+      "label": "Szöveg",
+      "placeholder": "*Oslo* Norvégia fővárosa, *Stockholm* Svédország fővárosa és *Koppenhága* Dánia fővárosa. Minden város a *Skandináv:Európa északi része*-félszigeten található.",
+      "important": {
+        "description": "<ul><li>A behúzandó szavak megadása csillag karakterekkel (*) történik, az adott szó/kifejezés elején és végén elhelyezve azokat.</li><li>Szöveges segítség adható a kettőspont segítségével (:), amit a segítség elé kell elhelyezni.</li><li>Minden üres helyhez csak egy helyes szó tartozik.</li><li>Hozzáadhat visszajelzést, amely megjelenik egy feladat befejezésekor. Használja a „\\+” jelzést a helyes és a „\\-” jelzést a helytelen visszajelzéshez.</li></ul>",
+        "example": "A H5P tartalom szerkeszthető *böngészővel:Milyen típusú program a Chrome?*. <br /> A H5P tartalom *interaktív\\+Helyes! \\-Helytelen, próbálja újra!*"
+      }
+    },
+    {
+      "label": "Elterelők",
+      "placeholder": "*Reykjavík* *Helsinki*",
+      "description": "Adjon meg további, helytelen megoldásokat, amelyek figyelemelterelőként szolgálhatnak. Használja ugyanúgy a csillag (*) karaktert, mint a szöveg esetében."
+    },
+    {
+      "label": "Globális visszajelzés",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Alapértelmezett"
+            }
+          ],
+          "label": "Egyéni visszajelzés megadása tetszőleges eredmény intervallumokra",
+          "description": "Kattintson az \"Új intervallum\" gombra további intervallumok hozzáadásához. Például: 0-20% Rossz eredmény, 21-91% Átlagos eredmény, 91-100% Kimagasló eredmény!",
+          "entity": "intervallum",
+          "field": {
+            "fields": [
+              {
+                "label": "Eredmény intervallum"
+              },
+              {},
+              {
+                "label": "Visszajelzés az adott eredmény intervallumnál",
+                "placeholder": "Adja meg a visszajelzést"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "\"Ellenőrzés\" gomb szövege",
+      "default": "Ellenőrzés"
+    },
+    {
+      "label": "\"Leadás\" gomb szövege",
+      "default": "Leadás"
+    },
+    {
+      "label": "\"Újra\" gomb szövege",
+      "default": "Újra"
+    },
+    {
+      "label": "\"Megoldás mutatása\" gomb felülírása",
+      "default": "Megoldás mutatása"
+    },
+    {
+      "label": "Számozott behúzási zóna felirata",
+      "default": "Behúzási zóna @index.",
+      "description": "A kisegítő lehetőségekhez használt címke, ahol a szövegfelolvasó felolvassa a behúzási zóna indexét. Rendelkezésre álló változó: @index"
+    },
+    {
+      "label": "Üres behúzási zóna felirata",
+      "default": "A behúzási zóna @index üres.",
+      "description": "A támogató-segítő eszközöknél használt címke, ahol a szövegfelolvasó felolvassa, hogy a behúzási zóna üres"
+    },
+    {
+      "label": "Kitöltött behúzási zóna felirata",
+      "default": "A behúzási zóna @index már tartalmazza a(z) @draggable elemet.",
+      "description": "A támogató-segítő eszközöknél használt címke, ahol a szövegfelolvasó felolvassa, hogy a behúzási zónában már van valami"
+    },
+    {
+      "label": "Behúzható elemek felirata",
+      "default": "@index behúzható a @count elemből.",
+      "description": "A támogató-segítő eszközöknél használt címke, ahol a szövegfelolvasó felolvassa, hogy ez egy húzható elem. Rendelkezésre álló változók: @index, @count"
+    },
+    {
+      "label": "Segítség megjelenítése gomb felirata",
+      "default": "Segítség mutatása",
+      "description": "A támogató-segítő eszközöknél használt címke, amit a szövegfelolvasó még a segítség felolvasása előtt felolvas"
+    },
+    {
+      "label": "Szövegfelolvasó szövege a helyes válasznál",
+      "default": "Helyes! "
+    },
+    {
+      "label": "Szövegfelolvasó szövege a helytelen válasznál",
+      "default": "Helytelen!"
+    },
+    {
+      "label": "Megerősítés párbeszédablak címe, ha a felhasználó vissza akar állítani egy húzható elemet",
+      "default": "Behúzás visszaállítása"
+    },
+    {
+      "label": "Megerősítés párbeszédablak leírása, ha a felhasználó vissza akar állítani egy húzható elemet",
+      "default": "Biztos, hogy alaphelyzetbe állítja ezt a behúzási zónát?"
+    },
+    {
+      "label": "A támogató-segítő eszközöknél használt címke, ahol a szövegfelolvasó jelzi, hogy a húzás megkezdődött",
+      "default": "A behúzható elem megfogva."
+    },
+    {
+      "label": "A támogató-segítő eszközöknél használt címke, ahol a szövegfelolvasó jelzi, hogy a húzás megszakadt",
+      "default": "A húzás megszakítva."
+    },
+    {
+      "label": "A támogató-segítő eszközöknél használt címke, ahol a szövegfelolvasó jelzi, hogy a szöveg a helyes válasz",
+      "default": "Helyes válasz:"
+    },
+    {
+      "label": "A helyes/helytelen válaszokkal kapcsolatos visszajelzéseket tartalmazó panel fejléce",
+      "default": "Visszajelzés"
+    },
+    {
+      "label": "Viselkedési beállítások",
+      "description": "Ezekkel a beállításokkal szabályozható a feladat viselkedése.",
+      "fields": [
+        {
+          "label": "\"Újra\" engedélyezve"
+        },
+        {
+          "label": "\"Megoldás mutatása\" gomb felülírása"
+        },
+        {
+          "label": "\"Ellenőrzés\" engedélyezve"
+        },
+        {
+          "label": "Azonnali visszajelzés"
+        }
+      ]
+    },
+    {
+      "label": "A pontszámjelző sáv szöveges megjelenítése a szövegfelolvasót használók számára",
+      "default": "Elért pontszám: :num / :total"
+    },
+    {
+      "label": "\"Ellenőrzés\" gomb felirata támogató-segítő eszközöknek",
+      "default": "Válaszok ellenőrzése. A válaszokat helyesnek, helytelennek vagy megválaszolatlannak jelöli."
+    },
+    {
+      "label": "\"Megoldás mutatása\" gomb leírása támogató-segítő eszközöknek",
+      "default": "Megoldás mutatása. A feladat helyes megoldásának mutatása."
+    },
+    {
+      "label": "\"Újra\" gomb címkéje támogató-segítő eszközöknek",
+      "default": "Feladat újrapróbálása. Minden válasz visszaállítása és a feladat újrakezdése."
+    }
+  ]
+}

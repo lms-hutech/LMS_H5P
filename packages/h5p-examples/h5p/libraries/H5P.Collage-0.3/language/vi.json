@@ -1,0 +1,96 @@
+{
+  "semantics": [
+    {
+      "label": "Xem trước",
+      "description": "Bạn có thể kéo để di chuyển hình ảnh. Bạn cũng có thể chọn một hình ảnh rồi sử dụng phím + hoặc - trên bàn phím để phóng to/thu nhỏ, hoặc giữ phím Z và cuộn chuột.",
+      "fields": [
+        {
+          "label": "Bố cục",
+          "options": [
+            {
+              "label": "1"
+            },
+            {
+              "label": "1-1"
+            },
+            {
+              "label": "2"
+            },
+            {
+              "label": "2-1"
+            },
+            {
+              "label": "1-2"
+            },
+            {
+              "label": "2-2"
+            },
+            {
+              "label": "3-1"
+            },
+            {
+              "label": "1-3"
+            },
+            {
+              "label": "2-3"
+            },
+            {
+              "label": "3-2"
+            },
+            {
+              "label": "3-3"
+            }
+          ]
+        },
+        {
+          "label": "Tùy chọn hiển thị",
+          "fields": [
+            {
+              "label": "Chiều cao"
+            },
+            {
+              "label": "Khoảng cách"
+            },
+            {
+              "label": "Khung"
+            }
+          ]
+        },
+        {
+          "label": "Đoạn cắt",
+          "entity": "Đoạn cắt",
+          "field": {
+            "label": "Đoạn cắt",
+            "fields": [
+              {
+                "label": "Hình ảnh"
+              },
+              {
+                "label": "Độ lệch",
+                "fields": [
+                  {
+                    "label": "Trên"
+                  },
+                  {
+                    "label": "Trái"
+                  }
+                ]
+              },
+              {
+                "label": "Văn bản thay thế",
+                "description": "Bắt buộc. Nếu hình ảnh không tải được, văn bản này sẽ hiển thị thay thế. Cũng được sử dụng bởi trình đọc màn hình (hỗ trợ tiếp cận)."
+              },
+              {
+                "label": "Văn bản khi di chuột",
+                "description": "Tùy chọn. Văn bản này hiển thị khi di chuột qua hình ảnh."
+              },
+              {
+                "label": "Tỷ lệ"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

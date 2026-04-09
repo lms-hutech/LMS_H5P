@@ -1,0 +1,57 @@
+{
+  "semantics": [
+    {
+      "label": "Description",
+      "description": "Description of the export page.",
+      "default": "នៅលើទំព័រនេះអ្នកអាចនាំចេញអត្ថបទ គោលបំណង និងការវាយតម្លៃគោលបំណងរបស់អ្នក។"
+    },
+    {
+      "label": "Create document button label",
+      "description": "Text that will be displayed on the \"Create document\"-button.",
+      "default": "បង្កើតឯកសារ"
+    },
+    {
+      "label": "Submit text button",
+      "description": "Text that will be displayed on the \"Submit\"-button.",
+      "default": "បញ្ជូន"
+    },
+    {
+      "label": "Submit success label",
+      "default": "របាយការណ៍របស់អ្នកត្រូវបានដាក់ស្នើដោយជោគជ័យ!"
+    },
+    {
+      "label": "Select all exportable text button label",
+      "description": "Text that will be displayed on the \"Select all text\"-button.",
+      "default": "ជ្រើសរើស"
+    },
+    {
+      "label": "Export text button label",
+      "description": "Text that will be displayed on the \"Export text\"-button.",
+      "default": "នាំចេញ"
+    },
+    {
+      "label": "Label for help text",
+      "description": "Label for showing additional helpful information to the user.",
+      "default": "ព័ត៌មានបន្ថែម"
+    },
+    {
+      "label": "Fill in additional help information",
+      "description": "នៅទីនេះ អ្នកអាចបញ្ចូលព័ត៌មានមានប្រយោជន៍សម្រាប់អ្នកប្រើប្រាស់។"
+    },
+    {
+      "label": "Required input missing text",
+      "description": "An error message which will be displayed if one or more required input fields have not been filled. @pages will be replaced with the titles of affected pages.",
+      "default": "ទំព័រខាងក្រោមមានប្រអប់ទិន្នន័យដែលអ្នកចាំបាច់ត្រូវបំពេញ ដើម្បីពិនិត្យឡើងវិញឬដាក់ស្នើឯកសារនេះ៖: @pages"
+    },
+    {
+      "label": "Tooltip text for exit document button",
+      "description": "Tooltip text when hovering over the exit (X-) button",
+      "default": "Exit"
+    },
+    {
+      "label": "Aria-label for exit document button",
+      "description": "Aria label to be read when reading the exit (X-) button",
+      "default": "Exit"
+    }
+  ]
+}

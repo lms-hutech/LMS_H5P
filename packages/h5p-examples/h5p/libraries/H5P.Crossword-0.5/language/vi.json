@@ -1,0 +1,293 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả nhiệm vụ",
+      "description": "Mô tả nhiệm vụ của bạn tại đây."
+    },
+    {
+      "label": "Các từ",
+      "widgets": [
+        {
+          "label": "Biểu mẫu nhập liệu"
+        }
+      ],
+      "entity": "Từ",
+      "field": {
+        "label": "Từ",
+        "fields": [
+          {
+            "label": "Gợi ý",
+            "description": "Gợi ý cho câu trả lời."
+          },
+          {
+            "label": "Đáp án",
+            "description": "Đáp án cho gợi ý."
+          },
+          {
+            "label": "Gợi ý bổ sung"
+          },
+          {
+            "label": "Cố định từ trong lưới",
+            "description": "Chọn tùy chọn này nếu bạn muốn cố định từ tại một vị trí cụ thể trong lưới. Các từ cùng hướng không được chạm nhau."
+          },
+          {
+            "label": "Hàng",
+            "description": "Số hàng mà đáp án bắt đầu."
+          },
+          {
+            "label": "Cột",
+            "description": "Số cột mà đáp án bắt đầu."
+          },
+          {
+            "label": "Hướng",
+            "description": "Hướng của đáp án.",
+            "options": [
+              {
+                "label": "Ngang"
+              },
+              {
+                "label": "Dọc"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Từ khóa giải đố",
+      "description": "Bạn có thể tùy chọn đặt một từ khóa giải đố được rút ra từ các chữ cái trong lưới. Nó chỉ hiển thị khi có đủ chữ cái phù hợp trong ô chữ. Lưu ý: Tính năng này chưa hỗ trợ trợ năng."
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Xác định phản hồi cho từng khoảng điểm",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm nhiều khoảng tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+          "entity": "Khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho khoảng điểm tương ứng",
+                "placeholder": "Nhập phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Chủ đề",
+      "fields": [
+        {
+          "label": "Hình nền",
+          "description": "Chọn hình nền tùy chọn. Hình sẽ được thu phóng không méo để phù hợp với nền."
+        },
+        {
+          "label": "Màu nền",
+          "description": "Chọn màu nền. Sẽ được dùng thay cho hình nền hoặc ở nơi hình ảnh trong suốt."
+        },
+        {
+          "label": "Màu lưới",
+          "description": "Chọn màu cho lưới."
+        },
+        {
+          "label": "Màu nền ô",
+          "description": "Chọn màu nền của ô."
+        },
+        {
+          "label": "Màu chữ ô",
+          "description": "Chọn màu chữ của ô."
+        },
+        {
+          "label": "Màu số gợi ý",
+          "description": "Chọn màu số gợi ý trong ô."
+        },
+        {
+          "label": "Màu nền ô (đã chọn)",
+          "description": "Chọn màu nền của ô đang được chọn."
+        },
+        {
+          "label": "Màu chữ ô (đã chọn)",
+          "description": "Chọn màu chữ của ô đang được chọn."
+        },
+        {
+          "label": "Màu số gợi ý (đã chọn)",
+          "description": "Chọn màu số gợi ý trong ô đang được chọn."
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này xác định cách nhiệm vụ hoạt động chi tiết.",
+      "fields": [
+        {
+          "label": "Số lượng từ hiển thị",
+          "description": "Tạo lựa chọn ngẫu nhiên các từ. Lựa chọn luôn bao gồm các từ đã được cố định trong lưới. Giá trị trống hoặc 0 nghĩa là tất cả các từ."
+        },
+        {
+          "label": "Bật phản hồi tức thì"
+        },
+        {
+          "label": "Tính theo từ",
+          "description": "Nếu bật, điểm sẽ được tính theo từ. Nếu không, điểm tính theo ký tự."
+        },
+        {
+          "label": "Trừ điểm",
+          "description": "Nếu bật, mỗi câu trả lời sai sẽ bị trừ một điểm."
+        },
+        {
+          "label": "Hiện nút \"Làm lại\""
+        },
+        {
+          "label": "Bật nút \"Xem đáp án\""
+        },
+        {
+          "label": "Giữ câu trả lời đúng khi làm lại",
+          "description": "Nếu bật, câu trả lời đúng sẽ được giữ lại khi người dùng làm lại - trừ khi đã đạt điểm tối đa."
+        }
+      ]
+    },
+    {
+      "label": "Nhãn và mô tả",
+      "fields": [
+        {
+          "label": "Nhãn cho hàng ngang",
+          "default": "Ngang"
+        },
+        {
+          "label": "Nhãn cho hàng dọc",
+          "default": "Dọc"
+        },
+        {
+          "label": "Nhãn nút \"Kiểm tra\"",
+          "default": "Kiểm tra"
+        },
+        {
+          "label": "Nhãn nút \"Gửi bài\"",
+          "default": "Gửi bài"
+        },
+        {
+          "label": "Nhãn nút \"Làm lại\"",
+          "default": "Làm lại"
+        },
+        {
+          "label": "Nhãn nút \"Xem đáp án\"",
+          "default": "Xem đáp án"
+        },
+        {
+          "label": "Không thể tạo ô chữ",
+          "default": "Không thể tạo ô chữ từ các từ đã cho. Vui lòng thử lại với ít từ hơn hoặc các từ có nhiều chữ cái chung hơn."
+        },
+        {
+          "label": "Không thể tạo ô chữ (quá ít từ)",
+          "default": "Không thể tạo ô chữ. Bạn cần ít nhất hai từ."
+        },
+        {
+          "label": "Các từ có vấn đề",
+          "description": "Liệt kê các từ không thể đặt được khi tạo ô chữ. @words là biến sẽ được thay thế bằng các từ có vấn đề thực tế.",
+          "default": "Một số từ không thể được đặt. Nếu bạn cố định từ trong lưới, hãy đảm bảo vị trí của chúng không ngăn cản việc đặt các từ khác. Các từ cùng hướng không được chạm nhau. Các từ có vấn đề: @words"
+        },
+        {
+          "label": "Gợi ý bổ sung",
+          "default": "Gợi ý bổ sung"
+        },
+        {
+          "label": "Đóng cửa sổ",
+          "default": "Đóng cửa sổ"
+        }
+      ]
+    },
+    {
+      "label": "Trình đọc màn hình (Trợ năng)",
+      "fields": [
+        {
+          "label": "Mô tả lưới ô chữ",
+          "default": "Lưới ô chữ. Sử dụng phím mũi tên và bàn phím để nhập ký tự. Sử dụng phím Tab để dùng ô nhập thay thế."
+        },
+        {
+          "label": "Cột",
+          "default": "Cột"
+        },
+        {
+          "label": "Hàng",
+          "default": "Hàng"
+        },
+        {
+          "label": "Ngang",
+          "default": "Ngang"
+        },
+        {
+          "label": "Dọc",
+          "default": "Dọc"
+        },
+        {
+          "label": "Trống",
+          "default": "Trống"
+        },
+        {
+          "description": "Thông báo kết quả. @clue là biến và sẽ được thay thế bằng gợi ý tương ứng.",
+          "label": "Kết quả cho",
+          "default": "Kết quả cho: @clue"
+        },
+        {
+          "label": "Đúng",
+          "default": "Đúng"
+        },
+        {
+          "label": "Sai",
+          "default": "Sai"
+        },
+        {
+          "label": "Điểm",
+          "default": "Điểm"
+        },
+        {
+          "description": "Thông báo đáp án. @clue và @solution là biến và sẽ được thay thế bằng giá trị tương ứng.",
+          "label": "Đáp án cho",
+          "default": "Đáp án cho @clue là: @solution"
+        },
+        {
+          "description": "Thông báo gợi ý bổ sung. @clue là biến và sẽ được thay thế bằng gợi ý tương ứng.",
+          "label": "Gợi ý bổ sung cho",
+          "default": "Mở gợi ý bổ sung cho @clue"
+        },
+        {
+          "description": "Thông báo vị trí. @position và @length là biến và sẽ được thay thế bằng giá trị tương ứng.",
+          "label": "Ký tự",
+          "default": "Ký tự @position trên @length"
+        },
+        {
+          "description": "Thông báo độ dài từ. @length là biến và sẽ được thay thế bằng giá trị tương ứng.",
+          "label": "Độ dài từ",
+          "default": "Từ có @length ký tự"
+        },
+        {
+          "label": "Mô tả trình đọc màn hình cho nút \"Kiểm tra\"",
+          "default": "Kiểm tra các câu trả lời. Các câu trả lời sẽ được đánh dấu đúng, sai hoặc chưa trả lời."
+        },
+        {
+          "label": "Mô tả trình đọc màn hình cho nút \"Xem đáp án\"",
+          "default": "Hiển thị đáp án. Ô chữ sẽ được điền đáp án đúng."
+        },
+        {
+          "label": "Mô tả trình đọc màn hình cho nút \"Làm lại\"",
+          "default": "Làm lại bài tập. Đặt lại tất cả và bắt đầu lại."
+        },
+        {
+          "label": "Kết quả của bạn",
+          "description": "@score và @total là biến và sẽ được thay thế bằng giá trị tương ứng.",
+          "default": "Bạn đạt @score trên @total điểm."
+        }
+      ]
+    }
+  ]
+}

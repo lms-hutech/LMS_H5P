@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Bilder",
+      "field": {
+        "label": "Bilde",
+        "fields": [
+          {
+            "label": "Bilde"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Forhold mellom bredde og høyde",
+      "description": "Hvis du velger \"Automatisk\", beholder bildene forholdet mellom bredde og høyde.",
+      "options": [
+        {
+          "label": "Automatisk"
+        },
+        {
+          "label": "Egendefinert"
+        },
+        {
+          "label": "Ikke fast"
+        }
+      ]
+    },
+    {
+      "label": "Innstillinger for forholdet mellom bredde og høyde",
+      "fields": [
+        {
+          "label": "Bredde",
+          "description": "Hvis du setter 4 her og 3 for høyde, blir sideforholdet 4 : 3."
+        },
+        {
+          "label": "Høyde",
+          "description": "Hvis du setter 3 her og 4 for bredde, blir sideforholdet 4 : 3."
+        }
+      ]
+    },
+    {
+      "label": "Tilgjengelighet for bildeserien",
+      "fields": [
+        {
+          "label": "Navn på \"Neste bilde\"-knapp",
+          "default": "Neste bilde",
+          "description": "Dette blir bare brukt av skjermleser. Det blir ikke vist."
+        },
+        {
+          "label": "Navn på \"Forrige bilde\"-knapp",
+          "default": "Forrige bilde",
+          "description": "Dette blir bare brukt av skjermleser. Det blir ikke vist."
+        },
+        {
+          "label": "Navn på knapp for direktenavigasjon til bildene",
+          "default": "Gå til bilde %slide",
+          "description": "Dette blir bare brukt av skjermleser. Det blir ikke vist. %slide er en variabel og blir erstattet med det aktuelle bildenummeret."
+        }
+      ]
+    }
+  ]
+}

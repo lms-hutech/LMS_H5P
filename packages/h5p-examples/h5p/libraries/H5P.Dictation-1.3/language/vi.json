@@ -1,0 +1,374 @@
+{
+  "semantics": [
+    {
+      "label": "Phương tiện",
+      "fields": [
+        {
+          "label": "Loại",
+          "description": "Phương tiện tùy chọn hiển thị phía trên bài tập."
+        },
+        {
+          "label": "Tắt phóng to hình ảnh"
+        }
+      ]
+    },
+    {
+      "label": "Mô tả nhiệm vụ",
+      "description": "Mô tả bài tập tại đây.",
+      "placeholder": "Vui lòng lắng nghe cẩn thận và viết lại những gì bạn nghe được."
+    },
+    {
+      "label": "Các câu",
+      "widgets": [
+        {
+          "label": "Mặc định"
+        }
+      ],
+      "entity": "Câu",
+      "field": {
+        "label": "Câu",
+        "fields": [
+          {
+            "label": "Mô tả",
+            "description": "Bạn có thể nhập mô tả đơn giản tùy chọn cho ô nhập, ví dụ cho hội thoại."
+          },
+          {
+            "label": "Bản ghi âm",
+            "description": "Câu được đọc ở tốc độ bình thường"
+          },
+          {
+            "label": "Bản ghi âm (chậm)",
+            "description": "Câu được đọc ở tốc độ chậm"
+          },
+          {
+            "label": "Văn bản",
+            "description": "Văn bản cần viết. Bạn có thể thêm các cách viết thay thế bằng cách thêm dấu gạch đứng (|) theo sau là cách viết thay thế."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Xác định phản hồi cho từng khoảng điểm",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm bao nhiêu khoảng tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+          "entity": "Khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {
+                "label": "Phản hồi cho khoảng điểm đã định",
+                "placeholder": "Điền phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này kiểm soát cách bài tập hoạt động.",
+      "fields": [
+        {
+          "label": "Số lần nghe tối đa",
+          "description": "Giới hạn số lần được nghe bản ghi âm."
+        },
+        {
+          "label": "Số lần nghe tối đa cho tốc độ chậm",
+          "description": "Giới hạn số lần được nghe bản ghi âm chậm."
+        },
+        {
+          "label": "Không cho tạm dừng",
+          "description": "Khi bật, file âm thanh không thể tạm dừng trong khi phát."
+        },
+        {
+          "label": "Trì hoãn phát",
+          "description": "Tùy chọn đặt thời gian trì hoãn tối đa 3 giây trước khi phát. Hữu ích để cho người học thời gian chuyển sang ô nhập."
+        },
+        {
+          "label": "Xáo trộn câu",
+          "description": "Xác định khi nào các câu nên được xáo trộn.",
+          "options": [
+            {
+              "label": "Không bao giờ"
+            },
+            {
+              "label": "Một lần khi bắt đầu"
+            },
+            {
+              "label": "Mỗi lần thử"
+            }
+          ]
+        },
+        {
+          "label": "Tính điểm",
+          "fields": [
+            {
+              "label": "Bỏ qua dấu câu",
+              "description": "Khi bật, dấu câu không được tính vào điểm."
+            },
+            {
+              "label": "Chế độ không trừ điểm",
+              "description": "Khi bật, chỉ câu trả lời đúng được tính điểm. Lỗi không bị trừ điểm."
+            },
+            {
+              "label": "Giá trị lỗi nhỏ",
+              "description": "Xác định mức độ tính điểm cho lỗi nhỏ (từ 3-9 ký tự: tối đa 1 lỗi, hơn 9 ký tự: tối đa 2 lỗi).",
+              "options": [
+                {
+                  "label": "100 %"
+                },
+                {
+                  "label": "50 %"
+                },
+                {
+                  "label": "0 %"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Văn bản",
+          "fields": [
+            {
+              "label": "Ký tự phân tách từ",
+              "description": "Xác định ký tự phân tách từ thay thế cho khoảng trắng, để cho phép đáp án thay thế có nhiều từ."
+            },
+            {
+              "label": "Hướng viết",
+              "description": "Xác định hướng viết là phải-sang-trái hay trái-sang-phải.",
+              "options": [
+                {
+                  "label": "Tự động phát hiện"
+                },
+                {
+                  "label": "Phải sang trái"
+                },
+                {
+                  "label": "Trái sang phải"
+                }
+              ]
+            },
+            {
+              "label": "Tách ký tự",
+              "description": "Bật tùy chọn này nếu một số ký tự (ví dụ: chữ Hán) cần được tự động tách thành các từ riêng."
+            }
+          ]
+        },
+        {
+          "label": "Hiển thị phản hồi",
+          "fields": [
+            {
+              "label": "Hiển thị riêng lỗi nhỏ",
+              "description": "Khi bật, lỗi nhỏ sẽ được hiển thị với kiểu riêng để phân biệt với lỗi thông thường."
+            },
+            {
+              "label": "Hiển thị đáp án thay thế",
+              "description": "Xác định đáp án thay thế nào hiển thị trong phần đáp án cho từ sai hoặc thiếu.",
+              "options": [
+                {
+                  "label": "Chỉ hiển thị đáp án đầu tiên"
+                },
+                {
+                  "label": "Hiển thị tất cả đáp án"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Bật \"Thử lại\""
+        },
+        {
+          "label": "Cho phép \"Xem đáp án\""
+        },
+        {
+          "label": "Hiển thị đáp án khi kiểm tra"
+        }
+      ]
+    },
+    {
+      "label": "Giao diện",
+      "fields": [
+        {
+          "label": "Phản hồi chung",
+          "description": "Bạn có thể sử dụng nhiều chỗ giữ chỗ: @matches = từ đúng, @total = tổng lỗi, @capped = tổng lỗi (giới hạn bằng số từ đúng), @wrong = từ sai, @added = từ thêm, @missing = từ thiếu, @typo = lỗi nhỏ",
+          "default": "Bạn đã mắc tổng cộng @total lỗi."
+        },
+        {
+          "label": "Phản hồi chung (chế độ không trừ điểm)",
+          "description": "Bạn có thể sử dụng nhiều chỗ giữ chỗ: @matches = từ đúng, @total = tổng lỗi, @wrong = từ sai, @added = từ thêm, @missing = từ thiếu, @typo = lỗi nhỏ",
+          "default": "Bạn đã nhập đúng @total từ và mắc @typo lỗi nhỏ."
+        },
+        {
+          "label": "Nhãn nút \"Kiểm tra\"",
+          "default": "Kiểm tra"
+        },
+        {
+          "label": "Nhãn nút \"Nộp\"",
+          "default": "Nộp"
+        },
+        {
+          "label": "Nhãn nút \"Thử lại\"",
+          "default": "Thử lại"
+        },
+        {
+          "label": "Nhãn nút \"Xem đáp án\"",
+          "default": "Xem đáp án"
+        },
+        {
+          "label": "Thông báo không thể phát file âm thanh",
+          "default": "Trình duyệt của bạn không hỗ trợ file âm thanh này."
+        }
+      ]
+    },
+    {
+      "label": "Trình đọc màn hình",
+      "fields": [
+        {
+          "label": "Mô tả nút \"Kiểm tra\" cho trình đọc màn hình",
+          "default": "Kiểm tra câu trả lời. Các ô nhập sẽ được đánh dấu đúng, sai hoặc chưa trả lời."
+        },
+        {
+          "label": "Mô tả nút \"Xem đáp án\" cho trình đọc màn hình",
+          "default": "Xem đáp án. Đáp án đúng sẽ được hiển thị trong bài tập."
+        },
+        {
+          "label": "Mô tả nút \"Thử lại\" cho trình đọc màn hình",
+          "default": "Thử lại bài tập. Tất cả ô nhập sẽ được đặt lại và bài tập bắt đầu lại."
+        },
+        {
+          "label": "Nút phát",
+          "default": "Phát"
+        },
+        {
+          "label": "Nút phát chậm",
+          "default": "Phát chậm"
+        },
+        {
+          "label": "Số lần nghe còn lại (văn bản cho trình đọc màn hình và tooltip)",
+          "description": "@number sẽ được thay bằng số lần còn lại.",
+          "default": "Số lần nghe còn lại: @number"
+        },
+        {
+          "label": "Không giới hạn (văn bản cho trình đọc màn hình và tooltip)",
+          "default": "không giới hạn"
+        },
+        {
+          "label": "Ô nhập",
+          "default": "Nhập những gì bạn nghe được."
+        },
+        {
+          "label": "Kết quả của bạn",
+          "description": "@score sẽ được thay bằng điểm đạt được. @total sẽ được thay bằng điểm tối đa.",
+          "default": "Bạn đạt @score / @total điểm"
+        },
+        {
+          "label": "Đáp án",
+          "default": "Đáp án"
+        },
+        {
+          "label": "Câu",
+          "default": "Câu"
+        },
+        {
+          "label": "Phần câu",
+          "default": "Phần câu"
+        },
+        {
+          "label": "Đúng",
+          "default": "đúng"
+        },
+        {
+          "label": "Sai",
+          "default": "sai"
+        },
+        {
+          "label": "Lỗi nhỏ",
+          "default": "Lỗi nhỏ"
+        },
+        {
+          "label": "Từ hoặc ký tự bị thiếu",
+          "default": "thiếu"
+        },
+        {
+          "label": "Từ hoặc ký tự bị thêm",
+          "default": "thêm"
+        },
+        {
+          "label": "Đáp án đúng",
+          "default": "Đáp án đúng là"
+        },
+        {
+          "label": "Hoặc",
+          "default": "hoặc"
+        },
+        {
+          "label": "Điểm",
+          "default": "điểm"
+        },
+        {
+          "label": "Điểm (số nhiều)",
+          "default": "điểm"
+        },
+        {
+          "label": "Dấu chấm",
+          "default": "dấu chấm"
+        },
+        {
+          "label": "Dấu chấm than",
+          "default": "dấu chấm than"
+        },
+        {
+          "label": "Dấu chấm hỏi",
+          "default": "dấu chấm hỏi"
+        },
+        {
+          "label": "Dấu phẩy",
+          "default": "dấu phẩy"
+        },
+        {
+          "label": "Dấu nháy đơn",
+          "default": "dấu nháy đơn"
+        },
+        {
+          "label": "Dấu nháy kép",
+          "default": "dấu nháy kép"
+        },
+        {
+          "label": "Dấu hai chấm",
+          "default": "dấu hai chấm"
+        },
+        {
+          "label": "Dấu chấm phẩy",
+          "default": "dấu chấm phẩy"
+        },
+        {
+          "label": "Dấu cộng",
+          "default": "dấu cộng"
+        },
+        {
+          "label": "Dấu trừ",
+          "default": "dấu trừ"
+        },
+        {
+          "label": "Dấu sao",
+          "default": "dấu sao"
+        },
+        {
+          "label": "Dấu gạch chéo",
+          "default": "dấu gạch chéo"
+        }
+      ]
+    }
+  ]
+}

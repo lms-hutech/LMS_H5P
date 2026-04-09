@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Mặc định"
+        }
+      ],
+      "label": "Các thẻ",
+      "entity": "thẻ",
+      "field": {
+        "label": "Thẻ",
+        "fields": [
+          {
+            "label": "Hình ảnh"
+          },
+          {
+            "label": "Văn bản thay thế cho hình ảnh",
+            "description": "Mô tả những gì có thể thấy trong ảnh. Văn bản được đọc bởi công cụ chuyển văn bản thành giọng nói dành cho người khiếm thị."
+          },
+          {
+            "label": "Bản âm thanh",
+            "description": "Âm thanh tùy chọn phát khi thẻ được lật."
+          },
+          {
+            "label": "Hình ảnh ghép đôi",
+            "description": "Hình ảnh tùy chọn để ghép đôi thay vì dùng hai thẻ có cùng hình ảnh."
+          },
+          {
+            "label": "Văn bản thay thế cho hình ảnh ghép đôi",
+            "description": "Mô tả những gì có thể thấy trong ảnh. Văn bản được đọc bởi công cụ chuyển văn bản thành giọng nói dành cho người khiếm thị."
+          },
+          {
+            "label": "Bản âm thanh ghép đôi",
+            "description": "Âm thanh tùy chọn phát khi thẻ thứ hai được lật."
+          },
+          {
+            "label": "Mô tả",
+            "description": "Văn bản ngắn tùy chọn sẽ hiện lên khi hai thẻ khớp được tìm thấy."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này cho phép bạn điều khiển cách trò chơi hoạt động.",
+      "fields": [
+        {
+          "label": "Xếp các thẻ thành hình vuông",
+          "description": "Sẽ cố gắng khớp số cột và hàng khi sắp xếp thẻ. Sau đó, thẻ sẽ được thu phóng để vừa với khung chứa."
+        },
+        {
+          "label": "Số thẻ sử dụng",
+          "description": "Đặt giá trị lớn hơn 2 sẽ khiến trò chơi chọn ngẫu nhiên thẻ từ danh sách."
+        },
+        {
+          "label": "Thêm nút thử lại khi trò chơi kết thúc"
+        }
+      ]
+    },
+    {
+      "label": "Giao diện",
+      "description": "Điều khiển giao diện của trò chơi.",
+      "fields": [
+        {
+          "label": "Màu chủ đề",
+          "description": "Chọn một màu để tạo chủ đề cho trò chơi thẻ của bạn."
+        },
+        {
+          "label": "Mặt sau thẻ",
+          "description": "Sử dụng mặt sau tùy chỉnh cho thẻ của bạn."
+        }
+      ]
+    },
+    {
+      "label": "Bản địa hóa",
+      "fields": [
+        {
+          "label": "Văn bản số lần lật thẻ",
+          "default": "Số lần lật thẻ"
+        },
+        {
+          "label": "Văn bản thời gian đã dùng",
+          "default": "Thời gian đã dùng"
+        },
+        {
+          "label": "Văn bản phản hồi",
+          "default": "Làm tốt lắm!"
+        },
+        {
+          "label": "Văn bản nút thử lại",
+          "default": "Thử lại?"
+        },
+        {
+          "label": "Nhãn nút đóng",
+          "default": "Đóng"
+        },
+        {
+          "label": "Nhãn trò chơi",
+          "default": "Trò chơi Trí nhớ. Tìm các thẻ phù hợp."
+        },
+        {
+          "label": "Hướng dẫn trò chơi",
+          "default": "Sử dụng phím mũi tên trái phải để điều hướng thẻ. Dùng phím cách hoặc Enter để lật thẻ."
+        },
+        {
+          "label": "Nhãn kết thúc trò chơi",
+          "default": "Tất cả các thẻ đã được tìm thấy."
+        },
+        {
+          "label": "Nhãn đánh số thẻ",
+          "description": "%num và %total là ký tự giữ chỗ và sẽ được thay thế bằng các giá trị tương ứng của thẻ.",
+          "default": "Thẻ %num trên %total:"
+        },
+        {
+          "label": "Nhãn thẻ chưa lật",
+          "default": "Chưa lật. Nhấn để lật."
+        },
+        {
+          "label": "Nhãn thẻ đã lật",
+          "default": "Đã lật."
+        },
+        {
+          "label": "Nhãn thẻ đã khớp",
+          "default": "Đã tìm thấy cặp phù hợp."
+        },
+        {
+          "label": "Thông báo thẻ khớp",
+          "default": "Các thẻ của bạn khớp nhau!"
+        },
+        {
+          "label": "Thông báo thẻ không khớp",
+          "default": "Các thẻ bạn chọn không khớp. Lật thẻ khác để thử lại."
+        }
+      ]
+    }
+  ]
+}

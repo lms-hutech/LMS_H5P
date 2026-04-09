@@ -1,0 +1,132 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả bài tập"
+    },
+    {
+      "widgets": [
+        {
+          "label": "Mặc định"
+        }
+      ],
+      "label": "Các thẻ",
+      "entity": "thẻ",
+      "field": {
+        "label": "Thẻ",
+        "fields": [
+          {
+            "label": "Câu hỏi",
+            "description": "Câu hỏi văn bản tùy chọn cho thẻ. (Thẻ có thể chỉ dùng hình ảnh, chỉ văn bản hoặc cả hai)"
+          },
+          {
+            "label": "Câu trả lời",
+            "description": "Đáp án (lời giải) cho thẻ. Dùng dấu gạch chéo / để tách các đáp án thay thế. Dùng \\/ nếu đáp án chứa dấu /."
+          },
+          {
+            "label": "Hình ảnh",
+            "description": "Hình ảnh tùy chọn cho thẻ. (Thẻ có thể chỉ dùng hình ảnh, chỉ văn bản hoặc cả hai)"
+          },
+          {
+            "label": "Văn bản thay thế cho hình ảnh"
+          },
+          {
+            "label": "Gợi ý",
+            "fields": [
+              {
+                "label": "Văn bản gợi ý"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Văn bản tiến trình",
+      "default": "Thẻ @card trên @total",
+      "description": "Văn bản tiến trình, các biến có sẵn: @card và @total. Ví dụ: 'Thẻ @card trên @total'"
+    },
+    {
+      "label": "Văn bản cho next button",
+      "default": "Tiếp theo"
+    },
+    {
+      "label": "Văn bản cho previous button",
+      "default": "Quay lại"
+    },
+    {
+      "label": "Văn bản cho check answers button",
+      "default": "Kiểm tra"
+    },
+    {
+      "label": "Yêu cầu dữ liệu nhập của người dùng trước khi có thể xem lời giải"
+    },
+    {
+      "label": "Văn bản cho answer input field",
+      "default": "Câu trả lời của bạn"
+    },
+    {
+      "label": "Văn bản cho correct answer",
+      "default": "Đúng"
+    },
+    {
+      "label": "Văn bản cho incorrect answer",
+      "default": "Sai"
+    },
+    {
+      "label": "Văn bản hiện lời giải",
+      "default": "Đáp án đúng"
+    },
+    {
+      "label": "Văn bản cho results title",
+      "default": "Kết quả"
+    },
+    {
+      "label": "Tiêu đề bảng kết quả mô tả các thẻ",
+      "default": "Các thẻ"
+    },
+    {
+      "label": "Tiêu đề bảng kết quả mô tả điểm số",
+      "default": "Điểm"
+    },
+    {
+      "label": "Văn bản cho number of correct",
+      "default": "@score trên @total đúng",
+      "description": "Văn bản kết quả, các biến có sẵn: @score và @total. Ví dụ: '@score trên @total đúng'"
+    },
+    {
+      "label": "Văn bản cho show results",
+      "default": "Hiện kết quả"
+    },
+    {
+      "label": "Văn bản cho short answer label",
+      "default": "A:"
+    },
+    {
+      "label": "Văn bản cho \"retry\" button",
+      "default": "Thử lại"
+    },
+    {
+      "label": "Phân biệt chữ hoa/thường",
+      "description": "Đảm bảo dữ liệu nhập của người dùng phải giống chính xác với đáp án."
+    },
+    {
+      "label": "Văn bản sai cho công nghệ hỗ trợ",
+      "default": "Đáp án sai. Đáp án đúng là @answer",
+      "description": "Văn bản được công nghệ hỗ trợ thông báo. Sử dụng biến @answer."
+    },
+    {
+      "label": "Văn bản phản hồi đúng cho công nghệ hỗ trợ",
+      "default": "@answer đúng.",
+      "description": "Văn bản được công nghệ hỗ trợ thông báo khi thẻ được trả lời đúng. Sử dụng biến @answer."
+    },
+    {
+      "label": "Thay đổi thẻ cho công nghệ hỗ trợ",
+      "default": "Trang @current trên @total",
+      "description": "Văn bản được công nghệ hỗ trợ thông báo khi điều hướng giữa các thẻ. Sử dụng biến @current và @total."
+    },
+    {
+      "label": "Ngẫu nhiên hóa thẻ",
+      "description": "Kích hoạt để ngẫu nhiên hóa thứ tự các thẻ được hiển thị."
+    }
+  ]
+}

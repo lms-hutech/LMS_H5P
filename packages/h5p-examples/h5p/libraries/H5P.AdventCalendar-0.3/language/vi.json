@@ -1,0 +1,203 @@
+{
+  "semantics": [
+    {
+      "label": "Chế độ hình ảnh cửa",
+      "description": "Chọn xem bạn muốn tự đặt từng hình ảnh cửa hay để H5P tự động tạo dựa trên hình nền lịch.",
+      "options": [
+        {
+          "label": "Tôi muốn tự đặt từng hình ảnh cửa"
+        },
+        {
+          "label": "H5P sẽ đặt hình ảnh cửa dựa trên hình nền"
+        }
+      ]
+    },
+    {
+      "label": "Cửa",
+      "entity": "Cửa",
+      "field": {
+        "fields": [
+          {
+            "label": "Loại nội dung",
+            "description": "Loại nội dung tùy chọn xuất hiện khi cửa được mở.",
+            "options": [
+              {
+                "label": "Âm thanh"
+              },
+              {
+                "label": "Hình ảnh"
+              },
+              {
+                "label": "Liên kết"
+              },
+              {
+                "label": "Văn bản"
+              },
+              {
+                "label": "Video"
+              }
+            ]
+          },
+          {
+            "label": "Âm thanh"
+          },
+          {
+            "label": "Hình ảnh"
+          },
+          {
+            "label": "Liên kết"
+          },
+          {
+            "label": "Văn bản"
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Tự động phát"
+          },
+          {
+            "label": "Hình ảnh cho cửa",
+            "description": "Hình ảnh dùng cho cửa. Cần tỷ lệ 1:1 nếu muốn nửa trái khớp với nửa phải."
+          },
+          {
+            "label": "Hình nền",
+            "description": "Hình ảnh hiển thị phía sau cửa. Nếu không có hình, số cửa sẽ được hiển thị."
+          }
+        ]
+      },
+      "widgets": [
+        {
+          "label": "Mặc định"
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hiển thị",
+      "description": "Các tùy chọn này cho phép bạn cấu hình giao diện.",
+      "fields": [
+        {
+          "label": "Hình nền cho lịch"
+        },
+        {
+          "label": "Hình mẫu cho cửa",
+          "description": "Nếu đặt hình, nó sẽ được dùng làm lớp phủ cho mỗi cửa mà không có hình riêng."
+        },
+        {
+          "label": "Ẩn viền cửa"
+        },
+        {
+          "label": "Ẩn số cửa"
+        },
+        {
+          "label": "Ẩn tay nắm cửa"
+        },
+        {
+          "label": "Ẩn đường viền cửa"
+        },
+        {
+          "label": "Tuyết rơi",
+          "description": "Thêm một chút tuyết cho lịch."
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt âm thanh",
+      "description": "Các tùy chọn này cho phép bạn cấu hình âm thanh.",
+      "fields": [
+        {
+          "label": "Nhạc nền"
+        },
+        {
+          "label": "Tự động phát nhạc nền",
+          "description": "Nếu chọn, nhạc nền sẽ tự động phát khi nội dung được mở. Lưu ý: Quy tắc của một số trình duyệt có thể ngăn việc tự động phát."
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này xác định cách lịch hoạt động chi tiết.",
+      "fields": [
+        {
+          "label": "Chế độ bố trí cửa",
+          "description": "Khi chế độ thiết kế được bật, tất cả các cửa đều có thể mở. Nếu không, cửa chỉ có thể mở trong tháng 12 vào hoặc sau ngày tương ứng với số cửa.",
+          "options": [
+            {
+              "label": "Cố định"
+            },
+            {
+              "label": "Linh hoạt"
+            }
+          ]
+        },
+        {
+          "label": "Tỷ lệ hàng-cột",
+          "description": "Chọn số cột và hàng lịch sử dụng.",
+          "options": [
+            {
+              "label": "6 x 4"
+            },
+            {
+              "label": "4 x 6"
+            }
+          ]
+        },
+        {
+          "label": "Thứ tự ngẫu nhiên",
+          "description": "Xáo trộn thứ tự các cửa. Nếu tùy chọn \"lưu trạng thái nội dung\" được bật trong cài đặt H5P, thứ tự sẽ được giữ khi người dùng quay lại."
+        },
+        {
+          "label": "Giữ thứ tự hình ảnh",
+          "description": "Xáo trộn cửa nhưng giữ hình ảnh bìa cửa tại vị trí cố định bắt đầu từ 1 ở góc trên bên trái đến 24 ở góc dưới bên phải."
+        },
+        {
+          "label": "Chế độ thiết kế",
+          "description": "Khi chế độ thiết kế được bật, tất cả các cửa đều có thể mở. Nếu không, cửa chỉ có thể mở trong tháng 12 vào hoặc sau ngày tương ứng với số cửa."
+        }
+      ]
+    },
+    {
+      "label": "Nhãn và mô tả",
+      "fields": [
+        {
+          "label": "Không có gì để xem!",
+          "default": "Không có gì để xem tại đây!"
+        },
+        {
+          "label": "Biến giữ chỗ",
+          "default": "Biến giữ chỗ"
+        }
+      ]
+    },
+    {
+      "label": "Trợ năng",
+      "fields": [
+        {
+          "label": "Cửa",
+          "default": "Cửa"
+        },
+        {
+          "label": "Đã khóa",
+          "default": "Đã khóa. Chưa đến lúc mở cửa này."
+        },
+        {
+          "description": "Thông báo nội dung. @door là biến và sẽ được thay thế bằng mô tả cửa.",
+          "label": "Nội dung của",
+          "default": "Nội dung của @door"
+        },
+        {
+          "label": "Tắt tiếng",
+          "default": "Tắt tiếng"
+        },
+        {
+          "label": "Bật tiếng",
+          "default": "Bật tiếng"
+        },
+        {
+          "label": "Đóng cửa sổ",
+          "default": "Đóng cửa sổ"
+        }
+      ]
+    }
+  ]
+}

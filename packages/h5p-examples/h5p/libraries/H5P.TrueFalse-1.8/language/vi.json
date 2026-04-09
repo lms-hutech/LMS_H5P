@@ -1,0 +1,163 @@
+{
+  "semantics": [
+    {
+      "label": "Phương tiện",
+      "fields": [
+        {
+          "label": "Loại",
+          "description": "Phương tiện tùy chọn hiển thị phía trên câu hỏi."
+        },
+        {
+          "label": "Tắt phóng to hình ảnh"
+        }
+      ]
+    },
+    {
+      "label": "Câu hỏi"
+    },
+    {
+      "label": "Đáp án đúng",
+      "options": [
+        {
+          "label": "Đúng"
+        },
+        {
+          "label": "Sai"
+        }
+      ]
+    },
+    {
+      "label": "Bản dịch giao diện cho câu hỏi Đúng/Sai",
+      "fields": [
+        {
+          "label": "Nhãn cho nút đúng",
+          "default": "Đúng"
+        },
+        {
+          "label": "Nhãn cho nút sai",
+          "default": "Sai"
+        },
+        {
+          "label": "Văn bản phản hồi",
+          "default": "Bạn đạt @score trên @total điểm",
+          "description": "Văn bản phản hồi, các biến có sẵn: @score và @total. Ví dụ: 'Bạn đạt @score trên @total điểm có thể'"
+        },
+        {
+          "label": "Văn bản cho \"Kiểm tra\" button",
+          "default": "Kiểm tra"
+        },
+        {
+          "label": "Văn bản cho \"Nộp\" button",
+          "default": "Nộp"
+        },
+        {
+          "label": "Văn bản cho \"Xem đáp án\" button",
+          "default": "Xem đáp án"
+        },
+        {
+          "label": "Văn bản cho \"Thử lại\" button",
+          "default": "Thử lại"
+        },
+        {
+          "label": "Đáp án sai",
+          "default": "Đáp án sai"
+        },
+        {
+          "label": "Đáp án đúng",
+          "default": "Đáp án đúng"
+        },
+        {
+          "label": "Biểu diễn văn bản của thanh điểm cho người dùng trình đọc màn hình",
+          "default": "Bạn đạt :num trên :total điểm"
+        },
+        {
+          "label": "Mô tả công nghệ hỗ trợ cho \"Kiểm tra\" button",
+          "default": "Kiểm tra đáp án. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Mô tả công nghệ hỗ trợ cho \"Xem đáp án\" button",
+          "default": "Xem đáp án. Bài tập sẽ được đánh dấu với đáp án đúng."
+        },
+        {
+          "label": "Mô tả công nghệ hỗ trợ cho \"Thử lại\" button",
+          "default": "Thử lại bài tập. Đặt lại tất cả câu trả lời và làm lại từ đầu."
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này cho phép bạn kiểm soát hành vi bài tập.",
+      "fields": [
+        {
+          "label": "Bật nút \"Thử lại\""
+        },
+        {
+          "label": "Bật nút \"Xem đáp án\""
+        },
+        {
+          "label": "Bật nút \"Kiểm tra\""
+        },
+        {
+          "label": "Hiện hộp thoại xác nhận khi \"Kiểm tra\""
+        },
+        {
+          "label": "Hiện hộp thoại xác nhận khi \"Thử lại\""
+        },
+        {
+          "label": "Tự động kiểm tra câu trả lời",
+          "description": "Lưu ý rằng khả năng truy cập sẽ bị ảnh hưởng nếu bật tùy chọn này"
+        },
+        {
+          "label": "Phản hồi cho đáp án đúng",
+          "description": "Điều này sẽ ghi đè văn bản phản hồi mặc định. Các biến có sẵn: @score và @total"
+        },
+        {
+          "label": "Phản hồi cho đáp án sai",
+          "description": "Điều này sẽ ghi đè văn bản phản hồi mặc định. Các biến có sẵn: @score và @total"
+        }
+      ]
+    },
+    {
+      "label": "Hộp thoại xác nhận kiểm tra",
+      "fields": [
+        {
+          "label": "Văn bản tiêu đề",
+          "default": "Hoàn thành?"
+        },
+        {
+          "label": "Nội dung",
+          "default": "Bạn có chắc muốn hoàn thành?"
+        },
+        {
+          "label": "Nhãn nút hủy",
+          "default": "Hủy"
+        },
+        {
+          "label": "Nhãn nút xác nhận",
+          "default": "Hoàn thành"
+        }
+      ]
+    },
+    {
+      "label": "Hộp thoại xác nhận thử lại",
+      "fields": [
+        {
+          "label": "Văn bản tiêu đề",
+          "default": "Thử lại?"
+        },
+        {
+          "label": "Nội dung",
+          "default": "Bạn có chắc muốn thử lại?"
+        },
+        {
+          "label": "Nhãn nút hủy",
+          "default": "Hủy"
+        },
+        {
+          "label": "Nhãn nút xác nhận",
+          "default": "Xác nhận"
+        }
+      ]
+    }
+  ]
+}

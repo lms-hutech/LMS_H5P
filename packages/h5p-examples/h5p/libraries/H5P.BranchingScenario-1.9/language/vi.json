@@ -1,0 +1,196 @@
+{
+  "semantics": [
+    {
+      "label": "Trình soạn kịch bản phân nhánh",
+      "fields": [
+        {
+          "label": "Tiêu đề"
+        },
+        {
+          "label": "Màn hình bắt đầu",
+          "fields": [
+            {
+              "label": "Tiêu đề khóa học",
+              "placeholder": "Tiêu đề cho khóa học"
+            },
+            {
+              "label": "Chi tiết khóa học",
+              "placeholder": "Chi tiết về khóa học"
+            },
+            {
+              "label": "Hình ảnh khóa học"
+            },
+            {
+              "label": "Văn bản thay thế cho hình ảnh"
+            }
+          ]
+        },
+        {
+          "label": "Danh sách màn hình kết thúc",
+          "entity": "Màn hình kết thúc",
+          "field": {
+            "label": "Màn hình kết thúc",
+            "fields": [
+              {
+                "label": "Tiêu đề"
+              },
+              {
+                "label": "Văn bản"
+              },
+              {
+                "label": "Hình ảnh"
+              },
+              {
+                "label": "Điểm",
+                "description": "Khi người học đến màn hình kết thúc mặc định, điểm sẽ được gửi đến LMS, LRS hoặc dịch vụ khác nhận kết quả từ H5P."
+              },
+              {
+                "label": "ID nội dung"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Danh sách nội dung kịch bản phân nhánh",
+          "entity": "Nội dung",
+          "field": {
+            "fields": [
+              {},
+              {
+                "label": "Hiển thị tiêu đề",
+                "description": "Khi bật, người học sẽ thấy tiêu đề nội dung trong thanh tiêu đề phía trên nội dung."
+              },
+              {
+                "label": "Nhãn nút \"Tiếp tục\" (tối đa 50 ký tự)",
+                "default": "Tiếp tục"
+              },
+              {
+                "label": "Ghi đè cài đặt theo dõi hoàn thành",
+                "description": "Ghi đè cài đặt riêng xác định liệu nội dung phải hoàn thành trước khi nút \"Tiếp tục\" được kích hoạt. Không ảnh hưởng nếu nội dung không báo \"hoàn thành\", ví dụ hình ảnh hoặc bài trình chiếu chỉ có một trang.",
+                "options": [
+                  {
+                    "label": "Sử dụng cài đặt hành vi"
+                  },
+                  {
+                    "label": "Bật"
+                  },
+                  {
+                    "label": "Tắt"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Phản hồi",
+                "fields": [
+                  {
+                    "label": "Tiêu đề phản hồi"
+                  },
+                  {
+                    "label": "Văn bản phản hồi"
+                  },
+                  {
+                    "label": "Hình ảnh phản hồi"
+                  },
+                  {
+                    "label": "Điểm cho kịch bản này",
+                    "description": "Điểm sẽ được gửi cho người dùng đạt đến kịch bản này đến LMS, LRS hoặc dịch vụ khác nhận điểm từ H5P."
+                  }
+                ]
+              },
+              {
+                "label": "Quay lại",
+                "description": "Cài đặt này cho phép người dùng quay lại xem câu hỏi/nội dung trước.",
+                "options": [
+                  {
+                    "label": "Sử dụng cài đặt hành vi"
+                  },
+                  {
+                    "label": "Bật"
+                  },
+                  {
+                    "label": "Tắt"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Tùy chọn tính điểm",
+          "fields": [
+            {
+              "label": "Tùy chọn tính điểm",
+              "description": "Chọn phương thức tính điểm.",
+              "options": [
+                {
+                  "label": "Đặt điểm cố định cho mỗi kịch bản kết thúc"
+                },
+                {
+                  "label": "Tính điểm động dựa trên câu trả lời của người học"
+                },
+                {
+                  "label": "Không tính điểm"
+                }
+              ]
+            },
+            {
+              "label": "Sử dụng điểm từ tương tác trong kịch bản phân nhánh",
+              "description": "Khi bật, điểm từ nội dung như Video tương tác sẽ được cộng vào tổng điểm. Khi tắt, chỉ tính điểm từ phản hồi nội dung, câu hỏi phân nhánh và kịch bản kết thúc."
+            }
+          ]
+        },
+        {
+          "label": "Cài đặt tương tác",
+          "fields": [
+            {
+              "label": "Điều hướng quay lại",
+              "description": "Cho phép người dùng quay lại xem nội dung/câu hỏi trước. Có thể ghi đè ở cấp nội dung."
+            },
+            {
+              "label": "Yêu cầu xem",
+              "description": "Yêu cầu người dùng xem video, video tương tác hoặc bài trình chiếu trước khi tiếp tục. Có thể ghi đè ở cấp nội dung."
+            },
+            {
+              "label": "Xáo trộn câu hỏi phân nhánh",
+              "description": "Các câu hỏi phân nhánh sẽ được hiển thị theo thứ tự ngẫu nhiên."
+            }
+          ]
+        },
+        {
+          "label": "Nhãn và mô tả",
+          "fields": [
+            {
+              "label": "Văn bản nút trên màn hình bắt đầu",
+              "default": "Bắt đầu khóa học"
+            },
+            {
+              "label": "Văn bản nút trên màn hình kết thúc",
+              "default": "Bắt đầu lại khóa học"
+            },
+            {
+              "label": "Văn bản nút \"Quay lại\" trên mỗi màn hình nội dung và phân nhánh",
+              "default": "Quay lại"
+            },
+            {
+              "label": "Văn bản nút \"Đã tắt\" trên các trang nội dung",
+              "default": "Cần hoàn thành mô-đun hiện tại"
+            },
+            {
+              "label": "Văn bản nút phát lại video",
+              "default": "Phát lại video"
+            },
+            {
+              "label": "Nhãn điểm trên màn hình kết thúc",
+              "default": "Điểm của bạn:"
+            },
+            {
+              "label": "Nhãn aria cho nút toàn màn hình",
+              "default": "Toàn màn hình"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

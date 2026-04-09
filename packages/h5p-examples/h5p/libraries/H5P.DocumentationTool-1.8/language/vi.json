@@ -1,0 +1,47 @@
+{
+  "semantics": [
+    {
+      "label": "Tiêu đề",
+      "default": "Công cụ tài liệu",
+      "description": "Tiêu đề của công cụ tài liệu."
+    },
+    {
+      "label": "Các phần tử",
+      "widgets": [
+        {
+          "label": "Biểu mẫu nhập liệu"
+        }
+      ],
+      "entity": "Trang",
+      "field": {
+        "label": "Loại trang",
+        "description": "Thư viện được sử dụng cho trang này."
+      }
+    },
+    {
+      "label": "Nhãn và mô tả",
+      "fields": [
+        {
+          "label": "Nhãn nút \"Quay lại\"",
+          "default": "Quay lại bước tài liệu"
+        },
+        {
+          "label": "Trước",
+          "default": "Trước"
+        },
+        {
+          "label": "Nhãn nút \"Tiếp theo\"",
+          "default": "Tiếp tục bước tài liệu"
+        },
+        {
+          "label": "Tiếp theo",
+          "default": "Tiếp theo"
+        },
+        {
+          "label": "Nhãn nút \"Đóng\"",
+          "default": "Đóng"
+        }
+      ]
+    }
+  ]
+}

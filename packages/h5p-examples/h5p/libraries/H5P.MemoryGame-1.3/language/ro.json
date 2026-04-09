@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Implicit"
+        }
+      ],
+      "label": "Cartonașe",
+      "entity": "cartonaș",
+      "field": {
+        "label": "Cartonaș",
+        "fields": [
+          {
+            "label": "Imagine"
+          },
+          {
+            "label": "Text alternativ pentru Imagine",
+            "description": "Descrieți ce se poate vedea în fotografie. Textul este citit de unelte text-în-vorbire necesare utilizatorilor cu deficiențe de vedere."
+          },
+          {
+            "label": "Pistă audio",
+            "description": "Un sunet opțional care se redă când cartonașul este întors."
+          },
+          {
+            "label": "Imagine potrivită",
+            "description": "O imagine opțională pentru potrivire, în loc de a folosi două cartonașe cu aceeași imagine."
+          },
+          {
+            "label": "Text alternativ pentru Imaginea potrivită",
+            "description": "Descrieți ce se poate vedea în fotografie. Textul este citit de unelte text-în-vorbire necesare utilizatorilor cu deficiențe de vedere."
+          },
+          {
+            "label": "Pistă audio potrivită",
+            "description": "Un sunet opțional care se redă când al doilea cartonaș este întors."
+          },
+          {
+            "label": "Descriere",
+            "description": "Un text scurt opțional care va apărea odată ce cele două cartonașe potrivite sunt găsite."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Setări de comportament",
+      "description": "Aceste opțiuni vă vor permite să controlați cum se comportă jocul.",
+      "fields": [
+        {
+          "label": "Poziționează cartonașele într-un pătrat",
+          "description": "Va încerca să potrivească numărul de coloane și rânduri la aranjarea cartonașelor. Apoi, cartonașele vor fi scalate pentru a se potrivi în container."
+        },
+        {
+          "label": "Numărul de cartonașe de folosit",
+          "description": "Setarea acestui număr la o valoare mai mare de 2 va face ca jocul să aleagă cartonașe aleatorii din lista de cartonașe."
+        },
+        {
+          "label": "Adaugă buton pentru reîncercare când jocul s-a terminat"
+        }
+      ]
+    },
+    {
+      "label": "Aspect și stil",
+      "description": "Controlați aspectul vizual al jocului.",
+      "fields": [
+        {
+          "label": "Culoare temă",
+          "description": "Alegeți o culoare pentru a crea o temă pentru jocul dumneavoastră de cărți."
+        },
+        {
+          "label": "Spatele cartonașului",
+          "description": "Folosiți un spate personalizat pentru cartonașele dumneavoastră."
+        }
+      ]
+    },
+    {
+      "label": "Localizare",
+      "fields": [
+        {
+          "label": "Text întoarceri cartonaș",
+          "default": "Întoarceri cartonaș"
+        },
+        {
+          "label": "Text timp petrecut",
+          "default": "Timp petrecut"
+        },
+        {
+          "label": "Text feedback",
+          "default": "Bravo!"
+        },
+        {
+          "label": "Text buton Încearcă din nou",
+          "default": "Resetează"
+        },
+        {
+          "label": "Etichetă buton Închide",
+          "default": "Închide"
+        },
+        {
+          "label": "Etichetă joc",
+          "default": "Joc de Memorie. Găsește cartonașele potrivite."
+        },
+        {
+          "label": "Instrucțiuni joc",
+          "default": "Folosește tastele săgeată stânga și dreapta pentru a naviga printre cartonașe. Folosește tasta spațiu sau enter pentru a întoarce cartonașul."
+        },
+        {
+          "label": "Etichetă joc terminat",
+          "default": "Toate cartonașele au fost găsite."
+        },
+        {
+          "label": "Etichetă indexare cartonaș",
+          "description": "%num și %total sunt substituenți și vor fi înlocuiți cu valorile respective pentru cartonaș.",
+          "default": "Cartonașul %num din %total:"
+        },
+        {
+          "label": "Etichetă cartonaș neîntors",
+          "default": "Neîntors. Apasă pentru a întoarce."
+        },
+        {
+          "label": "Etichetă cartonaș întors",
+          "default": "Întors."
+        },
+        {
+          "label": "Etichetă cartonaș potrivit",
+          "default": "Potrivire găsită."
+        },
+        {
+          "label": "Anunț cartonașe potrivite",
+          "default": "Cartonașele tale se potrivesc!"
+        },
+        {
+          "label": "Anunț cartonașe nepotrivite",
+          "default": "Cartonașele alese de tine nu se potrivesc. Întoarce alte cartonașe pentru a încerca din nou."
+        }
+      ]
+    }
+  ]
+}

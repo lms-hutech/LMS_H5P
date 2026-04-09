@@ -1,0 +1,215 @@
+{
+  "semantics": [
+    {
+      "label": "Trình soạn tham quan ảo",
+      "fields": [
+        {
+          "label": "Cảnh",
+          "entity": "Cảnh",
+          "field": {
+            "fields": [
+              {
+                "label": "Loại cảnh",
+                "options": [
+                  {
+                    "label": "Ảnh 360°"
+                  },
+                  {
+                    "label": "Ảnh tĩnh"
+                  }
+                ]
+              },
+              {
+                "label": "Hiển thị nút \"Quay lại\"",
+                "description": "Hiển thị nút để quay lại cảnh trước"
+              },
+              {},
+              {
+                "label": "Tiêu đề cảnh",
+                "description": "Giúp nhận diện cảnh"
+              },
+              {
+                "label": "Hình nền cảnh"
+              },
+              {
+                "label": "Mô tả cảnh",
+                "description": "Văn bản mô tả cảnh cho người dùng"
+              },
+              {},
+              {
+                "field": {
+                  "fields": [
+                    {
+                      "label": "Nhãn",
+                      "description": "Nếu để trống, sẽ không hiển thị nhãn và trình đọc màn hình sẽ sử dụng tiêu đề cảnh"
+                    },
+                    {
+                      "label": "Cài đặt nhãn",
+                      "fields": [
+                        {
+                          "label": "Vị trí nhãn",
+                          "description": "Xác định vị trí hiển thị nhãn",
+                          "options": [
+                            {
+                              "label": "Sử dụng cài đặt hành vi"
+                            },
+                            {
+                              "label": "Căn phải"
+                            },
+                            {
+                              "label": "Căn trái"
+                            },
+                            {
+                              "label": "Căn trên"
+                            },
+                            {
+                              "label": "Căn dưới"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Hiển thị nhãn",
+                          "description": "Nếu ẩn, nhãn chỉ hiển thị khi di chuột qua",
+                          "options": [
+                            {
+                              "label": "Sử dụng cài đặt hành vi"
+                            },
+                            {
+                              "label": "Hiển thị"
+                            },
+                            {
+                              "label": "Ẩn"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {}
+                  ]
+                }
+              },
+              {
+                "label": "Kiểu hiển thị nút",
+                "description": "Xác định giao diện nút dẫn đến cảnh này. Với cảnh tĩnh không dẫn đến cảnh khác, nên chọn \"Thêm thông tin\".",
+                "options": [
+                  {
+                    "label": "Cảnh mới (Mũi tên)"
+                  },
+                  {
+                    "label": "Thêm thông tin (Dấu cộng)"
+                  }
+                ]
+              },
+              {
+                "label": "Nhạc nền",
+                "description": "Thêm nhạc nền chỉ phát trong cảnh này."
+              }
+            ]
+          }
+        },
+        {},
+        {
+          "label": "Nhạc nền"
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này xác định cách tham quan hoạt động chi tiết.",
+      "fields": [
+        {
+          "label": "Nhạc nền cho tất cả cảnh",
+          "description": "Thêm nhạc nền phát mặc định trong tất cả các cảnh."
+        },
+        {
+          "label": "Chất lượng hiển thị cảnh",
+          "description": "Cho phép chọn số lượng phân đoạn để hiển thị cảnh. Điều này ảnh hưởng trực tiếp đến chất lượng. Tăng chất lượng nếu cảnh trông \"khối\" hoặc có \"sóng\". Chất lượng cao hơn dẫn đến thời gian tải lâu hơn.",
+          "options": [
+            {
+              "label": "Chất lượng cao (128x128)"
+            },
+            {
+              "label": "Chất lượng trung bình (64x64)"
+            },
+            {
+              "label": "Chất lượng thấp (16x16)"
+            }
+          ]
+        },
+        {
+          "label": "Cài đặt nhãn",
+          "fields": [
+            {
+              "label": "Vị trí nhãn",
+              "description": "Vị trí mặc định của nhãn. Có thể ghi đè cho từng tương tác.",
+              "options": [
+                {
+                  "label": "Căn phải"
+                },
+                {
+                  "label": "Căn trái"
+                },
+                {
+                  "label": "Căn trên"
+                },
+                {
+                  "label": "Căn dưới"
+                }
+              ]
+            },
+            {
+              "label": "Hiển thị nhãn",
+              "description": "Nếu không chọn, nhãn chỉ hiển thị khi di chuột qua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Nhãn và mô tả",
+      "fields": [
+        {
+          "label": "Nhãn aria cho loại nội dung",
+          "default": "Tham quan ảo"
+        },
+        {
+          "label": "Nhãn để phát âm thanh",
+          "default": "Phát nhạc nền"
+        },
+        {
+          "label": "Nhãn để tạm dừng âm thanh",
+          "default": "Tạm dừng nhạc nền"
+        },
+        {
+          "label": "Tiêu đề hộp thoại cảnh",
+          "default": "Mô tả cảnh"
+        },
+        {
+          "label": "Nhãn nút đặt lại camera",
+          "default": "Đặt lại camera"
+        },
+        {
+          "label": "Nhãn nút gửi hộp thoại",
+          "default": "Gửi hộp thoại"
+        },
+        {
+          "label": "Nhãn nút đóng hộp thoại",
+          "default": "Đóng hộp thoại"
+        },
+        {
+          "label": "Nhãn aria cho nút mở rộng nhãn",
+          "default": "Mở rộng nhãn"
+        },
+        {
+          "label": "Nhãn khi hình nền cảnh 360° đang tải",
+          "default": "Đang tải hình nền..."
+        },
+        {
+          "label": "Nhãn khi không có nội dung",
+          "default": "Không có nội dung"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "semantics": [
+    {
+      "label": "Tiêu đề",
+      "description": "Nếu được nhập, văn bản này sẽ được sử dụng thay cho tiêu đề nội dung làm tiêu đề."
+    },
+    {
+      "label": "Mô tả nhiệm vụ",
+      "description": "Người học sẽ thấy mô tả nhiệm vụ này phía trên ghi chú."
+    },
+    {
+      "label": "Nội dung nhiệm vụ"
+    },
+    {
+      "label": "Trường ghi chú",
+      "description": "Cài đặt cho trường ghi chú.",
+      "fields": [
+        {
+          "label": "Tiêu đề trường từ khóa",
+          "default": "Từ khóa",
+          "description": "Tiêu đề cho phần bình luận."
+        },
+        {
+          "label": "Văn bản giữ chỗ cho trường từ khóa",
+          "default": "Nhập bình luận, câu hỏi, ý chính v.v. mà bạn rút ra từ ghi chú!",
+          "description": "Văn bản giữ chỗ cho phần bình luận để nhắc nhở người học."
+        },
+        {
+          "label": "Tiêu đề trường ghi chú",
+          "default": "Ghi chú",
+          "description": "Tiêu đề cho phần ghi chú."
+        },
+        {
+          "label": "Văn bản giữ chỗ cho trường ghi chú",
+          "default": "Nhập dữ liệu, chi tiết, định nghĩa, công thức, ví dụ v.v. từ tài liệu!",
+          "description": "Văn bản giữ chỗ cho phần ghi chú để nhắc nhở người học."
+        },
+        {
+          "label": "Tiêu đề trường tóm tắt",
+          "default": "Tóm tắt những gì bạn đã học",
+          "description": "Tiêu đề của phần tóm tắt."
+        },
+        {
+          "label": "Văn bản giữ chỗ cho trường tóm tắt",
+          "default": "Nhập những gì bạn đã học!",
+          "description": "Văn bản giữ chỗ cho phần tóm tắt để nhắc nhở người học."
+        }
+      ]
+    },
+    {
+      "label": "Nhãn và mô tả",
+      "fields": [
+        {
+          "label": "Ghi chú đã lưu",
+          "default": "Ghi chú đã lưu"
+        },
+        {
+          "label": "Lưu",
+          "default": "Lưu"
+        },
+        {
+          "label": "Không thể lưu ghi chú",
+          "default": "Nền tảng không hỗ trợ chức năng lưu trạng thái nội dung hoặc chức năng này chưa được bật trong cài đặt nền tảng hoặc bạn chưa đăng nhập. Ghi chú của bạn không thể được lưu!"
+        },
+        {
+          "label": "Văn bản nút \"Sao chép\"",
+          "default": "Sao chép"
+        },
+        {
+          "label": "Đã sao chép văn bản vào bộ nhớ tạm",
+          "default": "Đã sao chép văn bản vào bộ nhớ tạm"
+        },
+        {
+          "label": "Không thể sao chép văn bản vào bộ nhớ tạm",
+          "default": "Không thể sao chép văn bản vào bộ nhớ tạm"
+        }
+      ]
+    },
+    {
+      "label": "Trình đọc màn hình (Trợ năng)",
+      "fields": [
+        {
+          "label": "Tiêu đề nút toàn màn hình (bật)",
+          "default": "Vào chế độ toàn màn hình"
+        },
+        {
+          "label": "Tiêu đề nút toàn màn hình (tắt)",
+          "default": "Thoát chế độ toàn màn hình"
+        },
+        {
+          "label": "Tiêu đề nút chuyển đổi (khi ghi chú đóng)",
+          "default": "Mở ghi chú"
+        },
+        {
+          "label": "Tiêu đề nút chuyển đổi (khi ghi chú mở)",
+          "default": "Đóng ghi chú"
+        },
+        {
+          "label": "Ghi chú đã mở",
+          "default": "Đã chuyển sang ghi chú của bạn."
+        },
+        {
+          "label": "Ghi chú đã đóng",
+          "default": "Đã chuyển sang nhiệm vụ."
+        },
+        {
+          "label": "Ghi chú đã lưu",
+          "default": "Ghi chú đã được lưu trên nền tảng."
+        },
+        {
+          "label": "Ẩn ghi chú",
+          "default": "Ẩn ghi chú @label",
+          "description": "@label là biến sẽ được thay thế bằng nhãn tương ứng của trường."
+        },
+        {
+          "label": "Hiện ghi chú",
+          "default": "Hiện ghi chú @label",
+          "description": "@label là biến sẽ được thay thế bằng nhãn tương ứng của trường."
+        }
+      ]
+    }
+  ]
+}

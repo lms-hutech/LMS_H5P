@@ -1,0 +1,16 @@
+{
+  "semantics": [
+    {
+      "label": "Nhãn",
+      "description": "Nhãn/tiêu đề cho câu trả lời khi người dùng xuất tất cả đáp án"
+    },
+    {},
+    {
+      "label": "Nhãn không hỗ trợ xuất",
+      "default": "Không hỗ trợ xuất trên thiết bị của bạn"
+    },
+    {
+      "label": "Bao gồm bình luận trong tài liệu xuất"
+    }
+  ]
+}

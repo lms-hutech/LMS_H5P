@@ -1,0 +1,98 @@
+{
+  "semantics": [
+    {
+      "label": "Hình nền",
+      "description": "Hình ảnh hiển thị làm nền."
+    },
+    {
+      "label": "Văn bản thay thế cho hình nền",
+      "description": "Nếu trình duyệt không thể tải hình ảnh, văn bản này sẽ hiển thị thay thế."
+    },
+    {
+      "label": "Biểu tượng điểm nóng",
+      "options": [
+        {
+          "label": "Biểu tượng định sẵn"
+        },
+        {
+          "label": "Hình ảnh đã tải lên"
+        }
+      ]
+    },
+    {
+      "label": "Biểu tượng định sẵn",
+      "description": "Sử dụng biểu tượng định sẵn cho điểm nóng.",
+      "options": [
+        {
+          "label": "Cộng"
+        },
+        {
+          "label": "Trừ"
+        },
+        {
+          "label": "Nhân"
+        },
+        {
+          "label": "Kiểm tra"
+        },
+        {
+          "label": "Câu hỏi"
+        },
+        {
+          "label": "Thông tin"
+        },
+        {
+          "label": "Dấu chấm than"
+        }
+      ]
+    },
+    {
+      "label": "Hình ảnh đã tải lên",
+      "description": "Sử dụng hình ảnh riêng cho biểu tượng điểm nóng.<br />Kích thước khuyến nghị 75px x 75px."
+    },
+    {
+      "label": "Màu điểm nóng",
+      "description": "Màu sắc của các điểm nóng"
+    },
+    {
+      "entity": "Điểm nóng",
+      "label": "Các điểm nóng",
+      "field": {
+        "label": "Điểm nóng",
+        "fields": [
+          {
+            "label": "Vị trí điểm nóng",
+            "description": "Nhấn vào hình thu nhỏ để đặt điểm nóng"
+          },
+          {
+            "label": "Phủ toàn bộ hình nền",
+            "description": "Khi người dùng nhấp điểm nóng, cửa sổ bật lên sẽ phủ toàn bộ hình nền"
+          },
+          {
+            "label": "Tiêu đề",
+            "description": "Tiêu đề tùy chọn cho cửa sổ bật lên. Được sử dụng bởi công nghệ hỗ trợ."
+          },
+          {
+            "label": "Nội dung cửa sổ bật lên",
+            "field": {
+              "label": "Mục nội dung"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Nhãn điểm nóng cho công nghệ hỗ trợ",
+      "default": "Điểm nóng #num",
+      "description": "Sẽ giúp thông báo phần tử điểm nóng nào đã được điều hướng đến nếu không có tiêu đề cho điểm nóng. #num có thể dùng để thay thế số điểm nóng."
+    },
+    {
+      "label": "Nhãn nút đóng cho công nghệ hỗ trợ",
+      "default": "Đóng"
+    },
+    {
+      "label": "Nhãn cho assistive technologies denoting that hotspot contains Audio/Video",
+      "default": "Chứa Âm thanh/Video"
+    }
+  ]
+}

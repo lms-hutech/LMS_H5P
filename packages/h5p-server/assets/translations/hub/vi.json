@@ -1,0 +1,460 @@
+{
+  "H5P_Accordion": {
+    "title": "Mục mở rộng",
+    "summary": "Tạo các mục mở rộng xếp dọc",
+    "description": "Giảm lượng văn bản trình bày cho người đọc bằng accordion responsive này. Người đọc chọn tiêu đề muốn xem chi tiết bằng cách mở rộng. Tuyệt vời để cung cấp tổng quan với giải thích chi tiết tùy chọn.",
+    "keywords": {
+      "accordion": "accordion",
+      "collapsible_text": "văn bản thu gọn"
+    }
+  },
+  "H5P_AdventCalendar": {
+    "title": "Lịch mùa vọng",
+    "summary": "Tạo bất ngờ được tiết lộ mỗi ngày",
+    "description": "Xây dựng và tùy chỉnh lịch mùa vọng đẹp mắt. Bạn có thể thêm hình nền cho toàn bộ lịch, trên mỗi cánh cửa, và làm nền cho nội dung bên trong. Bạn cũng có thể thêm hiệu ứng tuyết và nhạc. Bên trong mỗi cánh cửa, bạn có thể thêm âm thanh, video, văn bản, hình ảnh hoặc liên kết.",
+    "keywords": {
+      "christmas": "giáng sinh",
+      "advent": "mùa vọng",
+      "holidays": "ngày lễ",
+      "calendar": "lịch"
+    }
+  },
+  "H5P_Agamotto": {
+    "title": "So sánh hình ảnh tuần tự",
+    "summary": "Trình bày chuỗi hình ảnh và giải thích",
+    "description": "Trình bày chuỗi hình ảnh để người xem quan sát lần lượt, ví dụ: ảnh của một vật thay đổi theo thời gian, sơ đồ hoặc bản đồ được tổ chức theo các lớp khác nhau, hoặc hình ảnh tiết lộ thêm chi tiết.",
+    "keywords": {
+      "image": "hình ảnh",
+      "images": "hình ảnh",
+      "transition": "chuyển tiếp"
+    }
+  },
+  "H5P_ArithmeticQuiz": {
+    "title": "Bài kiểm tra số học",
+    "summary": "Tạo bài kiểm tra số học có giới hạn thời gian",
+    "description": "Tạo bài kiểm tra số học gồm các câu hỏi trắc nghiệm. Tác giả chỉ cần quyết định loại và độ dài bài kiểm tra. Người dùng theo dõi điểm số và thời gian khi giải bài.",
+    "keywords": {
+      "math": "toán học",
+      "arithmetic_quiz": "bài kiểm tra số học",
+      "countdown": "đếm ngược"
+    }
+  },
+  "H5P_Audio": {
+    "title": "Âm thanh",
+    "summary": "Tải lên bản ghi âm",
+    "description": "Tải lên bản ghi âm định dạng .mp3, .wav, .ogg hoặc cung cấp liên kết đến bản ghi âm."
+  },
+  "H5P_AudioRecorder": {
+    "title": "Ghi âm",
+    "summary": "Tạo bản ghi âm",
+    "description": "Trình ghi âm HTML5. Ghi giọng nói và phát lại hoặc tải xuống file .wav.",
+    "keywords": {
+      "audio": "âm thanh",
+      "recorder": "ghi âm"
+    }
+  },
+  "H5P_Blanks": {
+    "title": "Điền vào chỗ trống",
+    "summary": "Tạo bài tập điền từ còn thiếu trong đoạn văn",
+    "description": "Người học điền các từ còn thiếu trong đoạn văn. Đáp án được hiển thị sau khi điền xong tất cả hoặc sau mỗi từ tùy cài đặt. Tác giả nhập văn bản và đánh dấu từ cần thay thế bằng dấu sao.",
+    "keywords": {
+      "fill": "điền",
+      "blanks": "chỗ trống",
+      "text": "văn bản"
+    }
+  },
+  "H5P_BranchingScenario": {
+    "title": "Kịch bản phân nhánh",
+    "summary": "Tạo kịch bản phân nhánh và tự học",
+    "description": "Kịch bản phân nhánh cho phép tác giả trình bày cho người học nhiều nội dung tương tác và lựa chọn đa dạng. Lựa chọn của người học sẽ quyết định nội dung tiếp theo. Có thể dùng để tạo tình huống, trò chơi nghiêm túc và học tập tự định hướng."
+  },
+  "H5P_Chart": {
+    "title": "Biểu đồ",
+    "summary": "Tạo biểu đồ cột và biểu đồ tròn nhanh chóng",
+    "description": "Cần trình bày dữ liệu thống kê đơn giản dưới dạng đồ họa? Biểu đồ là câu trả lời cho bạn.",
+    "keywords": {
+      "chart": "biểu đồ",
+      "bar_chart": "biểu đồ cột",
+      "pie_chart": "biểu đồ tròn",
+      "graph": "đồ thị"
+    }
+  },
+  "H5P_Collage": {
+    "title": "Ảnh ghép",
+    "summary": "Tạo ảnh ghép từ nhiều hình ảnh",
+    "description": "Công cụ Ảnh ghép cho phép bạn sắp xếp hình ảnh thành một bố cục hài hòa.",
+    "keywords": {
+      "collage": "ảnh ghép",
+      "image": "hình ảnh"
+    }
+  },
+  "H5P_Column": {
+    "title": "Cột nội dung",
+    "summary": "Sắp xếp nội dung H5P theo bố cục cột",
+    "description": "Sắp xếp các loại nội dung theo bố cục cột. Các nội dung cùng chủ đề có thể được nhóm lại để tạo trải nghiệm học tập mạch lạc. Tác giả có thể kết hợp hầu hết các loại nội dung H5P hiện có.",
+    "keywords": {
+      "column": "cột",
+      "layout": "bố cục",
+      "compound": "kết hợp"
+    }
+  },
+  "H5P_CoursePresentation": {
+    "title": "Bài trình bày",
+    "summary": "Tạo bài trình bày với các slide tương tác",
+    "description": "Bài trình bày gồm các slide với đa phương tiện, văn bản và nhiều dạng tương tác như tóm tắt tương tác, câu hỏi trắc nghiệm và video tương tác. Người học có thể trải nghiệm tài liệu học tập tương tác mới và kiểm tra kiến thức.",
+    "keywords": {
+      "course_presentation": "bài trình bày",
+      "slides": "slide",
+      "powerpoint": "powerpoint"
+    }
+  },
+  "H5P_Crossword": {
+    "title": "Ô chữ",
+    "summary": "Tạo câu đố ô chữ",
+    "description": "Xây dựng và tùy chỉnh ô chữ đẹp mắt để thu hút người dùng. Ô chữ có thể tùy chỉnh cao, cho phép cấu hình màu sắc, tải hình nền, quyết định cách tính điểm và ngẫu nhiên hóa các từ.",
+    "keywords": {
+      "crossword": "ô chữ",
+      "games": "trò chơi"
+    }
+  },
+  "H5P_Dialogcards": {
+    "title": "Thẻ hội thoại",
+    "summary": "Tạo thẻ lật dựa trên văn bản",
+    "description": "Thẻ hội thoại có thể dùng để giúp người học ghi nhớ từ vựng, cụm từ hoặc câu. Mặt trước hiển thị gợi ý, lật thẻ để xem đáp án. Có thể dùng cho học ngôn ngữ, bài toán hoặc ghi nhớ sự kiện lịch sử.",
+    "keywords": {
+      "dialog_cards": "thẻ hội thoại"
+    }
+  },
+  "H5P_Dictation": {
+    "title": "Chính tả",
+    "summary": "Tạo bài chính tả với phản hồi tức thì",
+    "description": "Bạn có thể thêm mẫu âm thanh chứa câu để chính tả và nhập bản chép đúng. Học sinh nghe và nhập những gì đã nghe. Đáp án được đánh giá tự động với nhiều tùy chọn độ khó.",
+    "keywords": {
+      "language": "ngôn ngữ",
+      "audio": "âm thanh"
+    }
+  },
+  "H5P_DocumentationTool": {
+    "title": "Công cụ tài liệu",
+    "summary": "Tạo biểu mẫu với xuất văn bản",
+    "description": "Công cụ tài liệu giúp dễ dàng tạo trình hướng dẫn đánh giá cho hoạt động hướng đến mục tiêu. Cũng có thể dùng làm trình tạo biểu mẫu. Tác giả có thể thêm nhiều bước với nội dung đa dạng.",
+    "keywords": {
+      "dialog_cards": "thẻ hội thoại"
+    }
+  },
+  "H5P_DragQuestion": {
+    "title": "Kéo và thả",
+    "summary": "Tạo bài tập kéo thả với hình ảnh",
+    "description": "Câu hỏi kéo thả cho phép người học kết hợp hai hoặc nhiều phần tử và tạo liên kết logic một cách trực quan. Hỗ trợ quan hệ một-một, một-nhiều, nhiều-một và nhiều-nhiều.",
+    "keywords": {
+      "drag_and drop": "kéo và thả"
+    }
+  },
+  "H5P_DragText": {
+    "title": "Kéo từ",
+    "summary": "Tạo bài tập kéo thả dựa trên văn bản",
+    "description": "Kéo từ cho phép tạo biểu thức văn bản với các phần còn thiếu. Người dùng kéo từ vào đúng vị trí để hoàn thành câu. Rất dễ tạo — chỉ cần đánh dấu từ kéo bằng dấu sao *từKéo*.",
+    "keywords": {
+      "drag": "kéo",
+      "words": "từ"
+    }
+  },
+  "H5P_Essay": {
+    "title": "Bài luận",
+    "summary": "Tạo bài luận với phản hồi tức thì",
+    "description": "Tác giả định nghĩa bộ từ khóa đại diện cho các khía cạnh quan trọng của chủ đề. Từ khóa được so khớp với văn bản học sinh viết để cung cấp phản hồi tức thì.",
+    "keywords": {
+      "Essay": "Bài luận"
+    }
+  },
+  "H5P_FindTheWords": {
+    "title": "Tìm từ",
+    "summary": "Trò chơi tìm từ trong lưới",
+    "description": "Tạo danh sách từ được vẽ trong lưới. Người học tìm và chọn các từ trong lưới."
+  },
+  "H5P_Flashcards": {
+    "title": "Thẻ ghi nhớ",
+    "summary": "Tạo thẻ ghi nhớ hiện đại",
+    "description": "Cho phép tác giả tạo một hoặc nhiều thẻ ghi nhớ, mỗi thẻ có hình ảnh kèm câu hỏi và đáp án. Người học điền đáp án và kiểm tra tính đúng đắn.",
+    "keywords": {
+      "cards": "thẻ",
+      "animation": "hoạt ảnh"
+    }
+  },
+  "H5P_GuessTheAnswer": {
+    "title": "Đoán câu trả lời",
+    "summary": "Tạo hình ảnh với câu hỏi và đáp án",
+    "description": "Cho phép tác giả tải hình ảnh lên và thêm mô tả phù hợp. Người dùng đoán đáp án và nhấn thanh bên dưới hình ảnh để xem đáp án đúng.",
+    "keywords": {
+      "guess": "đoán",
+      "answer": "đáp án"
+    }
+  },
+  "H5P_IFrameEmbed": {
+    "title": "Nhúng Iframe",
+    "summary": "Nhúng từ URL hoặc tập hợp file",
+    "description": "Iframe Embedder giúp dễ dàng tạo H5P từ các ứng dụng JavaScript đã có sẵn.",
+    "keywords": {
+      "embed": "nhúng",
+      "iframe": "iframe"
+    }
+  },
+  "H5P_ImageHotspotQuestion": {
+    "title": "Tìm điểm nóng",
+    "summary": "Tạo điểm nóng hình ảnh cho người dùng tìm",
+    "description": "Cho phép người dùng nhấn vào vị trí trên hình ảnh và nhận phản hồi đúng hoặc sai theo mô tả bài tập.",
+    "keywords": {
+      "find": "tìm",
+      "hotspot": "điểm nóng",
+      "image": "hình ảnh"
+    }
+  },
+  "H5P_ImageHotspots": {
+    "title": "Điểm nóng hình ảnh",
+    "summary": "Tạo hình ảnh với nhiều điểm thông tin",
+    "description": "Cho phép tạo hình ảnh với các điểm nóng tương tác. Khi nhấn vào điểm nóng, popup hiển thị tiêu đề và văn bản hoặc video.",
+    "keywords": {
+      "image": "hình ảnh",
+      "hotspot": "điểm nóng"
+    }
+  },
+  "H5P_ImageJuxtaposition": {
+    "title": "So sánh hình ảnh",
+    "summary": "Tạo so sánh hình ảnh tương tác",
+    "description": "Loại nội dung hình ảnh cho phép người dùng so sánh hai hình ảnh một cách tương tác."
+  },
+  "H5P_ImageMultipleHotspotQuestion": {
+    "title": "Tìm nhiều điểm nóng",
+    "summary": "Tạo nhiều điểm nóng cho người dùng tìm",
+    "description": "Loại câu hỏi dựa trên hình ảnh cho phép người học tìm các điểm đúng trên hình ảnh."
+  },
+  "H5P_ImagePair": {
+    "title": "Ghép cặp hình ảnh",
+    "summary": "Trò chơi ghép hình kéo thả",
+    "description": "Ghép cặp hình ảnh yêu cầu người học khớp các cặp hình ảnh. Tác giả cũng có thể kiểm tra sự hiểu biết về mối quan hệ giữa hai hình ảnh khác nhau.",
+    "keywords": {
+      "image_images matching pair": "ghép cặp hình ảnh"
+    }
+  },
+  "H5P_ImageSequencing": {
+    "title": "Sắp xếp hình ảnh",
+    "summary": "Đặt hình ảnh theo đúng thứ tự",
+    "description": "Cho phép tác giả thêm chuỗi hình ảnh theo thứ tự nhất định. Hình ảnh sẽ được xáo trộn và người chơi phải sắp xếp lại đúng thứ tự.",
+    "keywords": {
+      "image": "hình ảnh",
+      "sequence": "chuỗi",
+      "order": "thứ tự"
+    }
+  },
+  "H5P_ImageSlider": {
+    "title": "Trình chiếu hình ảnh",
+    "summary": "Tạo trình chiếu hình ảnh dễ dàng",
+    "description": "Trình bày hình ảnh một cách hấp dẫn. Tác giả chỉ cần tải hình ảnh lên và cung cấp văn bản thay thế. Hai hình ảnh tiếp theo luôn được tải trước để chuyển đổi nhanh.",
+    "keywords": {
+      "image": "hình ảnh",
+      "images": "hình ảnh",
+      "slider": "trình chiếu",
+      "carousel": "carousel"
+    }
+  },
+  "H5P_InteractiveBook": {
+    "title": "Sách tương tác",
+    "summary": "Tạo sách tương tác",
+    "description": "Tạo khóa học nhỏ, sách hoặc bài kiểm tra. Sách tương tác cho phép kết hợp nhiều nội dung tương tác trên nhiều trang. Có tóm tắt điểm số ở cuối.",
+    "keywords": {
+      "book": "sách",
+      "course": "khóa học"
+    }
+  },
+  "H5P_InteractiveVideo": {
+    "title": "Video tương tác",
+    "summary": "Tạo video được bổ sung tương tác",
+    "description": "Thêm tương tác vào video với giải thích, hình ảnh bổ sung, bảng biểu, Điền vào chỗ trống và câu hỏi trắc nghiệm. Hỗ trợ nhảy đến phần khác của video dựa trên đáp án người dùng.",
+    "keywords": {
+      "interactive": "tương tác",
+      "video": "video"
+    }
+  },
+  "H5P_KewArCode": {
+    "title": "Mã QR",
+    "summary": "Tạo mã QR cho nhiều mục đích",
+    "description": "Cho phép tạo mã QR. Mã QR có thể mã hóa URL, thông tin liên hệ, sự kiện, vị trí địa lý và nhiều hơn nữa.",
+    "keywords": {
+      "QR": "QR"
+    }
+  },
+  "H5P_MarkTheWords": {
+    "title": "Đánh dấu từ",
+    "summary": "Tạo bài tập đánh dấu từ",
+    "description": "Cho phép tạo biểu thức văn bản với bộ từ đúng được xác định. Người dùng đánh dấu từ theo mô tả bài tập và được chấm điểm. Tác giả chỉ cần đánh dấu từ đúng bằng dấu sao *từĐúng*.",
+    "keywords": {
+      "mark": "đánh dấu",
+      "words": "từ"
+    }
+  },
+  "H5P_MemoryGame": {
+    "title": "Trò chơi ghi nhớ",
+    "summary": "Tạo trò chơi ghép cặp hình ảnh",
+    "description": "Tạo trò chơi ghi nhớ của riêng bạn và kiểm tra trí nhớ người dùng với trò chơi HTML5 đơn giản nhưng đẹp mắt.",
+    "keywords": {
+      "memory": "ghi nhớ",
+      "game": "trò chơi",
+      "cards": "thẻ"
+    }
+  },
+  "H5P_MultiChoice": {
+    "title": "Trắc nghiệm nhiều lựa chọn",
+    "summary": "Tạo câu hỏi trắc nghiệm linh hoạt",
+    "description": "Câu hỏi trắc nghiệm là công cụ đánh giá hiệu quả. Người học nhận phản hồi kết quả ngay lập tức. Hỗ trợ một hoặc nhiều đáp án đúng cho mỗi câu hỏi.",
+    "keywords": {
+      "multiple": "nhiều",
+      "choice": "lựa chọn",
+      "quiz": "trắc nghiệm"
+    }
+  },
+  "H5P_MultiMediaChoice": {
+    "title": "Chọn hình ảnh",
+    "summary": "Tạo bài tập với các lựa chọn là hình ảnh",
+    "description": "Xây dựng câu hỏi trắc nghiệm đẹp mắt với các lựa chọn là hình ảnh. Có thể tùy chỉnh bố cục và tỷ lệ khung hình.",
+    "keywords": {
+      "sorting": "sắp xếp",
+      "games": "trò chơi",
+      "tasks": "bài tập"
+    }
+  },
+  "H5P_PersonalityQuiz": {
+    "title": "Trắc nghiệm tính cách",
+    "summary": "Tạo trắc nghiệm tính cách",
+    "description": "Tác giả định nghĩa chuỗi câu hỏi với các lựa chọn, mỗi lựa chọn khớp với một hoặc nhiều tính cách. Cuối bài, người dùng thấy tính cách phù hợp nhất.",
+    "keywords": {
+      "personality": "tính cách",
+      "quiz": "trắc nghiệm"
+    }
+  },
+  "H5P_Questionnaire": {
+    "title": "Bảng câu hỏi",
+    "summary": "Tạo bảng khảo sát để nhận phản hồi",
+    "description": "Thu thập phản hồi và đặt câu hỏi mở trong Video tương tác và các loại nội dung khác. Đáp án người dùng có thể lưu qua xAPI.",
+    "keywords": {
+      "questionnaire": "bảng câu hỏi"
+    }
+  },
+  "H5P_QuestionSet": {
+    "title": "Bộ câu hỏi",
+    "summary": "Tạo bộ câu hỏi với nhiều dạng khác nhau",
+    "description": "Bộ câu hỏi cho phép người học giải chuỗi câu hỏi đa dạng như Trắc nghiệm, Kéo thả và Điền vào chỗ trống. Tác giả có thể tùy chỉnh hình nền và phần trăm đạt. Cũng cho phép thêm video khi hoàn thành.",
+    "keywords": {
+      "question_set": "bộ câu hỏi",
+      "collection": "bộ sưu tập",
+      "quiz": "trắc nghiệm"
+    }
+  },
+  "H5P_SingleChoiceSet": {
+    "title": "Bộ câu hỏi một lựa chọn",
+    "summary": "Tạo bộ câu hỏi một đáp án đúng",
+    "description": "Cho phép tạo bộ câu hỏi với một đáp án đúng cho mỗi câu. Người dùng nhận phản hồi ngay sau mỗi câu trả lời.",
+    "keywords": {
+      "collection": "bộ sưu tập",
+      "quiz": "trắc nghiệm",
+      "choice": "lựa chọn"
+    }
+  },
+  "H5P_SortParagraphs": {
+    "title": "Sắp xếp đoạn văn",
+    "summary": "Tạo bộ đoạn văn cần sắp xếp",
+    "description": "Nhập danh sách đoạn văn sẽ được xáo trộn. Ví dụ: mỗi đoạn có thể là phần của bài hát, khối mã hoặc các bước trong công thức. Người học sắp xếp lại đúng thứ tự.",
+    "keywords": {
+      "sorting": "sắp xếp",
+      "games": "trò chơi",
+      "tasks": "bài tập"
+    }
+  },
+  "H5P_SpeakTheWords": {
+    "title": "Nói từ",
+    "summary": "Trả lời câu hỏi bằng giọng nói",
+    "description": "Đặt câu hỏi và để người dùng trả lời bằng giọng nói. Có thể chọn nhiều đáp án đúng. Người dùng thấy lời nói được nhận dạng và độ gần đúng so với đáp án.",
+    "keywords": {
+      "language": "ngôn ngữ",
+      "translation": "dịch thuật",
+      "voice": "giọng nói",
+      "recognition": "nhận dạng",
+      "speech": "lời nói",
+      "mic": "mic",
+      "microphone": "microphone"
+    }
+  },
+  "H5P_SpeakTheWordsSet": {
+    "title": "Bộ nói từ",
+    "summary": "Tạo chuỗi câu hỏi trả lời bằng giọng nói",
+    "description": "Tạo bộ câu hỏi mà người học trả lời bằng giọng nói. Có thể chọn nhiều đáp án đúng. Người dùng thấy lời nói được nhận dạng và độ chính xác.",
+    "keywords": {
+      "language": "ngôn ngữ",
+      "translation": "dịch thuật",
+      "voice": "giọng nói",
+      "quiz": "trắc nghiệm",
+      "set": "bộ",
+      "recognition": "nhận dạng",
+      "mic": "mic",
+      "microphone": "microphone"
+    }
+  },
+  "H5P_Summary": {
+    "title": "Tóm tắt",
+    "summary": "Tạo bài tập với danh sách các phát biểu",
+    "description": "Tóm tắt giúp người học nhớ thông tin chính bằng cách chủ động xây dựng bản tóm tắt. Khi hoàn thành, danh sách đầy đủ các phát biểu chính được hiển thị.",
+    "keywords": {
+      "summary": "tóm tắt"
+    }
+  },
+  "H5P_ThreeImage": {
+    "title": "Tham quan ảo (360)",
+    "summary": "Tạo môi trường 360 với tương tác",
+    "description": "Hình ảnh 360 (equirectangular) và hình ảnh thường có thể được bổ sung tương tác như giải thích, video, âm thanh và câu hỏi tương tác. Các hình ảnh tạo thành cảnh có thể liên kết với nhau."
+  },
+  "H5P_Timeline": {
+    "title": "Dòng thời gian",
+    "summary": "Tạo dòng thời gian các sự kiện",
+    "description": "Cho phép đặt chuỗi sự kiện theo thứ tự thời gian. Mỗi sự kiện có thể thêm hình ảnh và văn bản, cùng nội dung từ Twitter, YouTube, Flickr, Vimeo, Google Maps và SoundCloud.",
+    "keywords": {
+      "timeline": "dòng thời gian",
+      "slider": "thanh trượt"
+    }
+  },
+  "H5P_TrueFalse": {
+    "title": "Câu hỏi Đúng/Sai",
+    "summary": "Tạo câu hỏi Đúng/Sai",
+    "description": "Câu hỏi Đúng/Sai đơn giản và trực tiếp, có thể dùng độc lập hoặc nhúng vào các loại nội dung khác. Có thể thêm hình ảnh hoặc video để tạo câu hỏi phức tạp hơn.",
+    "keywords": {
+      "true": "đúng",
+      "false": "sai"
+    }
+  },
+  "H5P_Cornell": {
+    "title": "Ghi chú Cornell",
+    "summary": "Tạo ghi chú theo phương pháp Cornell",
+    "description": "Cho phép người dùng tạo ghi chú theo phương pháp Cornell với các phần: ghi chú chính, từ khóa và tóm tắt."
+  },
+  "H5P_ARScavenger": {
+    "title": "Tìm kiếm AR",
+    "summary": "Tạo trải nghiệm thực tế tăng cường",
+    "description": "Tạo các hoạt động học tập dựa trên thực tế tăng cường (AR) với camera."
+  },
+  "H5P_StructureStrip": {
+    "title": "Dải cấu trúc",
+    "summary": "Tạo dải cấu trúc văn bản",
+    "description": "Giúp người học lập kế hoạch và cấu trúc bài viết bằng cách chia thành các phần với tỷ lệ trực quan."
+  },
+  "H5P_InfoWall": {
+    "title": "Bảng thông tin",
+    "summary": "Tạo bảng thông tin tương tác",
+    "description": "Tạo bảng hiển thị thông tin với các thẻ có thể nhấp để xem chi tiết."
+  },
+  "H5P_GameMap": {
+    "title": "Bản đồ trò chơi",
+    "summary": "Tạo bản đồ học tập dạng trò chơi",
+    "description": "Tạo bản đồ tương tác nơi người học di chuyển qua các điểm, hoàn thành bài tập để mở khóa nội dung tiếp theo."
+  },
+  "H5P_TwitterUserFeed": {
+    "title": "Nguồn tin Twitter"
+  }
+}

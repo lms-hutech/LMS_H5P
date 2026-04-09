@@ -1,0 +1,42 @@
+# Needed for the integration tests of the h5p-mongos3 package.
+# Run with docker-compose -f scripts/mongo-s3-docker-compose.yml up
+version: '3.6'
+
+services:
+    mongo:
+        image: mongo:latest
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: change-me-mongodb-password
+        ports:
+            - 27017:27017
+        volumes:
+            - mongodb_data:/data/db
+            
+    mongo-express:
+        image: mongo-express
+        restart: always
+        ports:
+            - 8081:8081
+        environment:
+            ME_CONFIG_MONGODB_ADMINUSERNAME: root
+            ME_CONFIG_MONGODB_ADMINPASSWORD: change-me-mongodb-password
+            ME_CONFIG_MONGODB_URL: mongodb://root:change-me-mongodb-password@mongo:27017/
+            ME_CONFIG_BASICAUTH: false
+
+    minio1:
+        image: minio/minio:latest
+        volumes:
+            - minio_data:/data
+        ports:
+            - 9000:9000
+            - 9001:9001
+        command: ['server', '/data', '--console-address', ':9001']
+        environment:
+            MINIO_ACCESS_KEY: change-me-access-key
+            MINIO_SECRET_KEY: change-me-secret-key
+
+volumes:
+    mongodb_data:
+    minio_data:

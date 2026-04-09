@@ -1,0 +1,6 @@
+# GitNexus index tuning: focus on source packages, skip generated H5P content and demo assets.
+/docs/
+/test/
+/packages/h5p-examples/h5p/
+/packages/h5p-examples/public/
+/packages/h5p-examples/build/

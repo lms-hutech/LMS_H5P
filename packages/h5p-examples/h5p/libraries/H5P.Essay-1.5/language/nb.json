@@ -1,0 +1,299 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valgfritt medieelement. Elementet vil bli plassert over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoom-funksjon."
+        }
+      ]
+    },
+    {
+      "label": "Oppgavebeskrivelse",
+      "description": "Beskriv oppgaven her. Beskrivelsen vil vises over skrivefeltet.",
+      "placeholder": "Oppsummer innholdet i boka. Bruk maks 500 tegn."
+    },
+    {
+      "label": "Hjelpetekst",
+      "description": "Denne teksten skal hjelpe brukeren å komme i gang.",
+      "placeholder": "Denne boka handler om ..."
+    },
+    {
+      "label": "Løsningsforslag",
+      "description": "Du kan velge å legge til et løsningsforslag som vises etter at brukeren har skrevet en tekst. Det kalles “løsningsforslag” fordi det sannsynligvis finnes flere mulige løsninger.",
+      "fields": [
+        {
+          "label": "Innledning",
+          "description": "Du kan velge å legge til løsningsforslaget ditt. Den blir bare vist dersom du også legger inn et løsningsforslag.",
+          "placeholder": "Husk: Dette eksemplet er bare et godt forslag. Du har kanskje funnet et annet godt svar."
+        },
+        {
+          "label": "Tekst til løsningsforslag",
+          "description": "Dersom du skriver inn tekst her, dukker det opp en “Vis svar”-knapp når bruker har levert svaret sitt."
+        }
+      ]
+    },
+    {
+      "label": "Nøkkelord",
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "entity": "Nøkkelord",
+      "field": {
+        "label": "Nøkkelord",
+        "fields": [
+          {
+            "label": "Nøkkelord",
+            "description": "Nøkkelord eller -frase som skal brukes i sjekk av tekst. Du kan bruke asterisk '*' som plassholder for en eller flere bokstaver. Du kan bruke skråstrek '/' for å markere start og slutt på en frase."
+          },
+          {
+            "label": "Varianter",
+            "description": "Legg til valgfrie alternativer til et nøkkelord. Eksempel: Alternativer til by' kan være 'metropol', 'storby', 'småby', 'landsby'. Bruker får poeng også for alternativene.",
+            "entity": "Variant",
+            "field": {
+              "label": "Nøkkelordvariant"
+            }
+          },
+          {
+            "label": "Poeng, valg og tilbakemelding",
+            "fields": [
+              {
+                "label": "Poeng",
+                "description": "Poeng som brukeren får dersom hen inkluderer dette nøkkelordet eller varianter av det i svaret sitt."
+              },
+              {
+                "label": "Tilfeller",
+                "description": "Definer hvor mange forekomster av nøkkelordet eller av varianter av det som skal gi poeng."
+              },
+              {
+                "label": "Ta hensyn til stor og liten bokstav",
+                "description": "Sørge for at svaret må være nøyaktig likt fasit."
+              },
+              {
+                "label": "Se bort fra mindre feil",
+                "description": "Dersom dette er valgt, regnes svaret som riktig selv med mindre stavefeil (3–9 tegn: 1 feil, flere enn 9 tegn: 2 feil)."
+              },
+              {
+                "label": "Tilbakemelding når nøkkelordet er brukt",
+                "description": "Denne tilbakemeldinga vises dersom brukeren har med nøkkelordet eller et alternativ til det i svaret sitt."
+              },
+              {
+                "label": "Tilbakemelding når nøkkelordet mangler",
+                "description": "Denne tilbakemeldinga vises dersom brukeren verken har med nøkkelordet eller et alternativ til det i svaret sitt."
+              },
+              {
+                "label": "Tilbakemelding dersom nøkkelordet er brukt",
+                "description": "Velg hvilket ord som skal bli vist foran tilbakemeldinga når et nøkkelord er funnet i teksten.",
+                "options": [
+                  {
+                    "label": "nøkkelord"
+                  },
+                  {
+                    "label": "alternativ til nøkkelord"
+                  },
+                  {
+                    "label": "avgitt svar"
+                  },
+                  {
+                    "label": "ikke noe"
+                  }
+                ]
+              },
+              {
+                "label": "Tilbakemelding når nøkkelordet ikke er funnet",
+                "description": "Velg hvilket ord som skal bli vist foran tilbakemeldinga når et nøkkelord mangler.",
+                "options": [
+                  {
+                    "label": "nøkkelord"
+                  },
+                  {
+                    "label": "ikke noe"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tilbakemelding på hele oppgaven",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standardinnstilling"
+            }
+          ],
+          "label": "Opprett poengområder og legg inn tilbakemeldinger",
+          "description": "Velg \"legg til poengområde\" og legg til så mange poengområder du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
+          "entity": "område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definerte poengområder",
+                "placeholder": "Skriv inn tilbakemelding"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse innstillingene lar deg styre ulike funksjoner i oppgaven.",
+      "fields": [
+        {
+          "label": "Minste antall tegn",
+          "description": "Bestem minste antall tegn brukeren må skrive."
+        },
+        {
+          "label": "Høyeste antall tegn",
+          "description": "Bestem høyeste antall tegn brukeren kan skrive."
+        },
+        {
+          "label": "Størrelse på skrivefelt",
+          "description": "Skrivefeltstørrelse i antall linjer",
+          "options": [
+            {
+              "label": "1 linje"
+            },
+            {
+              "label": "3 linjer"
+            },
+            {
+              "label": "10 linjer"
+            }
+          ]
+        },
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp",
+          "description": "Velg dersom bruker skal kunne starte på nytt."
+        },
+        {
+          "label": "Uten poeng",
+          "description": "Velg dersom brukeren bare skal få tilbakemeldingene på nøkkelordene som er med i svaret, ikke poeng."
+        },
+        {
+          "label": "Poeng i vertssystem",
+          "description": "Brukes for å tildele poeng i vertssystemet for at oppgaven er besvart (vises ikke for brukeren)."
+        },
+        {
+          "label": "Bestått-prosent",
+          "description": "Percentage that's necessary for passing"
+        },
+        {
+          "label": "Mastering percentage",
+          "description": "Percentage that's necessary for mastering. Setting the mastering percentage below 100 % will lower the maximum possible score accordingly. It's intended to give some leeway to students, not to \"graciously accept\" solutions that do not contain all keywords."
+        },
+        {
+          "label": "Override case sensitive",
+          "description": "This option determines if the \"Case sensitive\" option will be activated for all keywords.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        },
+        {
+          "label": "Override forgive mistakes",
+          "description": "This option determines if the \"Forgive mistakes\" option will be activated for all keywords.",
+          "options": [
+            {
+              "label": "Enabled"
+            },
+            {
+              "label": "Disabled"
+            }
+          ]
+        },
+        {
+          "label": "Replacement for line breaks",
+          "description": "By default, line breaks will be replaced with a space character. If you want to check for line breaks, e.g. in regular expressions, you can set a different replacement here.",
+          "options": [
+            {
+              "label": "space"
+            },
+            {
+              "label": "line break (\\n)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Text for \"Check\" button",
+      "default": "Check"
+    },
+    {
+      "label": "Text for \"Submit\" button",
+      "default": "Submit"
+    },
+    {
+      "label": "Text for \"Retry\" button",
+      "default": "Retry"
+    },
+    {
+      "label": "Text for \"Show solution\" button",
+      "default": "Show solution"
+    },
+    {
+      "label": "Header for panel containing feedback for included/missing keywords",
+      "default": "Feedback"
+    },
+    {
+      "label": "Label for solution",
+      "default": "Sample solution"
+    },
+    {
+      "label": "Remaining characters",
+      "default": "Remaining characters: @chars",
+      "description": "Message for remaining characters. You can use @chars which will be replaced by the corresponding number."
+    },
+    {
+      "label": "Not enough characters",
+      "default": "You must enter at least @chars characters!",
+      "description": "Message to indicate that the text doesn't contain enough characters. You can use @chars which will be replaced by the corresponding number."
+    },
+    {
+      "label": "Save message",
+      "description": "Message indicating that the text has been saved",
+      "default": "saved"
+    },
+    {
+      "label": "Your result (not displayed)",
+      "description": "Accessibility text used for readspeakers. @score will be replaced by the number of points. @total will be replaced by the maximum possible points.",
+      "default": "You got @score out of @total points"
+    },
+    {
+      "label": "Navigation message (not displayed)",
+      "description": "Accessibility text used for readspeakers",
+      "default": "Navigated to newly included sample solution after textarea."
+    },
+    {
+      "label": "Assistive technology description for \"Check\" button",
+      "default": "Check the answers."
+    },
+    {
+      "label": "Assistive technology description for \"Show Solution\" button",
+      "default": "Show the solution. You will be provided with a sample solution."
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. You can improve your previous answer if the author allowed that."
+    }
+  ]
+}

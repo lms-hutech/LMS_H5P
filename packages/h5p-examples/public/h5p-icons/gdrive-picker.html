@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Google Drive Picker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 4px solid #3498db;
+      width: 40px;
+      height: 40px;
+      -webkit-animation: spin 1s linear infinite; /* Safari */
+      animation: spin 1s linear infinite;
+    }
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    p { margin-top: 15px; color: #555; }
+    
+    .picker-dialog-bg { z-index: 1000 !important; }
+    .picker-dialog { z-index: 1001 !important; width: 100% !important; height: 100% !important; top: 0 !important; left: 0 !important; }
+  </style>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="https://accounts.google.com/gsi/client"></script>
+</head>
+<body>
+  <div class="loader" id="loader"></div>
+  <p id="status-text">Đang kết nối Google Drive...</p>
+
+  <script>
+    const GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY";
+    const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID";
+    const GOOGLE_APP_ID = "YOUR_GOOGLE_APP_ID";
+
+    let pickerApiLoaded = false;
+    let gisLoaded = false;
+    let tokenClient;
+
+    function isConfigured(value) {
+      return value && !value.startsWith("YOUR_GOOGLE_");
+    }
+
+    function verifyAndStart() {
+      if (!isConfigured(GOOGLE_API_KEY) || !isConfigured(GOOGLE_CLIENT_ID) || !isConfigured(GOOGLE_APP_ID)) {
+        document.getElementById("status-text").innerText =
+          "Google Drive Picker chưa được cấu hình. Hãy cập nhật GOOGLE_API_KEY, GOOGLE_CLIENT_ID và GOOGLE_APP_ID trước khi dùng tính năng này.";
+        document.getElementById("loader").style.display = "none";
+        return;
+      }
+      if (pickerApiLoaded && gisLoaded) {
+        document.getElementById("status-text").innerText = "Đang chờ tải cửa sổ xác thực...";
+        tokenClient.requestAccessToken({ prompt: "" });
+      }
+    }
+
+    gapi.load("picker", { callback: () => { 
+      pickerApiLoaded = true; 
+      verifyAndStart();
+    }});
+
+    window.onload = () => {
+      tokenClient = google.accounts.oauth2.initTokenClient({
+        client_id: GOOGLE_CLIENT_ID,
+        scope: "https://www.googleapis.com/auth/drive.readonly",
+        callback: async (response) => {
+          if (response.error !== undefined) {
+            document.getElementById("status-text").innerText = "Lỗi xác thực: " + response.error;
+            document.getElementById("loader").style.display = "none";
+            return;
+          }
+          
+          document.getElementById("status-text").innerText = "Đang mở kho video...";
+          const accessToken = response.access_token;
+          
+          try {
+            const view = new google.picker.DocsView(google.picker.ViewId.VIDEO);
+            const picker = new google.picker.PickerBuilder()
+                .enableFeature(google.picker.Feature.NAV_HIDDEN)
+                .setOAuthToken(accessToken)
+                .addView(view)
+                .setDeveloperKey(GOOGLE_API_KEY)
+                .setAppId(GOOGLE_APP_ID)
+                .setSize(document.documentElement.clientWidth, document.documentElement.clientHeight)
+                .setCallback((data) => {
+                  if (data.action == google.picker.Action.PICKED) {
+                    const doc = data.docs[0];
+                    const fileId = doc.id;
+                    const directUrl = "https://drive.google.com/uc?export=download&id=" + fileId;
+                    
+                    document.getElementById("status-text").innerText = "Đã chọn video! Đang trở về...";
+                    
+                    if (window.opener) {
+                      window.opener.postMessage({
+                        type: "gdrive-picked",
+                        url: directUrl
+                      }, "*");
+                    }
+                    window.close();
+                  } else if (data.action == google.picker.Action.CANCEL) {
+                    window.close();
+                  }
+                })
+                .build();
+            picker.setVisible(true);
+          } catch (err) {
+            console.error(err);
+            document.getElementById("status-text").innerText = "Lỗi tải giao diện Picker: " + err;
+            document.getElementById("loader").style.display = "none";
+          }
+        },
+      });
+      gisLoaded = true;
+      verifyAndStart();
+    };
+  </script>
+</body>
+</html>

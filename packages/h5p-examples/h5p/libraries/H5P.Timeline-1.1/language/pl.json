@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Oś czasu",
+      "fields": [
+        {
+          "label": "Nagłówek",
+          "description": "Główny nagłówek osi czasu wchodzi tutaj (pierwsza strona)"
+        },
+        {
+          "label": "Treść",
+          "description": "Główna część osi czasu wchodzi tutaj (pierwsza strona)."
+        },
+        {
+          "label": "Domyślny poziom powiększenia",
+          "description": "Spowoduje to dostosowanie domyślnego poziomu powiększenia. Odpowiednik naciśnięcia przycisku powiększenia lub pomniejszenia określoną liczbę razy. Liczby ujemne pomniejszają. Wartość domyślna to 0"
+        },
+        {
+          "label": "Tło",
+          "description": "Obraz do wyświetlenia jako tło."
+        },
+        {
+          "label": "Wysokość",
+          "description": "Wysokość w pikselach"
+        },
+        {
+          "label": "Zasób",
+          "description": "Tutaj możesz dodać zasób do \"strony głównej\" swojej osi czasu",
+          "fields": [
+            {
+              "label": "Media",
+              "description": "Link do URL mediów (obecnie są obsługiwane Twitter, YouTube, Flickr, Vimeo, Google Maps and SoundCloud)"
+            },
+            {
+              "label": "Prawa",
+              "description": "Prawa do mediów"
+            },
+            {
+              "label": "Napisy",
+              "description": "Opis napisów wchodzi tutaj"
+            }
+          ]
+        },
+        {
+          "label": "Daty",
+          "description": "Dodaj daty do swojej osi czasu!",
+          "field": {
+            "label": "Data",
+            "description": "Data",
+            "fields": [
+              {
+                "label": "Data rozpoczęcia",
+                "description": "RRRR,MM,DD (Minimalnie wymagany RRRR)"
+              },
+              {
+                "label": "Data zakończenia",
+                "description": "RRRR,MM,DD (Minimalnie wymagany RRRR)"
+              },
+              {
+                "label": "Nagłówek",
+                "description": "Nagłówek wpisu daty"
+              },
+              {
+                "label": "Treść",
+                "description": "Treść wprowadzenia daty"
+              },
+              {
+                "label": "Tagi",
+                "description": "Wprowadź Tagi (kategorie)"
+              },
+              {
+                "label": "Zasób",
+                "fields": [
+                  {
+                    "label": "Media",
+                    "description": "URL do mediów (obecnie są obsługiwane Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps and SoundCloud)."
+                  },
+                  {
+                    "label": "Zwięzły opis",
+                    "description": "W razie potrzeby dodaj miniaturę, 32x32"
+                  },
+                  {
+                    "label": "Prawo",
+                    "description": "Prawa do mediów"
+                  },
+                  {
+                    "label": "Napis",
+                    "description": "Tekst napisu"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Ery",
+          "description": "Dodaj erę do swojej osi czasu",
+          "field": {
+            "label": "Era",
+            "fields": [
+              {
+                "label": "Data rozpoczęcia",
+                "description": "RRRR,MM,DD (Minimalnie wymagany RRRR)"
+              },
+              {
+                "label": "Data zakończenia",
+                "description": "RRRR,MM,DD (Minimalnie wymagany RRRR)"
+              },
+              {
+                "label": "Nagłówek",
+                "description": "Nagłówek ery"
+              },
+              {
+                "label": "Tekst",
+                "description": "Treść ery"
+              },
+              {
+                "label": "Tag",
+                "description": "Tagi ery (kategorie)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Język",
+          "description": "Język interfejsu użytkownika",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabski"
+            },
+            {
+              "label": "Armeński"
+            },
+            {
+              "label": "Baskijski"
+            },
+            {
+              "label": "Bułgarski"
+            },
+            {
+              "label": "Kataloński"
+            },
+            {
+              "label": "Chiński"
+            },
+            {
+              "label": "Chorwacki"
+            },
+            {
+              "label": "Czeski"
+            },
+            {
+              "label": "Duński"
+            },
+            {
+              "label": "Niderlandzki"
+            },
+            {
+              "label": "Angielski"
+            },
+            {
+              "label": "Angielski (24-godzinny format)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estoński"
+            },
+            {
+              "label": "Farerski"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Fiński"
+            },
+            {
+              "label": "Francuski"
+            },
+            {
+              "label": "Galicyjski"
+            },
+            {
+              "label": "Gruziński"
+            },
+            {
+              "label": "Niemiecki"
+            },
+            {
+              "label": "Grecki"
+            },
+            {
+              "label": "Hebrajski"
+            },
+            {
+              "label": "Węgierski"
+            },
+            {
+              "label": "Islandzki"
+            },
+            {
+              "label": "Indonezyjski"
+            },
+            {
+              "label": "Włoski"
+            },
+            {
+              "label": "Japoński"
+            },
+            {
+              "label": "Koreański"
+            },
+            {
+              "label": "Łotewski"
+            },
+            {
+              "label": "Litewski"
+            },
+            {
+              "label": "Luksemburski"
+            },
+            {
+              "label": "Malajski"
+            },
+            {
+              "label": "Nepalski"
+            },
+            {
+              "label": "Norweski"
+            },
+            {
+              "label": "Polski"
+            },
+            {
+              "label": "Portugalski"
+            },
+            {
+              "label": "Portugalski (Brazylijski)"
+            },
+            {
+              "label": "Retoromański"
+            },
+            {
+              "label": "Rosyjski"
+            },
+            {
+              "label": "Serbski - Cyrylica"
+            },
+            {
+              "label": "Serbski - Łacina"
+            },
+            {
+              "label": "Cejloński"
+            },
+            {
+              "label": "Słowacki"
+            },
+            {
+              "label": "Słoweński"
+            },
+            {
+              "label": "Hiszpański"
+            },
+            {
+              "label": "Szwedzki"
+            },
+            {
+              "label": "Tagalski"
+            },
+            {
+              "label": "Tamilski"
+            },
+            {
+              "label": "Tajwański"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turecki"
+            },
+            {
+              "label": "Ukraiński"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

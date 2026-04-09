@@ -1,0 +1,26 @@
+{
+  "semantics": [
+    {
+      "label": "Descrierea sarcinii",
+      "description": "Descrieți cum ar trebui utilizatorul să rezolve sarcina."
+    },
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Media opțională de afișat deasupra întrebării."
+        }
+      ]
+    },
+    {
+      "label": "Eticheta soluției descriptive",
+      "default": "Apasă pentru a vedea răspunsul.",
+      "description": "Zonă de text pe care se poate face clic, unde va fi afișată soluția."
+    },
+    {
+      "label": "Textul soluției",
+      "description": "Soluția pentru imagine."
+    }
+  ]
+}

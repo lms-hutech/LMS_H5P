@@ -1,0 +1,50 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả",
+      "description": "Mô tả cho trang đánh giá mục tiêu",
+      "default": "Đánh giá các mục tiêu trên trang mục tiêu."
+    },
+    {
+      "label": "Văn bản đánh giá thấp",
+      "description": "Văn bản cho đánh giá thấp nhất",
+      "default": "Học ít"
+    },
+    {
+      "label": "Văn bản đánh giá trung bình",
+      "description": "Văn bản cho đánh giá trung bình",
+      "default": "Học được một chút"
+    },
+    {
+      "label": "Văn bản đánh giá cao",
+      "description": "Văn bản cho đánh giá cao",
+      "default": "Học được nhiều"
+    },
+    {
+      "label": "Văn bản khi không có mục tiêu",
+      "description": "Văn bản phản hồi khi chưa tạo mục tiêu nào",
+      "default": "Chưa có mục tiêu nào được chọn."
+    },
+    {
+      "label": "Nhãn văn bản trợ giúp",
+      "description": "Văn bản gợi ý để hiển thị thông tin hữu ích bổ sung cho người dùng.",
+      "default": "Thông tin thêm"
+    },
+    {
+      "label": "Thêm thông tin hữu ích",
+      "description": "Có thể nhập thêm thông tin hữu ích cho người dùng tại đây."
+    },
+    {
+      "label": "Tiêu đề chú giải",
+      "default": "Các mức đánh giá:"
+    },
+    {
+      "label": "Tiêu đề mục tiêu",
+      "default": "Mục tiêu"
+    },
+    {
+      "label": "Tiêu đề đánh giá",
+      "default": "Đánh giá"
+    }
+  ]
+}

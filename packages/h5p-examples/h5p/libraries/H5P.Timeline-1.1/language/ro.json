@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Cronologie",
+      "fields": [
+        {
+          "label": "Titlu principal",
+          "description": "Titlul principal al cronologiei se introduce aici (prima pagină)"
+        },
+        {
+          "label": "Text principal",
+          "description": "Textul principal al cronologiei se introduce aici (prima pagină)."
+        },
+        {
+          "label": "Nivel de zoom implicit",
+          "description": "Acesta va ajusta nivelul de zoom implicit. Echivalent cu apăsarea butonului de mărire sau micșorare de un număr specificat de ori. Numerele negative micșorează. Valoarea implicită este 0."
+        },
+        {
+          "label": "Imagine de fundal",
+          "description": "O imagine de afișat ca fundal."
+        },
+        {
+          "label": "Înălțime",
+          "description": "Înălțimea în pixeli"
+        },
+        {
+          "label": "Resursă media",
+          "description": "Aici puteți adăuga o resursă media la „prima pagină” a cronologiei",
+          "fields": [
+            {
+              "label": "Media",
+              "description": "Link către URL-ul media (Twitter, YouTube, Flickr, Vimeo, Google Maps și SoundCloud sunt acceptate în prezent)"
+            },
+            {
+              "label": "Credite",
+              "description": "Credite pentru media"
+            },
+            {
+              "label": "Legendă",
+              "description": "Descrierea legendei se introduce aici"
+            }
+          ]
+        },
+        {
+          "label": "Date",
+          "description": "Adăugați câteva date la cronologia dumneavoastră!",
+          "field": {
+            "label": "Dată",
+            "description": "Dată",
+            "fields": [
+              {
+                "label": "Dată de început",
+                "description": "AAAA,LL,ZZ (Minimum AAAA necesar)"
+              },
+              {
+                "label": "Dată de sfârșit",
+                "description": "AAAA,LL,ZZ (Minimum AAAA necesar)"
+              },
+              {
+                "label": "Titlu",
+                "description": "Titlu pentru intrarea de dată"
+              },
+              {
+                "label": "Text principal",
+                "description": "Text principal pentru intrarea de dată"
+              },
+              {
+                "label": "Etichete",
+                "description": "Introduceți Etichete (categorii)"
+              },
+              {
+                "label": "Resursă media",
+                "fields": [
+                  {
+                    "label": "Media",
+                    "description": "URL către media (Twitter, YouTube, Flickr, Vimeo, Wikipedia, Google Maps și SoundCloud sunt acceptate în prezent)."
+                  },
+                  {
+                    "label": "Miniatură",
+                    "description": "Adăugați o miniatură dacă este necesar, 32x32"
+                  },
+                  {
+                    "label": "Credit",
+                    "description": "Credite pentru media"
+                  },
+                  {
+                    "label": "Legendă",
+                    "description": "Text legendă"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Ere",
+          "description": "Adăugați o eră la cronologia dumneavoastră",
+          "field": {
+            "label": "Eră",
+            "fields": [
+              {
+                "label": "Dată de început",
+                "description": "AAAA,LL,ZZ (Minimum AAAA necesar)"
+              },
+              {
+                "label": "Dată de sfârșit",
+                "description": "AAAA,LL,ZZ (Minimum AAAA necesar)"
+              },
+              {
+                "label": "Titlu",
+                "description": "Titlu eră"
+              },
+              {
+                "label": "Text",
+                "description": "Text principal eră"
+              },
+              {
+                "label": "Etichetă",
+                "description": "Etichete eră (categorii)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Limbă",
+          "description": "Limba interfeței utilizatorului",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arabă"
+            },
+            {
+              "label": "Armeană"
+            },
+            {
+              "label": "Bască"
+            },
+            {
+              "label": "Bulgară"
+            },
+            {
+              "label": "Catalană"
+            },
+            {
+              "label": "Chineză"
+            },
+            {
+              "label": "Croată / Hrvatski"
+            },
+            {
+              "label": "Cehă"
+            },
+            {
+              "label": "Daneză"
+            },
+            {
+              "label": "Olandeză"
+            },
+            {
+              "label": "Engleză"
+            },
+            {
+              "label": "Engleză (format 24 de ore)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonă"
+            },
+            {
+              "label": "Feroeză"
+            },
+            {
+              "label": "Farsi (Persană)"
+            },
+            {
+              "label": "Finlandeză"
+            },
+            {
+              "label": "Franceză"
+            },
+            {
+              "label": "Galițiană"
+            },
+            {
+              "label": "Georgiană"
+            },
+            {
+              "label": "Germană / Deutsch"
+            },
+            {
+              "label": "Greacă"
+            },
+            {
+              "label": "Ebraică"
+            },
+            {
+              "label": "Maghiară"
+            },
+            {
+              "label": "Islandeză"
+            },
+            {
+              "label": "Indoneziană"
+            },
+            {
+              "label": "Italiană"
+            },
+            {
+              "label": "Japoneză"
+            },
+            {
+              "label": "Coreeană"
+            },
+            {
+              "label": "Letonă"
+            },
+            {
+              "label": "Lituaniană"
+            },
+            {
+              "label": "Luxemburgheză"
+            },
+            {
+              "label": "Malaeză"
+            },
+            {
+              "label": "Nepaleză"
+            },
+            {
+              "label": "Norvegiană"
+            },
+            {
+              "label": "Poloneză"
+            },
+            {
+              "label": "Portugheză"
+            },
+            {
+              "label": "Portugheză (braziliană)"
+            },
+            {
+              "label": "Romanșă"
+            },
+            {
+              "label": "Rusă"
+            },
+            {
+              "label": "Sârbă - Chirilic"
+            },
+            {
+              "label": "Sârbă - Latin"
+            },
+            {
+              "label": "Sinhaleză"
+            },
+            {
+              "label": "Slovacă"
+            },
+            {
+              "label": "Slovenă"
+            },
+            {
+              "label": "Spaniolă"
+            },
+            {
+              "label": "Suedeză"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamilă"
+            },
+            {
+              "label": "Taiwaneză"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turcă"
+            },
+            {
+              "label": "Ucraineană"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

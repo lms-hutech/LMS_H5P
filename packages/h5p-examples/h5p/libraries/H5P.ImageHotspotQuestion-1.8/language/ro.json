@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Editor Întrebare cu Puncte Active pe Imagine",
+      "fields": [
+        {
+          "label": "Imagine de fundal",
+          "fields": [
+            {
+              "label": "Imagine de fundal",
+              "description": "Selectați o imagine pentru a o folosi ca fundal pentru întrebarea cu puncte active pe imagine."
+            }
+          ]
+        },
+        {
+          "label": "Puncte active",
+          "description": "Glisați și plasați figura dorită din bara de instrumente pentru a crea un nou punct activ. Faceți dublu clic pentru a edita un punct activ existent. Glisați punctul activ pentru a-l muta. Trageți de mânerul de redimensionare din colțul din dreapta jos pentru a redimensiona.",
+          "fields": [
+            {
+              "label": "Descrierea sarcinii",
+              "description": "Instrucțiuni pentru utilizator."
+            },
+            {
+              "label": "Punct activ",
+              "entity": "Punct activ",
+              "field": {
+                "label": "Punct activ",
+                "fields": [
+                  {
+                    "label": "userSettings",
+                    "fields": [
+                      {
+                        "label": "Corect",
+                        "description": "Pot exista mai multe puncte active corecte. Cu toate acestea, utilizatorul primește feedback corect/incorect imediat după primul clic."
+                      },
+                      {
+                        "label": "Feedback"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "computedSettings"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Feedback dacă utilizatorul selectează un loc gol:",
+              "placeholder": "Nu ați localizat niciun punct activ, încercați din nou!"
+            },
+            {
+              "label": "Afișează feedback-ul într-un pop-up"
+            },
+            {
+              "label": "Localizare",
+              "fields": [
+                {
+                  "label": "Text buton Reîncearcă",
+                  "default": "Reîncearcă"
+                },
+                {
+                  "label": "Text buton Închide",
+                  "default": "Închide"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Reprezentarea textuală a barei de scor pentru cei care folosesc un cititor de ecran",
+      "default": "Ai obținut :num din :total puncte"
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă a butonului „Reîncearcă”",
+      "default": "Reîncearcă sarcina. Resetează toate răspunsurile și reia sarcina de la început."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Introduksjonstekst",
+      "default": "Velg riktig påstand.",
+      "description": "Denne teksten står over oppgaven."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Standard"
+        },
+        {
+          "label": "Tekstlig"
+        }
+      ],
+      "label": "Oppsummering",
+      "entity": "påstander",
+      "field": {
+        "label": "Påstander",
+        "fields": [
+          {
+            "label": "Alternative påstander. Første påstand er riktig.",
+            "entity": "påstand",
+            "field": {
+              "label": "Påstand"
+            }
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tipstekst"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Samla tilbakemelding",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standard"
+            }
+          ],
+          "label": "Opprett poengområder og legg inn tilbakemeldinger",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområder du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
+          "entity": "poengområde",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekst som vises foran antall løste påstander",
+      "default": "Løste påstander:",
+      "description": "Vil vises over påstandene. Eksempel: \"Løste påstander: 2/5\""
+    },
+    {
+      "label": "Tekst som vises foran antall feil svar",
+      "default": "Feil svar:",
+      "description": "Vil vises over påstandene. Eksempel: \"Feil svar: 4\""
+    },
+    {
+      "label": "Overskrift over tilbakemelding",
+      "default": "Resultatet ditt:",
+      "description": "Vises over poengsum og eventuell tilbakemelding"
+    },
+    {
+      "label": "Skjermlesertekst ved riktig svar",
+      "default": "Riktig."
+    },
+    {
+      "label": "Skjermlesertekst ved feil svar",
+      "default": "Feil svar. Prøv igjen."
+    },
+    {
+      "label": "Skjermleseretikett for feil svar",
+      "default": "Feil"
+    },
+    {
+      "label": "Etikett for liste over riktige svar",
+      "default": "Riktige svar."
+    },
+    {
+      "label": "Etikett for \"Vis tips\"-knapp",
+      "default": "Vis tips"
+    },
+    {
+      "label": "Tekstalternativ til resultatlinja (for skjermlesere)",
+      "description": ":num og :total er variabler som oppdateres automatisk.",
+      "default": "Du fikk :num av :total poeng."
+    },
+    {
+      "label": "Skjermlesertekst som informerer om progresjon",
+      "description": ":num og :total er variabler som oppdateres automatisk.",
+      "default": "Progresjon :num av :total"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "semantics": [
+    {
+      "label": "Antraštė",
+      "default": "Dokumentacijos įrankis",
+      "description": "Pavadinimas dokumentacijos įrankiui."
+    },
+    {
+      "label": "Elementai",
+      "widgets": [
+        {
+          "label": "Numatytasis"
+        }
+      ],
+      "entity": "puslapis",
+      "field": {
+        "label": "Puslapio tipas",
+        "description": "Šios skaidrės biblioteka."
+      }
+    },
+    {
+      "label": "Localize documentation tool buttons",
+      "fields": [
+        {
+          "label": "Previous button label",
+          "default": "Previous documentation step"
+        },
+        {
+          "label": "Previous",
+          "default": "Previous"
+        },
+        {
+          "label": "Next button label",
+          "default": "Kitas dokumentacijos etapas"
+        },
+        {
+          "label": "Next",
+          "default": "Next"
+        },
+        {
+          "label": "Close button label",
+          "default": "Uždaryti"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả",
+      "description": "Mô tả trang xuất.",
+      "default": "Trên trang này bạn có thể chọn xuất văn bản, mục tiêu và đánh giá mục tiêu."
+    },
+    {
+      "label": "Nhãn nút tạo tài liệu",
+      "description": "Văn bản sẽ hiển thị trên nút \"Tạo tài liệu\".",
+      "default": "Tạo tài liệu"
+    },
+    {
+      "label": "Nút nộp văn bản",
+      "description": "Văn bản hiển thị trên nút \"Nộp bài\".",
+      "default": "Nộp"
+    },
+    {
+      "label": "Nhãn nộp thành công",
+      "default": "Báo cáo của bạn đã được gửi thành công!"
+    },
+    {
+      "label": "Nhãn nút chọn tất cả văn bản có thể xuất",
+      "description": "Văn bản hiển thị trên nút \"Chọn tất cả văn bản\".",
+      "default": "Chọn"
+    },
+    {
+      "label": "Nhãn nút xuất văn bản",
+      "description": "Văn bản hiển thị trên nút \"Xuất văn bản\".",
+      "default": "Xuất"
+    },
+    {
+      "label": "Nhãn cho văn bản trợ giúp",
+      "description": "Nhãn cho showing additional helpful information to the user.",
+      "default": "Thêm thông tin"
+    },
+    {
+      "label": "Điền thêm thông tin trợ giúp",
+      "description": "Tại đây bạn có thể điền thêm thông tin hữu ích cho người dùng."
+    },
+    {
+      "label": "Văn bản thiếu dữ liệu nhập bắt buộc",
+      "description": "Thông báo lỗi hiển thị khi một hoặc nhiều trường bắt buộc chưa được điền. @pages sẽ được thay thế bằng tiêu đề các trang bị ảnh hưởng.",
+      "default": "Các trang sau chứa trường bắt buộc cần điền để xem lại hoặc nộp tài liệu này: @pages"
+    }
+  ]
+}

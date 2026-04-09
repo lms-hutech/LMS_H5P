@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "Trình soạn câu hỏi điểm nóng trên hình ảnh",
+      "fields": [
+        {
+          "label": "Hình nền",
+          "fields": [
+            {
+              "label": "Hình nền",
+              "description": "Chọn hình ảnh làm nền cho câu hỏi điểm nóng."
+            }
+          ]
+        },
+        {
+          "label": "Các điểm nóng",
+          "description": "Kéo và thả hình mong muốn từ thanh công cụ để tạo điểm nóng mới. Nhấp đúp để chỉnh sửa điểm nóng hiện có. Kéo điểm nóng để di chuyển. Kéo tay nắm thay đổi kích thước ở góc dưới bên phải để thay đổi kích thước.",
+          "fields": [
+            {
+              "label": "Mô tả bài tập",
+              "description": "Hướng dẫn cho người dùng."
+            },
+            {
+              "label": "Điểm nóng",
+              "entity": "Điểm nóng",
+              "field": {
+                "label": "Điểm nóng",
+                "fields": [
+                  {
+                    "label": "Cài đặt người dùng",
+                    "fields": [
+                      {
+                        "label": "Đúng",
+                        "description": "Có thể có nhiều điểm nóng đúng. Tuy nhiên, người dùng nhận phản hồi đúng/sai ngay sau lần nhấp đầu tiên."
+                      },
+                      {
+                        "label": "Phản hồi"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Cài đặt tính toán"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Phản hồi nếu người dùng chọn vị trí trống:",
+              "placeholder": "Bạn chưa tìm thấy điểm nóng nào, hãy thử lại!"
+            },
+            {
+              "label": "Hiện phản hồi dưới dạng cửa sổ bật lên"
+            },
+            {
+              "label": "Bản địa hóa",
+              "fields": [
+                {
+                  "label": "Văn bản nút thử lại",
+                  "default": "Thử lại"
+                },
+                {
+                  "label": "Văn bản nút đóng",
+                  "default": "Đóng"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Biểu diễn văn bản của thanh điểm cho người dùng trình đọc màn hình",
+      "default": "Bạn đạt :num trên :total điểm"
+    },
+    {
+      "label": "Mô tả công nghệ hỗ trợ cho \"Thử lại\" button",
+      "default": "Thử lại bài tập. Đặt lại tất cả câu trả lời và làm lại từ đầu."
+    }
+  ]
+}

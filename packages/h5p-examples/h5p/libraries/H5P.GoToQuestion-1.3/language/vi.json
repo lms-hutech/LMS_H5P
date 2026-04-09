@@ -1,0 +1,32 @@
+{
+  "semantics": [
+    {
+      "label": "Văn bản câu hỏi",
+      "description": "Câu hỏi mà người dùng sẽ lựa chọn dựa trên đó."
+    },
+    {
+      "label": "Các lựa chọn",
+      "entity": "lựa chọn",
+      "field": {
+        "fields": [
+          {
+            "label": "Văn bản lựa chọn",
+            "description": "Nhãn sẽ hiển thị trên nút lựa chọn."
+          },
+          {
+            "label": "Go To",
+            "description": "Thời gian đích người dùng sẽ được chuyển đến khi nhấn nút lựa chọn. Nhập mã thời gian theo định dạng M:SS."
+          },
+          {
+            "label": "Văn bản khi được chọn",
+            "description": "Văn bản xác nhận tùy chọn sẽ hiển thị sau khi người dùng nhấn nút lựa chọn."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Nhãn nút Tiếp tục",
+      "default": "Tiếp tục"
+    }
+  ]
+}

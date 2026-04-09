@@ -1,0 +1,138 @@
+{
+  "semantics": [
+    {
+      "widgets": [
+        {
+          "label": "Standard"
+        }
+      ],
+      "label": "Kort",
+      "entity": "kort",
+      "field": {
+        "label": "Kort",
+        "fields": [
+          {
+            "label": "Bilde"
+          },
+          {
+            "label": "Alternativ tekst for bilde",
+            "description": "Beskriv bildet. Teksten brukes av skjermleser."
+          },
+          {
+            "label": "Lydspor",
+            "description": "Valgfri lyd som spilles når kortet snus."
+          },
+          {
+            "label": "Tilhørende bilde",
+            "description": "Valgfritt bilde som brukes som kort nummer to (i stedet for å bruke to kort med samme bilde)."
+          },
+          {
+            "label": "Alternativ tekst for tilhørende bilde",
+            "description": "Beskriv bildet. Teksten brukes av skjermleser."
+          },
+          {
+            "label": "Lydspor til tilhørende bilde",
+            "description": "Valgfri lyd som spilles når tilhørende bilde snus."
+          },
+          {
+            "label": "Tilbakemelding",
+            "description": "Valgfri kort tekst som spretter opp når kort-paret er funnet."
+          }
+        ]
+      }
+    },
+    {
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse innstillingene lar deg bestemme ulike funksjoner i spillet.",
+      "fields": [
+        {
+          "label": "Plasser kortene i en firkant",
+          "description": "Prøver å ordne kortene i likt antall kolonner og rader. Størrelsen på kortene blir også tilpasset."
+        },
+        {
+          "label": "Antall kort som skal brukes",
+          "description": "Ved å sette antallet høyere enn 2 vil spillet plukke tilfeldige kort fra listen over kort."
+        },
+        {
+          "label": "Legg til knapp for å prøve på nytt når spillet er over"
+        }
+      ]
+    },
+    {
+      "label": "Tilpass utseende",
+      "description": "Velg hvordan spillet skal se ut.",
+      "fields": [
+        {
+          "label": "Temafarge",
+          "description": "Velg en farge for å skape en stil eller en stemning for spillet."
+        },
+        {
+          "label": "Kortbaksiden",
+          "description": "Bruk en tilpasset bakside for kortene."
+        }
+      ]
+    },
+    {
+      "label": "Språktilpassing",
+      "fields": [
+        {
+          "label": "Tekst for snudd kort",
+          "default": "Snudde kort"
+        },
+        {
+          "label": "Tekst for brukt tid",
+          "default": "Tid brukt"
+        },
+        {
+          "label": "Tilbakemeldingstekst",
+          "default": "Godt jobbet!"
+        },
+        {
+          "label": "Tekst på knapp som lar bruker starte på nytt",
+          "default": "En gang til?"
+        },
+        {
+          "label": "Navn på “Lukk”-knapp",
+          "default": "Lukk"
+        },
+        {
+          "label": "Beskrivelse av spill",
+          "default": "Memory Game. Finn kortparene!"
+        },
+        {
+          "label": "Spillinstruksjoner",
+          "default": "Bruk venstre og høyre piltast for å gå fra kort til kort. Bruk mellomromstast eller Enter-tast for å snu kort."
+        },
+        {
+          "label": "Melding når spillet er avsluttet",
+          "default": "Du har funnet alle kortparene."
+        },
+        {
+          "label": "Etikett for kortnummer",
+          "description": "%num og %total er variabler som blir erstattet med tallene for det aktuelle kortet.",
+          "default": "Kort %num av %total:"
+        },
+        {
+          "label": "Etikett for kort som ikke er snudd",
+          "default": "Ikke snudd. Velg for å snu."
+        },
+        {
+          "label": "Etikett for snudd kort",
+          "default": "Snudd."
+        },
+        {
+          "label": "Etikett når et par er funnet",
+          "default": "Par funnet."
+        },
+        {
+          "label": "Melding når par er funnet",
+          "default": "Du har funnet et par."
+        },
+        {
+          "label": "Melding når kortene ikke hører sammen",
+          "default": "Kortene hører ikke sammen. Snu andre kort for å prøve igjen."
+        }
+      ]
+    }
+  ]
+}

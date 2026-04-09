@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chọn Video từ Google Drive</title>
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#f8f9fa; }
+    .loading { text-align:center; color:#5f6368; }
+    .spinner { width:40px; height:40px; border:4px solid #e0e0e0; border-top-color:#1a73e8; border-radius:50%; animation:spin .7s linear infinite; margin:0 auto 16px; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    Đang tải Google Drive Picker...
+  </div>
+
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="https://accounts.google.com/gsi/client"></script>
+  <script>
+    var CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
+    var APP_ID = 'YOUR_GOOGLE_APP_ID';
+    var SCOPES = 'https://www.googleapis.com/auth/drive.readonly';
+    var gapiReady = false, gisReady = false;
+
+    function isConfigured(value) {
+      return value && value.indexOf('YOUR_GOOGLE_') !== 0;
+    }
+
+    function checkReady() {
+      if (!isConfigured(CLIENT_ID) || !isConfigured(APP_ID)) {
+        document.getElementById('loading').innerText =
+          'Google Drive Picker chưa được cấu hình. Hãy cập nhật CLIENT_ID và APP_ID trước khi dùng tính năng này.';
+        return;
+      }
+      if (gapiReady && gisReady) {
+        doAuth();
+      }
+    }
+
+    // Load Picker API
+    gapi.load('picker', function () {
+      gapiReady = true;
+      checkReady();
+    });
+
+    // Init OAuth
+    var tokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: CLIENT_ID,
+      scope: SCOPES,
+      callback: function (response) {
+        if (response.error) {
+          alert('Lỗi xác thực: ' + response.error);
+          return;
+        }
+        showPicker(response.access_token);
+      }
+    });
+    gisReady = true;
+    checkReady();
+
+    function doAuth() {
+      tokenClient.requestAccessToken({ prompt: 'consent' });
+    }
+
+    function showPicker(accessToken) {
+      var view = new google.picker.DocsView(google.picker.ViewId.DOCS);
+      view.setMimeTypes('video/mp4,video/webm,video/ogg,video/avi,video/mov,video/mkv,video/x-matroska,video/quicktime');
+
+      var picker = new google.picker.PickerBuilder()
+        .setOAuthToken(accessToken)
+        .addView(view)
+        .addView(new google.picker.DocsUploadView())
+        .setAppId(APP_ID)
+        .setCallback(function (data) {
+          if (data.action === google.picker.Action.PICKED) {
+            window.opener.postMessage({ type: 'gdrive-picked', fileId: data.docs[0].id }, '*');
+            window.close();
+          }
+          if (data.action === google.picker.Action.CANCEL) {
+            window.close();
+          }
+        })
+        .build();
+
+      document.getElementById('loading').style.display = 'none';
+      picker.setVisible(true);
+    }
+  </script>
+</body>
+</html>

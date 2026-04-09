@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Medium",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valgfritt medieelement som vises over spørsmålet."
+        },
+        {
+          "label": "Deaktiver zoomfunksjon."
+        }
+      ]
+    },
+    {
+      "label": "Spørsmål"
+    },
+    {
+      "label": "Tilgjengelige valg",
+      "entity": "alternativ",
+      "field": {
+        "label": "Alternativ",
+        "fields": [
+          {
+            "label": "Tekst"
+          },
+          {
+            "label": "Riktig"
+          },
+          {
+            "label": "Tips og tilbakemelding",
+            "fields": [
+              {
+                "label": "Tipstekst",
+                "description": "Hint til bruker. Vises før bruker sjekker svar."
+              },
+              {
+                "label": "Melding dersom svaret er valgt",
+                "description": "Meldinga vises under svaret hvis bruker velger \"Sjekk\"."
+              },
+              {
+                "label": "Melding hvis alternativet ikke er valgt",
+                "description": "Ved svarsjekk vises denne meldinga under svaret om svaret ikke er valgt."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tilbakemelding på hele oppgaven",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standard"
+            }
+          ],
+          "label": "Opprett poengområder og legg inn tilbakemeldinger",
+          "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområder du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
+          "entity": "poengområde",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Oversettelse av tekst i brukergrensesnittet",
+      "fields": [
+        {
+          "label": "Tekst på \"Sjekk svar\"-knapp",
+          "default": "Sjekk"
+        },
+        {
+          "label": "Tekst på \"Send inn\"-knapp",
+          "default": "Send inn"
+        },
+        {
+          "label": "Tekst på \"Vis svar\"-knapp",
+          "default": "Vis svar"
+        },
+        {
+          "label": "Tekst på \"Prøv igjen\"-knapp",
+          "default": "Prøv igjen"
+        },
+        {
+          "label": "Tekst på \"Tips\"-knapp",
+          "default": "Vis tips"
+        },
+        {
+          "label": "Tekstalternativ til resultatlinja (for skjermleserbrukere)",
+          "description": "Tilgjengelige variabler er :num og :total.",
+          "default": "Du fikk :num av :total poeng."
+        },
+        {
+          "label": "Tips tilgjengelig (vises ikke)",
+          "default": "Tips tilgjengelig",
+          "description": "Tekst som brukes av skjermleser"
+        },
+        {
+          "label": "Tilbakemelding tilgjengelig (ikke vist)",
+          "default": "Tilbakemelding tilgjengelig",
+          "description": "Tekst som brukes av skjermleser"
+        },
+        {
+          "label": "Les tilbakemelding (ikke vist)",
+          "default": "Les tilbakemelding",
+          "description": "Tekst som brukes av skjermleser"
+        },
+        {
+          "label": "Feil svar (ikke vist)",
+          "default": "Feil svar",
+          "description": "Tekst brukt av skjermleser"
+        },
+        {
+          "label": "Riktig svar (ikke vist)",
+          "default": "Riktig svar",
+          "description": "Tekst som brukes av skjermleser"
+        },
+        {
+          "label": "Skulle vært valgt",
+          "default": "Skulle vært valgt"
+        },
+        {
+          "label": "Skulle ikke vært valgt",
+          "default": "Skulle ikke vært valgt"
+        },
+        {
+          "label": "Beskjed om at bruker må svare",
+          "default": "Du må svare før du får se løsningen."
+        },
+        {
+          "label": "Beskrivelse av \"Sjekk\"-knapp (for assisterende teknologi)",
+          "default": "Sjekk svar. Svara blir merka som riktig, feil eller ubesvart."
+        },
+        {
+          "label": "Beskrivelse av \"Vis svar\"-knapp (for assisterende teknologi)",
+          "default": "Vis svar. Oppgaven blir merka med riktige svar."
+        },
+        {
+          "label": "Beskrivelse av \"Prøv igjen\"-knapp (for assisterende teknologi)",
+          "default": "Prøv igjen. Alle svara blir nullstilt, og oppgaven starter på nytt."
+        }
+      ]
+    },
+    {
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse valga lar deg styre ulike funksjoner i oppgaven.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Vis svar\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Sjekk\"-knapp"
+        },
+        {
+          "label": "Oppgavetype",
+          "description": "Velg utseende og innstillinger.",
+          "options": [
+            {
+              "label": "Automatisk"
+            },
+            {
+              "label": "Multiple Choice (flere svar kan være riktige; firkanta knapper)"
+            },
+            {
+              "label": "Single Choice (ett svar er riktig; runde knapper)"
+            }
+          ]
+        },
+        {
+          "label": "Gi ett poeng for hele oppgaven",
+          "description": "Aktiver for å gi ett poeng totalt for flere riktige svar. Ikke mulig i Single Choice-oppgaver."
+        },
+        {
+          "label": "Tilfeldig rekkefølge",
+          "description": "Aktiver for å vise svara i tilfeldig rekkefølge."
+        },
+        {
+          "label": "Krev svar før bruker får se fasit."
+        },
+        {
+          "label": "Vis bekreftelsesdialog når \"Sjekk\" er valgt."
+        },
+        {
+          "label": "Vis bekreftelsesdialog når \"Prøv igjen\" er valgt."
+        },
+        {
+          "label": "Sjekk svar automatisk.",
+          "description": "Obs! Dette valget gir dårligere tilgjengelighet."
+        },
+        {
+          "label": "Prosentandel riktige svar som kreves for å bestå",
+          "description": "Dersom bruker bare kan få ett poeng for hele oppgaven, må hen oppnå denne prosentandelen rette svar for å få poenget."
+        },
+        {
+          "label": "Vis poengsum",
+          "description": "Vis poengsum for hvert svar. Kan ikke velges ved Single Choice-oppgaver eller dersom \"Gi ett poeng for hele oppgaven\" er aktivert."
+        }
+      ]
+    },
+    {
+      "label": "Bekreftelsesdialog for \"Sjekk svar\"",
+      "fields": [
+        {
+          "label": "Tittel på bekreftelsesdialog",
+          "default": "Avslutte?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du er ferdig?"
+        },
+        {
+          "label": "Tekst på \"Avbryt\"-knapp",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Tekst på \"Bekreft\"-knapp",
+          "default": "Bekreft"
+        }
+      ]
+    },
+    {
+      "label": "Bekreftelsesdialog for \"Prøv igjen\"",
+      "fields": [
+        {
+          "label": "Tittel på bekreftelsesdialog",
+          "default": "Prøve igjen?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du vil prøve igjen?"
+        },
+        {
+          "label": "Tekst på \"Avbryt\"-knapp",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Tekst på \"Bekreft\"-knapp",
+          "default": "Bekreft"
+        }
+      ]
+    }
+  ]
+}

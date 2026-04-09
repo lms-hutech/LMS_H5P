@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Beskriving av inntastingsfelt",
+      "description": "Ei beskriving av kva brukaren skal fylle inn."
+    },
+    {
+      "label": "Valfri fylltekst ved tomt tekstfelt",
+      "description": "Her kan du oppgi ein fylltekst som skal visast når inntastingsfeltet er tomt."
+    },
+    {
+      "label": "Maksimal tekstlengde",
+      "description": "Maksimalt antal teikn i teksten."
+    },
+    {
+      "label": "Storleik på inntastingsfelt",
+      "description": "Storleiken på inntastingsfeltet, oppgitt i antal linjer.",
+      "options": [
+        {
+          "label": "1 linje"
+        },
+        {
+          "label": "3 linjer"
+        },
+        {
+          "label": "10 linjer"
+        }
+      ]
+    },
+    {
+      "label": "Obligatorisk felt",
+      "description": "Skru på for å gjere dette inntastingsfeltet obligatorisk. Brukar kan ikkje eksportere eit dokument før alle dei obligatoriske inntastingsfelta er fylte ut."
+    },
+    {
+      "label": "Gjenståande teikn",
+      "default": "Teikn igjen: @chars",
+      "description": "Melding om kor mange teikn brukar har igjen. Du kan bruke variabelen @chars, som blir erstatta av det aktuelle talet."
+    }
+  ]
+}

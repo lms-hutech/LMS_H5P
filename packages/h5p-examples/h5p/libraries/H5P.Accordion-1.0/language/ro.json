@@ -1,0 +1,36 @@
+{
+  "semantics":[
+    {
+      "label":"Panou",
+      "entity":"panou",
+      "field":{
+        "label":"Conținut",
+        "entity":"conținut",
+        "fields":[
+          {
+            "label":"Titlu"
+          },
+          {
+            "label":"Tip conținut",
+            "entity":"conținut"
+          }
+        ]
+      }
+    },
+    {
+      "label":"Marchează H pentru etichete (nu afectează dimensiunea etichetei)",
+      "description":"Marcarea h folosită pentru etichete (labels). În mod normal este H2, dar dacă aceasta se află sub un titlu H2, se folosește H3. Nu afectează dimensiunea etichetelor, este utilizat doar în scopuri semantice.",
+      "options":[
+        {
+          "label":"H2"
+        },
+        {
+          "label":"H3"
+        },
+        {
+          "label":"H4"
+        }
+      ]
+    }
+  ]
+}

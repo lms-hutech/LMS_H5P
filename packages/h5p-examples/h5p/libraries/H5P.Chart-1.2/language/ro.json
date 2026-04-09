@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Tip de grafic",
+      "options": [
+        {
+          "label": "Grafic circular"
+        },
+        {
+          "label": "Grafic cu bare"
+        }
+      ]
+    },
+    {
+      "label": "Elemente de date",
+      "entity": "opțiune",
+      "field": {
+        "label": "Element de date",
+        "fields": [
+          {
+            "label": "Nume"
+          },
+          {
+            "label": "Valoare"
+          },
+          {
+            "label": "Culoare"
+          },
+          {
+            "label": "Culoare font"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Text citit de cititoarele de ecran care definește figura ca fiind un grafic.",
+      "default": "Grafic"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "semantics": [
+    {
+      "label": "Pealkiri",
+      "default": "Dokumenteerimisvahend",
+      "description": "Dokumenteerimisvahendi pealkiri."
+    },
+    {
+      "label": "Elemendid",
+      "widgets": [
+        {
+          "label": "Vaikimisi"
+        }
+      ],
+      "entity": "lehekülg",
+      "field": {
+        "label": "Lehekülje tüüp",
+        "description": "Selle lehekülje teek."
+      }
+    },
+    {
+      "label": "Kohanda dokumenteerimisvahendi nupud",
+      "fields": [
+        {
+          "label": "Eelmine nupu silt",
+          "default": "Eelmine documentation step"
+        },
+        {
+          "label": "Previous",
+          "default": "Previous"
+        },
+        {
+          "label": "Järgmine nupu silt",
+          "default": "Järgmine documentation step"
+        },
+        {
+          "label": "Next",
+          "default": "Next"
+        },
+        {
+          "label": "Sulge nupu silt",
+          "default": "Sulge"
+        }
+      ]
+    }
+  ]
+}

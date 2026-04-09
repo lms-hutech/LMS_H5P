@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Hình ảnh",
+      "field": {
+        "label": "Hình ảnh",
+        "fields": [
+          {
+            "label": "Hình ảnh"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tỷ lệ khung hình",
+      "description": "Tự động nghĩa là sử dụng tỷ lệ khung hình cố định được xác định tự động dựa trên hình ảnh",
+      "options": [
+        {
+          "label": "Tự động"
+        },
+        {
+          "label": "Tùy chỉnh"
+        },
+        {
+          "label": "Không cố định"
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt tỷ lệ khung hình",
+      "fields": [
+        {
+          "label": "Chiều rộng tương đối",
+          "description": "Nếu bạn nhập 4 ở đây và 3 cho chiều cao, tỷ lệ khung hình sẽ là 4:3"
+        },
+        {
+          "label": "Chiều cao tương đối",
+          "description": "Nếu bạn nhập 3 ở đây và 4 cho chiều rộng, tỷ lệ khung hình sẽ là 4:3"
+        }
+      ]
+    },
+    {
+      "label": "Hỗ trợ tiếp cận cho trình chiếu ảnh",
+      "fields": [
+        {
+          "label": "Nhãn nút \"Ảnh tiếp theo\"",
+          "default": "Ảnh tiếp theo",
+          "description": "Chỉ sử dụng cho trình đọc màn hình. Không hiển thị."
+        },
+        {
+          "label": "Nhãn nút \"Ảnh trước\"",
+          "default": "Ảnh trước",
+          "description": "Chỉ sử dụng cho trình đọc màn hình. Không hiển thị."
+        },
+        {
+          "label": "Nhãn nút điều hướng trực tiếp đến ảnh",
+          "default": "Đi đến ảnh %slide",
+          "description": "Chỉ sử dụng cho trình đọc màn hình. Không hiển thị. %slide là chỗ giữ chỗ và sẽ được thay bằng số ảnh."
+        }
+      ]
+    }
+  ]
+}

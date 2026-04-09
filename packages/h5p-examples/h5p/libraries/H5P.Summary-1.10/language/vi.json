@@ -1,0 +1,113 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả nhiệm vụ",
+      "default": "Chọn phát biểu đúng.",
+      "description": "Hiển thị phía trên bài tập."
+    },
+    {
+      "widgets": [
+        {
+          "label": "Biểu mẫu nhập liệu"
+        },
+        {
+          "label": "Nhập trong ô văn bản"
+        }
+      ],
+      "label": "Tóm tắt",
+      "entity": "Phát biểu",
+      "field": {
+        "label": "Nhóm phát biểu",
+        "fields": [
+          {
+            "label": "Danh sách các phát biểu cho phần tóm tắt - phát biểu đầu tiên là đúng.",
+            "entity": "Phát biểu",
+            "field": {
+              "label": "Phát biểu"
+            }
+          },
+          {
+            "label": "Gợi ý",
+            "fields": [
+              {
+                "label": "Văn bản gợi ý"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Biểu mẫu nhập liệu"
+            }
+          ],
+          "label": "Xác định phản hồi cho từng khoảng điểm",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm bao nhiêu khoảng tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+          "entity": "Khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho khoảng điểm đã định",
+                "placeholder": "Điền phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Văn bản hiển thị trước số phát biểu đúng đã chọn.",
+      "default": "Tiến độ:",
+      "description": "Hiển thị phía trên các phát biểu. Ví dụ: Tiến độ: 2/5"
+    },
+    {
+      "label": "Văn bản hiển thị trước số phát biểu sai đã chọn.",
+      "default": "Câu trả lời sai:",
+      "description": "Hiển thị phía trên các phát biểu. Ví dụ: Câu trả lời sai: 4"
+    },
+    {
+      "label": "Tiêu đề của điểm tổng kết cuối cùng",
+      "default": "Kết quả của bạn",
+      "description": "Hiển thị phía trên văn bản phản hồi với điểm số."
+    },
+    {
+      "label": "Văn bản trình đọc màn hình cho câu trả lời đúng (Hỗ trợ tiếp cận)",
+      "default": "Đúng."
+    },
+    {
+      "label": "Văn bản trình đọc màn hình cho câu trả lời sai (Hỗ trợ tiếp cận)",
+      "default": "Sai! Vui lòng thử lại."
+    },
+    {
+      "label": "Nhãn câu trả lời sai cho trình đọc màn hình (Hỗ trợ tiếp cận)",
+      "default": "Sai"
+    },
+    {
+      "label": "Nhãn danh sách câu trả lời đúng",
+      "default": "Câu trả lời đúng."
+    },
+    {
+      "label": "Nhãn nút \"Xem gợi ý\"",
+      "default": "Xem gợi ý"
+    },
+    {
+      "label": "Văn bản thanh điểm cho trình đọc màn hình (Hỗ trợ tiếp cận)",
+      "description": ":num là chỗ giữ chỗ cho số điểm đạt được, :total cho điểm tối đa",
+      "default": "Bạn đạt :num trên :total điểm."
+    },
+    {
+      "label": "Văn bản trình đọc màn hình cho tiến độ hiện tại",
+      "description": ":num là chỗ giữ chỗ cho số điểm đạt được, :total cho điểm tối đa",
+      "default": "Tiến độ :num / :total"
+    }
+  ]
+}

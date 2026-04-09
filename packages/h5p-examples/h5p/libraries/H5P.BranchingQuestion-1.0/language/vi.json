@@ -1,0 +1,41 @@
+{
+  "semantics": [
+    {
+      "label": "Trình soạn thảo câu hỏi phân nhánh",
+      "fields": [
+        {
+          "label": "Câu hỏi"
+        },
+        {
+          "label": "Các lựa chọn",
+          "entity": "Lựa chọn",
+          "field": {
+            "label": "Lựa chọn",
+            "fields": [
+              {
+                "label": "Nội dung"
+              },
+              {
+                "label": "Nội dung tiếp theo (-1 là màn hình kết thúc)"
+              },
+              {
+                "label": "Phản hồi",
+                "fields": [
+                  {
+                    "label": "Tiêu đề phản hồi"
+                  },
+                  {
+                    "label": "Nội dung phản hồi"
+                  },
+                  {
+                    "label": "Hình ảnh phản hồi"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

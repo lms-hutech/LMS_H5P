@@ -1,0 +1,26 @@
+{
+  "semantics": [
+    {
+      "label": "Užduoties aprašymas",
+      "description": "Aprašykite kaip naudotojas turėtų išspręsti šią užduotį."
+    },
+    {
+      "label": "Medija",
+      "fields": [
+        {
+          "label": "Tipas",
+          "description": "Pasirenkama medija, rodoma virš klausimo."
+        }
+      ]
+    },
+    {
+      "label": "Apibūdinanti sprendimo etiketė",
+      "default": "Spustelėkite, kad pamatytumėte atsakymą.",
+      "description": "Spustelėjama teksto sritis, kurioje bus rodomas sprendimas."
+    },
+    {
+      "label": "Sprendimo tekstas",
+      "description": "Paveikslėlio sprendimas."
+    }
+  ]
+}

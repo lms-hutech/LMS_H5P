@@ -1,0 +1,105 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả nhiệm vụ",
+      "description": "Mô tả trò chơi",
+      "default": "Tìm các từ trong bảng"
+    },
+    {
+      "label": "Danh sách từ",
+      "description": "Danh sách từ cách nhau bằng dấu phẩy. Không cho phép ký tự đặc biệt, khoảng trắng và số"
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này cho phép bạn kiểm soát cách trò chơi hoạt động.",
+      "fields": [
+        {
+          "label": "Hướng",
+          "description": "Mảng chứa tên các hướng từ sẽ được sử dụng khi tạo bảng chữ",
+          "fields": [
+            {
+              "label": "Ngang - trái sang phải"
+            },
+            {
+              "label": "Ngang - phải sang trái"
+            },
+            {
+              "label": "Dọc xuống"
+            },
+            {
+              "label": "Dọc lên"
+            },
+            {
+              "label": "Chéo xuống - trái sang phải"
+            },
+            {
+              "label": "Chéo xuống - phải sang trái"
+            },
+            {
+              "label": "Chéo lên - trái sang phải"
+            },
+            {
+              "label": "Chéo lên - phải sang trái"
+            }
+          ]
+        },
+        {
+          "label": "Dọc xuống",
+          "description": "Bộ chữ cái để điền các ô trống"
+        },
+        {
+          "label": "Ưu tiên chồng chéo",
+          "description": "Xác định cách trò chơi quyết định đặt từ trong bảng. Khi bật, sẽ chọn ngẫu nhiên trong các vị trí có nhiều chữ cái chồng chéo nhất để tạo bảng gọn hơn. Khi tắt, sẽ chọn ngẫu nhiên trong tất cả vị trí hợp lệ."
+        },
+        {
+          "label": "Hiển thị danh sách từ",
+          "description": "Xác định có hiển thị danh sách từ cho người chơi hay không"
+        },
+        {
+          "label": "Bật xem đáp án",
+          "description": "Thêm nút xem đáp án cho trò chơi"
+        },
+        {
+          "label": "Bật thử lại",
+          "description": "Thêm nút thử lại cho trò chơi"
+        }
+      ]
+    },
+    {
+      "label": "Bản địa hóa",
+      "fields": [
+        {
+          "label": "Văn bản nút \"Kiểm tra\"",
+          "default": "Kiểm tra"
+        },
+        {
+          "label": "Văn bản nút \"Thử lại\"",
+          "default": "Thử lại"
+        },
+        {
+          "label": "Văn bản nút \"Xem đáp án\"",
+          "default": "Xem đáp án"
+        },
+        {
+          "label": "Văn bản bộ đếm",
+          "default": "Đã tìm @found / @totalWords",
+          "description": "Văn bản phản hồi, các biến có sẵn: @found và @totalWords. Ví dụ: Đã tìm @found / @totalWords"
+        },
+        {
+          "label": "Văn bản thời gian đã dùng",
+          "default": "Thời gian đã dùng",
+          "description": "Nhãn hiển thị thời gian đã chơi trò chơi"
+        },
+        {
+          "label": "Văn bản phản hồi",
+          "default": "Bạn đạt @score / @total điểm",
+          "description": "Văn bản phản hồi, các biến có sẵn: @score và @total. Ví dụ: Bạn đạt @score / @total điểm"
+        },
+        {
+          "label": "Tiêu đề danh sách từ",
+          "default": "Tìm các từ"
+        }
+      ]
+    }
+  ]
+}

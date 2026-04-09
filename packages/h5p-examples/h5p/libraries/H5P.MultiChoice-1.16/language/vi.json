@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Phương tiện",
+      "fields": [
+        {
+          "label": "Loại",
+          "description": "Phương tiện tùy chọn hiển thị phía trên câu hỏi."
+        },
+        {
+          "label": "Tắt phóng to hình ảnh"
+        }
+      ]
+    },
+    {
+      "label": "Câu hỏi"
+    },
+    {
+      "label": "Các lựa chọn có sẵn",
+      "entity": "lựa chọn",
+      "field": {
+        "label": "lựa chọn",
+        "fields": [
+          {
+            "label": "Văn bản"
+          },
+          {
+            "label": "Đúng"
+          },
+          {
+            "label": "Gợi ý và phản hồi",
+            "fields": [
+              {
+                "label": "Văn bản gợi ý",
+                "description": "Gợi ý cho người dùng. Sẽ hiển thị trước khi kiểm tra đáp án."
+              },
+              {
+                "label": "Thông báo hiển thị nếu đáp án được chọn",
+                "description": "Thông báo sẽ hiển thị bên dưới đáp án khi \"kiểm tra\" nếu đáp án này được chọn."
+              },
+              {
+                "label": "Thông báo hiển thị nếu đáp án không được chọn",
+                "description": "Thông báo sẽ hiển thị bên dưới đáp án khi \"kiểm tra\" nếu đáp án này không được chọn."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Định nghĩa phản hồi tùy chỉnh cho bất kỳ khoảng điểm nào",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm nhiều khoảng điểm tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm giỏi!",
+          "entity": "khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho khoảng điểm đã định",
+                "placeholder": "Điền phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bản dịch giao diện cho multichoice",
+      "fields": [
+        {
+          "label": "Nhãn nút kiểm tra đáp án",
+          "default": "Kiểm tra"
+        },
+        {
+          "label": "Nhãn nút nộp câu trả lời",
+          "default": "Nộp"
+        },
+        {
+          "label": "Nhãn nút xem đáp án",
+          "default": "Xem đáp án"
+        },
+        {
+          "label": "Nhãn nút thử lại",
+          "default": "Thử lại"
+        },
+        {
+          "label": "Nhãn gợi ý",
+          "default": "Hiện gợi ý"
+        },
+        {
+          "label": "Biểu diễn văn bản của thanh điểm cho người dùng trình đọc màn hình",
+          "description": "Các biến có sẵn là :num và :total",
+          "default": "Bạn đạt :num trên :total điểm"
+        },
+        {
+          "label": "Gợi ý có sẵn (không hiển thị)",
+          "default": "Có gợi ý",
+          "description": "Văn bản trợ năng cho trình đọc màn hình"
+        },
+        {
+          "label": "Phản hồi có sẵn (không hiển thị)",
+          "default": "Phản hồi có sẵn",
+          "description": "Văn bản trợ năng cho trình đọc màn hình"
+        },
+        {
+          "label": "Đọc Phản hồi (không hiển thị)",
+          "default": "Đọc phản hồi",
+          "description": "Văn bản trợ năng cho trình đọc màn hình"
+        },
+        {
+          "label": "Đáp án sai (không hiển thị)",
+          "default": "Đáp án sai",
+          "description": "Văn bản trợ năng cho trình đọc màn hình"
+        },
+        {
+          "label": "Đáp án đúng (không hiển thị)",
+          "default": "Đáp án đúng",
+          "description": "Văn bản trợ năng cho trình đọc màn hình"
+        },
+        {
+          "label": "Tùy chọn lẽ ra phải được chọn",
+          "default": "Lẽ ra phải được chọn"
+        },
+        {
+          "label": "Tùy chọn lẽ ra không nên được chọn",
+          "default": "Lẽ ra không nên được chọn"
+        },
+        {
+          "label": "Văn bản cho \"Requires answer\" message",
+          "default": "Vui lòng trả lời trước khi xem lời giải"
+        },
+        {
+          "label": "Mô tả công nghệ hỗ trợ cho \"Kiểm tra\" button",
+          "default": "Kiểm tra đáp án. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Mô tả công nghệ hỗ trợ cho \"Xem đáp án\" button",
+          "default": "Xem đáp án. Bài tập sẽ được đánh dấu với đáp án đúng."
+        },
+        {
+          "label": "Mô tả công nghệ hỗ trợ cho \"Thử lại\" button",
+          "default": "Thử lại bài tập. Đặt lại tất cả câu trả lời và làm lại từ đầu."
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này cho phép bạn kiểm soát hành vi bài tập.",
+      "fields": [
+        {
+          "label": "Bật nút \"Thử lại\""
+        },
+        {
+          "label": "Bật nút \"Xem đáp án\""
+        },
+        {
+          "label": "Bật nút \"Kiểm tra\""
+        },
+        {
+          "label": "Loại câu hỏi",
+          "description": "Chọn giao diện và hành vi của câu hỏi.",
+          "options": [
+            {
+              "label": "Tự động"
+            },
+            {
+              "label": "Trắc nghiệm nhiều đáp án (Hộp kiểm)"
+            },
+            {
+              "label": "Trắc nghiệm một đáp án (Nút radio)"
+            }
+          ]
+        },
+        {
+          "label": "Cho một điểm cho toàn bài",
+          "description": "Bật để cho tổng một điểm cho nhiều đáp án đúng. Tùy chọn này không khả dụng ở chế độ \"Một đáp án\"."
+        },
+        {
+          "label": "Xáo trộn câu trả lời",
+          "description": "Bật để xáo trộn thứ tự các câu trả lời khi hiển thị."
+        },
+        {
+          "label": "Yêu cầu trả lời trước khi có thể xem lời giải"
+        },
+        {
+          "label": "Hiện hộp thoại xác nhận khi \"Kiểm tra\""
+        },
+        {
+          "label": "Hiện hộp thoại xác nhận khi \"Thử lại\""
+        },
+        {
+          "label": "Tự động kiểm tra các câu trả lời",
+          "description": "Bật tùy chọn này sẽ ảnh hưởng đến khả năng truy cập, hãy chắc chắn bạn biết mình đang làm gì."
+        },
+        {
+          "label": "Tỷ lệ đạt",
+          "description": "Cài đặt này thường không có hiệu lực. Đây là phần trăm tổng điểm cần để được 1 điểm khi bật chế độ một điểm cho toàn bộ bài tập, và để đạt result.success trong câu lệnh xAPI."
+        },
+        {
+          "label": "Hiển thị điểm",
+          "description": "Hiện điểm đạt được cho mỗi câu trả lời. Không khả dụng ở chế độ 'Một đáp án' hoặc nếu tùy chọn 'Cho một điểm cho toàn bộ bài tập' được bật."
+        }
+      ]
+    },
+    {
+      "label": "Hộp thoại xác nhận kiểm tra",
+      "fields": [
+        {
+          "label": "Văn bản tiêu đề",
+          "default": "Hoàn thành?"
+        },
+        {
+          "label": "Nội dung",
+          "default": "Bạn có chắc muốn hoàn thành?"
+        },
+        {
+          "label": "Nhãn nút hủy",
+          "default": "Hủy"
+        },
+        {
+          "label": "Nhãn nút xác nhận",
+          "default": "Hoàn thành"
+        }
+      ]
+    },
+    {
+      "label": "Hộp thoại xác nhận thử lại",
+      "fields": [
+        {
+          "label": "Văn bản tiêu đề",
+          "default": "Thử lại?"
+        },
+        {
+          "label": "Nội dung",
+          "default": "Bạn có chắc muốn thử lại?"
+        },
+        {
+          "label": "Nhãn nút hủy",
+          "default": "Hủy"
+        },
+        {
+          "label": "Nhãn nút xác nhận",
+          "default": "Xác nhận"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "semantics": [
+    {
+      "label": "Idővonal",
+      "fields": [
+        {
+          "label": "Cím",
+          "description": "Ide kerül az idővonal fő címe (első oldal)"
+        },
+        {
+          "label": "Törzsszöveg",
+          "description": "Ide kerül az idővonal fő törzsszövege (első oldal)."
+        },
+        {
+          "label": "Alapértelmezett nagyítási szint",
+          "description": "Ez módosítja az alapértelmezett nagyítási szintet. A nagyítás vagy kicsinyítés gomb meghatározott számú megnyomásával egyenértékű. A negatív számok kicsinyítenek. Az alapértelmezett érték 0"
+        },
+        {
+          "label": "Háttérkép",
+          "description": "A háttérként megjelenítendő kép."
+        },
+        {
+          "label": "Magasság",
+          "description": "A magasság képpontokban"
+        },
+        {
+          "label": "Forrásanyag",
+          "description": "Itt hozzáadhat egy forrást az idővonal „kezdőlapjához”",
+          "fields": [
+            {
+              "label": "Média",
+              "description": "Hivatkozás a média URL-címére (jelenleg támogatott a Twitter, a YouTube, a Flickr, a Vimeo, a Google Térkép és a SoundCloud)"
+            },
+            {
+              "label": "Forrásmegjelölés",
+              "description": "A média forrásmegjelölése"
+            },
+            {
+              "label": "Felirat",
+              "description": "Ide kerül a felirat szövege"
+            }
+          ]
+        },
+        {
+          "label": "Dátumok",
+          "description": "Adjon hozzá néhány dátumot az idővonalhoz!",
+          "field": {
+            "label": "Dátum",
+            "description": "Dátum",
+            "fields": [
+              {
+                "label": "Kezdő dátum",
+                "description": "Éééé,hh,nn (legalább éééé szükséges)"
+              },
+              {
+                "label": "Záró dátum",
+                "description": "Éééé,hh,nn (legalább éééé szükséges)"
+              },
+              {
+                "label": "Cím",
+                "description": "A dátumelem címe"
+              },
+              {
+                "label": "Törzsszöveg",
+                "description": "A dátumelem törzse"
+              },
+              {
+                "label": "Címkék",
+                "description": "Adjon meg címkéket (kategóriákat)"
+              },
+              {
+                "label": "Forrásanyag",
+                "fields": [
+                  {
+                    "label": "Média",
+                    "description": "Hivatkozás a média URL-címére (jelenleg támogatott a Twitter, a YouTube, a Flickr, a Vimeo, a Google Térkép és a SoundCloud)"
+                  },
+                  {
+                    "label": "Miniatűr kép",
+                    "description": "Adjon hozzá miniatűrt, ha szükséges, 32x32"
+                  },
+                  {
+                    "label": "Forrásmegjelölés",
+                    "description": "A média forrásmegjelölése"
+                  },
+                  {
+                    "label": "Felirat",
+                    "description": "Felirat szövege"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Korszakok",
+          "description": "Adjon hozzá egy korszakot az idővonalhoz",
+          "field": {
+            "label": "Korszak",
+            "fields": [
+              {
+                "label": "Kezdő dátum",
+                "description": "Éééé,hh,nn (legalább éééé szükséges)"
+              },
+              {
+                "label": "Záró dátum",
+                "description": "Éééé,hh,nn (legalább éééé szükséges)"
+              },
+              {
+                "label": "Cím",
+                "description": "Korszak címe"
+              },
+              {
+                "label": "Szöveg",
+                "description": "Korszak törzse"
+              },
+              {
+                "label": "Címke",
+                "description": "Korszak címkék (kategóriák)"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Nyelv",
+          "description": "A felhasználói felület nyelve",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Arab"
+            },
+            {
+              "label": "Örmény"
+            },
+            {
+              "label": "Baszk"
+            },
+            {
+              "label": "Bolgár"
+            },
+            {
+              "label": "Katalán"
+            },
+            {
+              "label": "Kínai"
+            },
+            {
+              "label": "Horvát"
+            },
+            {
+              "label": "Cseh"
+            },
+            {
+              "label": "Dán"
+            },
+            {
+              "label": "Holland"
+            },
+            {
+              "label": "Angol"
+            },
+            {
+              "label": "Angol (24 órás időformátum)"
+            },
+            {
+              "label": "Eszperantó"
+            },
+            {
+              "label": "Észt"
+            },
+            {
+              "label": "Feröeri"
+            },
+            {
+              "label": "Fárszi"
+            },
+            {
+              "label": "Finn"
+            },
+            {
+              "label": "Francia"
+            },
+            {
+              "label": "Galíciai"
+            },
+            {
+              "label": "Georgiai"
+            },
+            {
+              "label": "Német"
+            },
+            {
+              "label": "Görög"
+            },
+            {
+              "label": "Héber"
+            },
+            {
+              "label": "Magyar"
+            },
+            {
+              "label": "Izlandi"
+            },
+            {
+              "label": "Indonéz"
+            },
+            {
+              "label": "Olasz"
+            },
+            {
+              "label": "Japán"
+            },
+            {
+              "label": "Koreai"
+            },
+            {
+              "label": "Lett"
+            },
+            {
+              "label": "Litván"
+            },
+            {
+              "label": "Luxemburgi"
+            },
+            {
+              "label": "Maláj"
+            },
+            {
+              "label": "Nepáli"
+            },
+            {
+              "label": "Norvég"
+            },
+            {
+              "label": "Lengyel"
+            },
+            {
+              "label": "Portugál"
+            },
+            {
+              "label": "Portugál (brazil)"
+            },
+            {
+              "label": "Rétoromán"
+            },
+            {
+              "label": "Orosz"
+            },
+            {
+              "label": "Szerb - cirill"
+            },
+            {
+              "label": "Szerb - latin"
+            },
+            {
+              "label": "Szingaléz"
+            },
+            {
+              "label": "Szlovák"
+            },
+            {
+              "label": "Szlovén"
+            },
+            {
+              "label": "Spanyol"
+            },
+            {
+              "label": "Svéd"
+            },
+            {
+              "label": "Tagalog"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Tajvani"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Török"
+            },
+            {
+              "label": "Ukrán"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

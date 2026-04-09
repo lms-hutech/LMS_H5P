@@ -1,0 +1,21 @@
+{
+  "semantics": [
+    {
+      "label": "Các phần tử",
+      "entity": "phần tử",
+      "field": {
+        "label": "Loại phần tử",
+        "description": "Thư viện cho trang này."
+      }
+    },
+    {
+      "label": "Nhãn cho văn bản trợ giúp",
+      "description": "Nhãn cho showing additional helpful information to the user.",
+      "default": "Thêm thông tin"
+    },
+    {
+      "label": "Điền thêm thông tin trợ giúp",
+      "description": "Tại đây bạn có thể điền thêm thông tin cho người dùng, sẽ hiển thị khi nhấp vào."
+    }
+  ]
+}

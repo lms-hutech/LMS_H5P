@@ -1,0 +1,282 @@
+{
+  "semantics": [
+    {
+      "label": "Giới thiệu bài kiểm tra",
+      "fields": [
+        {
+          "label": "Hiển thị giới thiệu"
+        },
+        {
+          "label": "Tiêu đề",
+          "description": "Tiêu đề này sẽ hiển thị phía trên văn bản giới thiệu."
+        },
+        {
+          "label": "Văn bản giới thiệu",
+          "description": "Văn bản này sẽ hiển thị trước khi bài kiểm tra bắt đầu."
+        },
+        {
+          "label": "Văn bản nút bắt đầu",
+          "default": "Bắt đầu bài kiểm tra"
+        },
+        {
+          "label": "Hình nền",
+          "description": "Hình nền tùy chọn cho phần giới thiệu."
+        }
+      ]
+    },
+    {
+      "label": "Hình nền",
+      "description": "Hình nền tùy chọn cho Bộ câu hỏi."
+    },
+    {
+      "label": "Chỉ báo tiến trình",
+      "description": "Kiểu chỉ báo tiến trình bộ câu hỏi.",
+      "options": [
+        {
+          "label": "Văn bản"
+        },
+        {
+          "label": "Dấu chấm"
+        }
+      ]
+    },
+    {
+      "label": "Tỷ lệ đạt",
+      "description": "Phần trăm tổng điểm cần để đạt bài kiểm tra."
+    },
+    {
+      "label": "Các câu hỏi",
+      "widgets": [
+        {
+          "label": "Mặc định"
+        },
+        {
+          "label": "Văn bản"
+        }
+      ],
+      "entity": "Câu hỏi",
+      "field": {
+        "label": "Loại câu hỏi",
+        "description": "Thư viện cho câu hỏi này."
+      }
+    },
+    {
+      "label": "Văn bản giao diện trong bài kiểm tra",
+      "fields": [
+        {
+          "label": "Nút quay lại",
+          "default": "Câu hỏi trước"
+        },
+        {
+          "label": "Nút tiếp theo",
+          "default": "Câu hỏi tiếp theo"
+        },
+        {
+          "label": "Nút hoàn thành",
+          "default": "Hoàn thành"
+        },
+        {
+          "label": "Nút nộp bài",
+          "default": "Nộp"
+        },
+        {
+          "label": "Văn bản tiến trình",
+          "description": "Văn bản sử dụng khi chọn tiến trình dạng văn bản.",
+          "default": "Câu hỏi: @current trên @total câu"
+        },
+        {
+          "label": "Nhãn cho jumping to a certain question",
+          "description": "Bạn phải sử dụng ký tự giữ chỗ '%d' thay vì số câu hỏi, và %total thay vì tổng số câu hỏi.",
+          "default": "Câu hỏi %d trên %total"
+        },
+        {
+          "label": "Nhãn câu hỏi hộp thoại bản quyền",
+          "default": "Câu hỏi"
+        },
+        {
+          "label": "Tiến trình trình đọc màn hình",
+          "description": "Có thể sử dụng biến câu hỏi @current và @total",
+          "default": "Câu hỏi @current trên @total"
+        },
+        {
+          "label": "Văn bản câu hỏi chưa trả lời",
+          "default": "Chưa trả lời"
+        },
+        {
+          "label": "Văn bản câu hỏi đã trả lời",
+          "default": "Đã trả lời"
+        },
+        {
+          "label": "Văn bản câu hỏi hiện tại",
+          "default": "Câu hỏi hiện tại"
+        },
+        {
+          "label": "Nhãn điều hướng cho trình đọc màn hình",
+          "default": "Các câu hỏi"
+        },
+        {
+          "label": "Hướng dẫn điều hướng bộ câu hỏi bằng trình đọc màn hình",
+          "default": "Chọn câu hỏi để hiển thị"
+        }
+      ]
+    },
+    {
+      "label": "Tắt điều hướng ngược",
+      "description": "Tùy chọn này chỉ cho phép bạn di chuyển tiến trong Bộ câu hỏi"
+    },
+    {
+      "label": "Xáo trộn câu hỏi",
+      "description": "Bật để xáo trộn thứ tự câu hỏi khi hiển thị."
+    },
+    {
+      "label": "Số câu hỏi được hiển thị:",
+      "description": "Tạo một tập câu hỏi ngẫu nhiên từ tổng số."
+    },
+    {
+      "label": "Bài kiểm tra hoàn thành",
+      "fields": [
+        {
+          "label": "Hiển thị kết quả"
+        },
+        {
+          "label": "Nút hiển thị đáp án"
+        },
+        {
+          "label": "Hiển thị nút thử lại"
+        },
+        {
+          "label": "Thông báo không có kết quả",
+          "description": "Văn bản hiển thị trên trang kết thúc khi \"Hiển thị kết quả\" bị tắt",
+          "default": "Đã hoàn thành"
+        },
+        {
+          "label": "Tiêu đề phản hồi",
+          "default": "Kết quả của bạn:",
+          "description": "Tiêu đề này sẽ hiển thị ở cuối bài kiểm tra khi người dùng đã trả lời tất cả câu hỏi."
+        },
+        {
+          "label": "Thông báo điểm",
+          "description": "Nhãn này sẽ được dùng để thông báo điểm cuối cùng cho người dùng trên màn hình kết thúc",
+          "default": "Bạn đạt @finals trên @totals điểm"
+        },
+        {
+          "label": "Phản hồi tổng thể",
+          "fields": [
+            {
+              "widgets": [
+                {
+                  "label": "Mặc định"
+                }
+              ],
+              "label": "Định nghĩa phản hồi tùy chỉnh cho bất kỳ khoảng điểm nào",
+              "description": "Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
+              "entity": "khoảng",
+              "field": {
+                "fields": [
+                  {
+                    "label": "Khoảng điểm"
+                  },
+                  {},
+                  {
+                    "label": "Phản hồi cho khoảng điểm đã định",
+                    "placeholder": "Điền phản hồi"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Phản hồi cũ",
+          "fields": [
+            {
+              "label": "Lời chào khi đạt bài kiểm tra",
+              "description": "Văn bản này sẽ hiển thị phía trên điểm nếu người dùng đạt bài kiểm tra."
+            },
+            {
+              "label": "Nhận xét khi đạt",
+              "description": "Nhận xét này sẽ hiển thị sau điểm nếu người dùng đạt bài kiểm tra."
+            },
+            {
+              "label": "Tiêu đề khi không đạt bài kiểm tra",
+              "description": "Văn bản này sẽ hiển thị phía trên điểm nếu người dùng không đạt bài kiểm tra."
+            },
+            {
+              "label": "Nhận xét khi không đạt",
+              "description": "Nhận xét này sẽ hiển thị sau điểm nếu người dùng không đạt bài kiểm tra."
+            }
+          ]
+        },
+        {
+          "label": "Nhãn nút lời giải",
+          "default": "Xem đáp án",
+          "description": "Văn bản cho solution button."
+        },
+        {
+          "label": "Nhãn nút thử lại",
+          "default": "Thử lại",
+          "description": "Văn bản cho retry button."
+        },
+        {
+          "label": "Văn bản nút hoàn thành",
+          "default": "Hoàn thành"
+        },
+        {
+          "label": "Văn bản nút nộp bài",
+          "default": "Nộp"
+        },
+        {
+          "label": "Hiển thị video trước kết quả bài kiểm tra"
+        },
+        {
+          "label": "Bật nút bỏ qua video"
+        },
+        {
+          "label": "Nhãn nút bỏ qua video",
+          "default": "Bỏ qua video"
+        },
+        {
+          "label": "Video khi đạt",
+          "description": "Video này sẽ phát nếu người dùng đạt bài kiểm tra."
+        },
+        {
+          "label": "Video khi không đạt",
+          "description": "Video này sẽ phát nếu người dùng không đạt bài kiểm tra."
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt cho nút \"Hiện lời giải\" và \"Thử lại\"",
+      "fields": [
+        {
+          "label": "Hiện nút \"Kiểm tra\"",
+          "description": "Tùy chọn này xác định liệu nút \"Kiểm tra\" có hiển thị cho tất cả câu hỏi không."
+        },
+        {
+          "label": "Ghi đè nút \"Hiện lời giải\"",
+          "description": "Tùy chọn này xác định liệu nút \"Hiện lời giải\" có hiển thị cho tất cả câu hỏi, tắt cho tất cả hoặc cấu hình riêng cho từng câu hỏi.",
+          "options": [
+            {
+              "label": "Đã bật"
+            },
+            {
+              "label": "Đã tắt"
+            }
+          ]
+        },
+        {
+          "label": "Ghi đè nút \"Thử lại\"",
+          "description": "Tùy chọn này xác định liệu nút \"Thử lại\" có hiển thị cho tất cả câu hỏi, tắt cho tất cả hoặc cấu hình riêng cho từng câu hỏi.",
+          "options": [
+            {
+              "label": "Đã bật"
+            },
+            {
+              "label": "Đã tắt"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

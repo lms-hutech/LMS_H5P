@@ -1,0 +1,14 @@
+{
+  "semantics": [
+    {
+      "label": "Tên người dùng Twitter",
+      "description": "Người dùng mà chúng tôi lấy tweet từ đó"
+    },
+    {
+      "label": "Hiển thị trả lời"
+    },
+    {
+      "label": "Số lượng tweet"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "semantics": [
+    {
+      "fields": [
+        {
+          "label": "Tiêu đề",
+          "description": "Tiêu đề tùy chọn cho bảng thông tin."
+        },
+        {
+          "label": "Thuộc tính",
+          "fields": [
+            {
+              "label": "Thuộc tính",
+              "description": "Thuộc tính cho các mục",
+              "entity": "Thuộc tính",
+              "widgets": [
+                {
+                  "label": "Mặc định"
+                }
+              ],
+              "field": {
+                "label": "Thuộc tính",
+                "fields": [
+                  {
+                    "label": "Nhãn",
+                    "default": "Chưa đặt tên"
+                  },
+                  {
+                    "label": "Hiển thị nhãn kèm theo"
+                  },
+                  {
+                    "label": "Cho phép tìm kiếm thuộc tính"
+                  },
+                  {
+                    "label": "Ghi đè kiểu dáng",
+                    "fields": [
+                      {
+                        "label": "In đậm"
+                      },
+                      {
+                        "label": "In nghiêng"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {}
+          ]
+        },
+        {
+          "label": "Thanh",
+          "description": "Thanh cho bảng",
+          "entity": "Thanh",
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "field": {
+            "label": "Mục nhập",
+            "fields": [
+              {
+                "label": "Tiêu đề cho thanh"
+              },
+              {
+                "label": "Hình ảnh"
+              },
+              {
+                "label": "Mục nhập",
+                "description": "Mục nhập cho các thuộc tính",
+                "entity": "Mục nhập",
+                "widgets": [
+                  {
+                    "label": "Mặc định"
+                  }
+                ],
+                "field": {
+                  "label": "Nhãn sẽ được tự động thay thế"
+                }
+              },
+              {
+                "label": "Từ khóa bổ sung",
+                "description": "Thêm từ khóa bổ sung cách nhau bằng dấu cách dùng để lọc nhưng không hiển thị cho người dùng."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Cài đặt hành vi",
+          "description": "Các tùy chọn này xác định cách nhiệm vụ hoạt động chi tiết.",
+          "fields": [
+            {
+              "label": "Dùng hình mặc định khi không có hình nào"
+            },
+            {
+              "label": "Hình ảnh"
+            },
+            {
+              "label": "Chiều rộng hình",
+              "description": "Chiều rộng hình tính bằng px."
+            },
+            {
+              "label": "Chiều cao hình",
+              "description": "Chiều cao hình tính bằng px."
+            },
+            {
+              "label": "Xen kẽ màu nền cho thanh",
+              "description": "Nếu chọn, mỗi thanh xen kẽ sẽ có màu nền đậm hơn một chút."
+            },
+            {
+              "label": "Ô nhập để lọc",
+              "description": "Nếu chọn, các mục trên bảng thông tin có thể được lọc theo từ khóa."
+            },
+            {
+              "label": "Chế độ lọc",
+              "description": "Chọn bộ lọc thu hẹp hay mở rộng kết quả tìm kiếm với mỗi từ khóa mới.",
+              "options": [
+                {
+                  "label": "Thu hẹp"
+                },
+                {
+                  "label": "Mở rộng"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Nhãn và mô tả",
+          "fields": [
+            {
+              "label": "Không có nội dung",
+              "default": "Tác giả chưa nhập nội dung nào."
+            },
+            {
+              "label": "Không tìm thấy kết quả",
+              "description": "@query là biến và sẽ được thay thế bằng từ khóa tìm kiếm.",
+              "default": "Không tìm thấy kết quả nào cho @query."
+            },
+            {
+              "label": "Nhập để lọc",
+              "description": "Thông báo cho trình đọc màn hình.",
+              "default": "Nhập từ khóa để lọc nội dung theo các mục liên quan."
+            },
+            {
+              "label": "Danh sách đã thay đổi.",
+              "description": "Thông báo cho trình đọc màn hình. @visible và @total là biến và sẽ được thay thế bằng giá trị tương ứng.",
+              "default": "Danh sách đã thay đổi. Hiển thị @visible trên @total mục."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

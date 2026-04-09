@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Média",
+      "fields": [
+        {
+          "label": "Típus",
+          "description": "Opcionális média a kérdés fölött megjelenítve."
+        },
+        {
+          "label": "Kép nagyításának letiltása"
+        }
+      ]
+    },
+    {
+      "label": "Feladat leírása",
+      "description": "Ismertesse, hogy a felhasználónak hogyan kell megoldania a feladatot!",
+      "placeholder": "Kattints az összes igére a következő szövegben!"
+    },
+    {
+      "label": "Szövegmező",
+      "placeholder": "Ez itt egy válasz: *válasz*.",
+      "important": {
+        "description": "<ul><li>A megjelölendő szavak csillag (*) karakterekkel adhatók meg.</li><li>A megjelölt szavakon belül csillagokat hozzáadni egy-egy további csillag beírásával lehet, pl. *jóválasz*** =&gt; jóválasz*.</li></ul>",
+        "example": "A helyes szavak így vannak megjelölve: *jóválasz*, csillag pedig így írható: *jóválasz***."
+      }
+    },
+    {
+      "label": "Globális visszajelzés",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Alapértelmezett"
+            }
+          ],
+          "label": "Egyéni visszajelzés megadása tetszőleges eredmény intervallumokra",
+          "description": "Kattintson az \"Új intervallum\" gombra további intervallumok hozzáadásához. Például: 0-20% Rossz eredmény, 21-91% Átlagos eredmény, 91-100% Kimagasló eredmény!",
+          "entity": "intervallum",
+          "field": {
+            "fields": [
+              {
+                "label": "Eredmény intervallum"
+              },
+              {},
+              {
+                "label": "Visszajelzés az adott eredmény intervallumnál",
+                "placeholder": "Adja meg a visszajelzést"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "\"Ellenőrzés\" gomb szövege",
+      "default": "Ellenőrzés"
+    },
+    {
+      "label": "\"Leadás\" gomb szövege",
+      "default": "Leadás"
+    },
+    {
+      "label": "\"Újra\" gomb szövege",
+      "default": "Újra"
+    },
+    {
+      "label": "\"Megoldás mutatása\" gomb felülírása",
+      "default": "Megoldás mutatása"
+    },
+    {
+      "label": "Viselkedési beállítások.",
+      "description": "Ezekkel a beállításokkal szabályozható a feladat viselkedése.",
+      "fields": [
+        {
+          "label": "\"Újra\" engedélyezve"
+        },
+        {
+          "label": "\"Megoldás mutatása\" gomb engedélyezve"
+        },
+        {
+          "label": "\"Ellenőrzés\" engedélyezve"
+        },
+        {
+          "label": "Pontszámok mutatása",
+          "description": "Az egyes válaszokért kapott pontok megjelenítése. "
+        }
+      ]
+    },
+    {
+      "label": "Helyes válasz szöveg",
+      "default": "Helyes!",
+      "description": "Szöveg annak jelzésére, hogy a válasz helyes"
+    },
+    {
+      "label": "Helytelen válasz szövege",
+      "default": "Helytelen!",
+      "description": "Szöveg annak jelzésére, hogy a válasz helytelen"
+    },
+    {
+      "label": "Hiányzó válasz szövege",
+      "default": "A válasz hiányzik!",
+      "description": "Szöveg annak jelzésére, hogy a válasz hiányzik"
+    },
+    {
+      "label": "A megoldás megjelenítése leírása",
+      "default": "A feladat frissül, hogy tartalmazza a megoldást.",
+      "description": "Ez a szöveg közli a felhasználóval, hogy a feladatok frissültek a megoldással."
+    },
+    {
+      "label": "A pontszámjelző sáv szöveges megjelenítése a szövegfelolvasót használók számára",
+      "default": "Elért pontszám: :num / :total"
+    },
+    {
+      "label": "A \"teljesen olvasható szöveg\" felirata támogató-segítő eszközöknek",
+      "default": "Teljes mértékben olvasható szöveg"
+    },
+    {
+      "label": "Felirat a megjelölhető szavakat tartalmazó szöveghez, támogató-segítő eszközöknek",
+      "default": "A teljes szöveg, ahol a szavak megjelölhetők"
+    },
+    {
+      "label": "Megoldási mód felirata a támogató-segítő eszközöknek",
+      "default": "Megoldási mód"
+    },
+    {
+      "label": "Ellenőrzési mód felirata a támogató-segítő eszközöknek",
+      "default": "Ellenőrzési mód"
+    },
+    {
+      "label": "\"Ellenőrzés\" gomb leírása támogató-segítő eszközöknek",
+      "default": "Válaszok ellenőrzése. A válaszokat helyesnek, helytelennek vagy megválaszolatlannak jelöli."
+    },
+    {
+      "label": "\"Megoldás mutatása\" gomb leírása támogató-segítő eszközöknek",
+      "default": "Megoldás mutatása. A feladat helyes megoldásának mutatása."
+    },
+    {
+      "label": "\"Újra\" gomb leírása támogató-segítő eszközöknek",
+      "default": "Feladat újrapróbálása. Minden válasz visszaállítása és a feladat újrakezdése."
+    }
+  ]
+}

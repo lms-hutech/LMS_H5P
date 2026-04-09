@@ -1,0 +1,40 @@
+{
+  "semantics": [
+    {
+      "label": "Descrierea câmpului de intrare",
+      "description": "Descrierea a ceea ce utilizatorul ar trebui să introducă."
+    },
+    {
+      "label": "Text substituent",
+      "description": "Un text substituent pentru utilizator."
+    },
+    {
+      "label": "Lungimea maximă a textului",
+      "description": "Numărul maxim de caractere pentru text."
+    },
+    {
+      "label": "Dimensiunea câmpului de intrare",
+      "description": "Dimensiunea câmpului de intrare în număr de rânduri pe care le va acoperi.",
+      "options": [
+        {
+          "label": "1 rând"
+        },
+        {
+          "label": "3 rânduri"
+        },
+        {
+          "label": "10 rânduri"
+        }
+      ]
+    },
+    {
+      "label": "Câmp obligatoriu",
+      "description": "Bifați pentru a face acest câmp obligatoriu, utilizatorul trebuie să răspundă la toate câmpurile obligatorii pentru a putea exporta un document."
+    },
+    {
+      "label": "Caractere rămase",
+      "default": "Caractere rămase: @chars",
+      "description": "Mesaj pentru caracterele rămase. Puteți folosi @chars, care va fi înlocuit cu numărul corespunzător."
+    }
+  ]
+}

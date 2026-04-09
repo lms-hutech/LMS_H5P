@@ -1,0 +1,143 @@
+{
+  "semantics": [
+    {
+      "label": "Medieelement",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Valfritt medieelement som blir vist over spørsmålet"
+        },
+        {
+          "label": "Deaktiver zoom-funksjon"
+        }
+      ]
+    },
+    {
+      "label": "Oppgåvebeskriving",
+      "description": "Forklar korleis brukaren skal løyse oppgåva.",
+      "placeholder": "Vel alle verba i denne teksten."
+    },
+    {
+      "label": "Tekstfelt",
+      "placeholder": "Oslo er hovudstaden i *Noreg*.",
+      "important": {
+        "description": "<ul><li>Marker løysingsord med asterisk (*) føre og bak ordet.</li><li>Dersom eit løysingsord inneheld ein asterisk, skriv to asteriskar (**) for denne asterisken.</li></ul>",
+        "example": "Døme på merking av løysingsord: *løysingsord*. Døme på asterisk i slutten av eit løysingsord: *løysingsord***."
+      }
+    },
+    {
+      "label": "Tilbakemelding på heile oppgåva",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Standardinnstilling"
+            }
+          ],
+          "label": "Opprett poengområde og legg inn tilbakemeldingar",
+          "description": "Vel knappen \"Legg til poengområde\" og legg til så mange poengområde du treng. Døme: 0–40 % Svakt resultat, 41–80 % Gjennomsnittleg resultat, 81–100 % Flott resultat!",
+          "entity": "Område",
+          "field": {
+            "fields": [
+              {
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "label": "Tilbakemelding for definert poengområde",
+                "placeholder": "Skriv inn tilbakemelding"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tekst på \"Sjekk\"-knapp",
+      "default": "Sjekk"
+    },
+    {
+      "label": "Tekst på \"Send inn\"-knapp",
+      "default": "Send inn"
+    },
+    {
+      "label": "Tekst på \"Prøv igjen\"-igjen",
+      "default": "Prøv igjen"
+    },
+    {
+      "label": "Tekst på \"Vis svar\"-knapp",
+      "default": "Vis svar"
+    },
+    {
+      "label": "Oppgåveinnstillingar",
+      "description": "Her kan du bestemme korleis oppgåva skal oppføre seg.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Vis svar\"-knapp"
+        },
+        {
+          "label": "Aktiver \"Sjekk\"-button"
+        },
+        {
+          "label": "Vis poeng",
+          "description": "Vel for å vise poeng for kvart svar."
+        }
+      ]
+    },
+    {
+      "label": "Tekst ved rett svar",
+      "default": "Rett",
+      "description": "Tekst som fortel at svaret er rett"
+    },
+    {
+      "label": "Tekst ved feil svar",
+      "default": "Feil",
+      "description": "Tekst som fortel at svaret er feil"
+    },
+    {
+      "label": "Tekst ved manglande svar",
+      "default": "Dette ordet fann du ikkje",
+      "description": "Tekst som fortel at svaret manglar"
+    },
+    {
+      "label": "Melding når løysinga blir vist",
+      "default": "Løysinga er no markert i teksten.",
+      "description": "Denne teksten fortel brukaren at løysinga no er markert i teksten."
+    },
+    {
+      "label": "Tekstalternativ til resultatlinja (for skjermlesar)",
+      "default": "Du fekk :num av :total poeng."
+    },
+    {
+      "label": "Etikett for heile den lesbare teksten (for skjermlesarar)",
+      "default": "Komplett lesbar tekst"
+    },
+    {
+      "label": "Etikett for teksten der ord kan bli merkte (for skjermlesarar)",
+      "default": "Komplett tekst der ord kan bli merkte"
+    },
+    {
+      "label": "Overskrift for løysingsmodus (for skjermlesarar)",
+      "default": "Løysingsmodus"
+    },
+    {
+      "label": "Overskrift for sjekk svar-modus (for skjermlesarar)",
+      "default": "Sjekkmodus"
+    },
+    {
+      "label": "Beskriving av \"Sjekk\"-knapp (for skjermlesarar)",
+      "default": "Sjekk svar. Svara blir merkte som rette, feil eller utan svar."
+    },
+    {
+      "label": "Beskriving av \"Vis svar\"-knapp (for skjermlesarar)",
+      "default": "Vis svar. Oppgåva blir merkt med rette svar."
+    },
+    {
+      "label": "Beskriving av \"Prøv igjen\"-knapp (for skjermlesarar)",
+      "default": "Prøv igjen. Alle svara blir nullstilte, og oppgåva startar på nytt."
+    }
+  ]
+}

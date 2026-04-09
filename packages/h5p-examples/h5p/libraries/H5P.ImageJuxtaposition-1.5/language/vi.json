@@ -1,0 +1,74 @@
+{
+  "semantics": [
+    {
+      "label": "Mô tả nhiệm vụ",
+      "description": "Thêm tiêu đề/nhiệm vụ hiển thị phía trên hình ảnh trước/sau.",
+      "placeholder": "Bạn có thể thêm tiêu đề hoặc gợi ý tùy chọn tại đây."
+    },
+    {
+      "label": "Hình ảnh thứ nhất",
+      "fields": [
+        {
+          "label": "Hình ảnh thứ nhất",
+          "description": "Hình ảnh đầu tiên. Hãy đảm bảo nó có cùng kích thước với hình ảnh thứ hai."
+        },
+        {
+          "label": "Nhãn hình ảnh thứ nhất",
+          "description": "Văn bản hiển thị phía trên hình ảnh thứ nhất"
+        }
+      ]
+    },
+    {
+      "label": "Hình ảnh thứ hai",
+      "fields": [
+        {
+          "label": "Hình ảnh thứ hai",
+          "description": "Hình ảnh thứ hai. Hãy đảm bảo nó có cùng kích thước với hình ảnh thứ nhất."
+        },
+        {
+          "label": "Nhãn hình ảnh thứ hai",
+          "description": "Văn bản hiển thị phía trên hình ảnh thứ hai"
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Có thể điều chỉnh một số chi tiết tại đây",
+      "fields": [
+        {
+          "label": "Vị trí bắt đầu của thanh trượt theo %",
+          "description": "Đặt vị trí bắt đầu của thanh trượt"
+        },
+        {
+          "label": "Hướng thanh trượt",
+          "description": "Ngang cho trái và phải, dọc cho lên và xuống.",
+          "options": [
+            {
+              "label": "Ngang"
+            },
+            {
+              "label": "Dọc"
+            }
+          ]
+        },
+        {
+          "label": "Màu thanh trượt",
+          "default": "#f3f3f3"
+        }
+      ]
+    },
+    {
+      "label": "Văn bản trợ năng",
+      "fields": [
+        {
+          "label": "Thông báo khả năng hiển thị hình ảnh",
+          "default": "Hình ảnh hiển thị @percentage %",
+          "description": "@percentage là biến và sẽ được thay thế bằng giá trị tương ứng."
+        },
+        {
+          "label": "Biến giữ chỗ"
+        }
+      ]
+    }
+  ]
+}

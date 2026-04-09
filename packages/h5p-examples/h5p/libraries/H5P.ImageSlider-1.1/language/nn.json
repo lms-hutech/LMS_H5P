@@ -1,0 +1,63 @@
+{
+  "semantics": [
+    {
+      "label": "Bilete",
+      "field": {
+        "fields": [
+          {
+            "label": "Bilete"
+          }
+        ],
+        "label": "Bilete"
+      }
+    },
+    {
+      "options": [
+        {
+          "label": "Automatisk"
+        },
+        {
+          "label": "Eigendefinert"
+        },
+        {
+          "label": "Ikkje fast"
+        }
+      ],
+      "label": "Forhold mellom breidde og høgde",
+      "description": "Om du vel \"Automatisk\", beheld bileta forholdet mellom breidde og høgde."
+    },
+    {
+      "label": "Innstillingar for forholdet mellom breidde og høgde",
+      "fields": [
+        {
+          "label": "Breidde",
+          "description": "Dersom du set 4 her og 3 for høgde, blir sideforholdet 4 : 3."
+        },
+        {
+          "label": "Høgde",
+          "description": "Dersom du set 3 her og 4 for breidde, blir sideforholdet 4 : 3."
+        }
+      ]
+    },
+    {
+      "label": "Tilgjengelegheit for biletserien",
+      "fields": [
+        {
+          "default": "Neste bilete",
+          "description": "Dette blir berre brukt av skjermlesar. Det blir ikkje vist.",
+          "label": "Namn på \"Neste bilete\"-knapp"
+        },
+        {
+          "label": "Namn på \"Førre bilete\"-knapp",
+          "default": "Førre bilete",
+          "description": "Dette blir berre brukt av skjermlesar. Det blir ikkje vist."
+        },
+        {
+          "label": "Namn på knappen for direktenavigasjon til bileta",
+          "default": "Gå til bilete %slide",
+          "description": "Dette blir berre brukt av skjermlesar. Det blir ikkje vist. %slide er ein variabel og blir erstatta med det aktuelle biletnummeret."
+        }
+      ]
+    }
+  ]
+}

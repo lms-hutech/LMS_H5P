@@ -1,0 +1,59 @@
+.h5p-guess-answer {
+  background-color: var(--h5p-theme-ui-base);
+  text-align: center;
+  color: var(--h5p-theme-text-primary);
+  container-type: inline-size;
+}
+
+.h5p-guess-answer .h5p-image > img {
+  line-height: 0;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h5p-guess-answer .show-solution-button {
+  margin: 1em auto;
+}
+
+.h5p-guess-answer-title {
+  padding-inline: var(--h5p-theme-spacing-m);
+}
+
+.h5p-guess-answer-title p {
+  font-size: var(--h5p-theme-font-size-xl);
+  color: var(--h5p-theme-text-primary);
+  font-weight: 600;
+}
+
+.h5p-guess-answer .button-container {
+  margin: var(--h5p-theme-spacing-s);
+  display: inline-flex;
+  container-type: inline-size;
+  width: 100%;
+  max-width: fill-available;
+  max-width: -webkit-fill-available;
+  max-width: -moz-available;
+  justify-content: center;
+}
+
+.h5p-guess-answer .solution-text {
+  font-weight: bold;
+}
+
+.h5p-guess-answer .solution-text:focus-visible {
+  outline: none;
+}
+
+.h5p-guess-answer .empty-text-for-nvda {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.h5p-guess-answer .hidden {
+  display: none;
+}

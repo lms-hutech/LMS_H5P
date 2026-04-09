@@ -1,0 +1,31 @@
+{
+  "semantics": [
+    {
+      "label": "Hình"
+    },
+    {
+      "label": "Chỉ trang trí",
+      "description": "Bật tùy chọn này nếu hình ảnh chỉ mang tính trang trí và không bổ sung thông tin cho nội dung trên trang. Nó sẽ bị trình đọc màn hình bỏ qua và không có văn bản thay thế."
+    },
+    {
+      "label": "Văn bản thay thế",
+      "description": "Bắt buộc. Nếu trình duyệt không thể tải hình ảnh, văn bản này sẽ hiển thị thay thế. Cũng được sử dụng bởi trình đọc \"chuyển văn bản thành giọng nói\"."
+    },
+    {
+      "label": "Văn bản di chuột",
+      "description": "Tùy chọn. Văn bản này hiển thị khi người dùng di chuột qua hình ảnh."
+    },
+    {
+      "label": "Tên nội dung hình ảnh",
+      "default": "Hình"
+    },
+    {
+      "label": "Phóng to hình ảnh",
+      "default": "Phóng to hình ảnh"
+    },
+    {
+      "label": "Thu nhỏ hình ảnh",
+      "default": "Thu nhỏ hình ảnh"
+    }
+  ]
+}

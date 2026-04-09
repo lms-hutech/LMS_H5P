@@ -1,0 +1,271 @@
+{
+  "semantics": [
+    {
+      "label": "Nút kiểm tra đáp án",
+      "default": "Kiểm tra"
+    },
+    {
+      "label": "Nút nộp đáp án",
+      "default": "Nộp"
+    },
+    {
+      "label": "Nút thử lại",
+      "default": "Thử lại"
+    },
+    {
+      "label": "Văn bản giải thích điểm",
+      "default": "Đáp án đúng +1 điểm. Đáp án sai -1 điểm. Điểm thấp nhất có thể là 0."
+    },
+    {
+      "fields": [
+        {
+          "label": "Cài đặt",
+          "fields": [
+            {
+              "label": "Hình nền",
+              "description": "Tùy chọn. Chọn hình ảnh để dùng làm nền cho bài tập kéo thả."
+            },
+            {
+              "label": "Kích thước bài tập",
+              "description": "Chỉ định kích thước (đơn vị px) cho vùng chơi."
+            }
+          ]
+        },
+        {
+          "label": "Bài tập",
+          "description": "Bắt đầu bằng cách đặt các vùng thả.<br />Tiếp theo, đặt các phần tử thả và đánh dấu vùng thả phù hợp.<br />Cuối cùng, chỉnh sửa vùng thả và đánh dấu đáp án đúng.",
+          "fields": [
+            {
+              "label": "Các phần tử",
+              "entity": "phần tử",
+              "field": {
+                "label": "Phần tử",
+                "fields": [
+                  {
+                    "description": "Chọn loại nội dung bạn muốn thêm."
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Chọn vùng thả"
+                  },
+                  {
+                    "label": "Độ mờ nền",
+                    "description": "Giảm độ mờ có thể dẫn đến độ tương phản không đủ và khiến nội dung không truy cập được."
+                  },
+                  {
+                    "label": "Số lượng không giới hạn",
+                    "description": "Nhân bản phần tử này để có thể kéo vào nhiều vùng thả."
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Các vùng thả",
+              "entity": "Vùng thả",
+              "field": {
+                "label": "Vùng thả",
+                "fields": [
+                  {
+                    "label": "Nhãn",
+                    "description": "Nhãn được sử dụng bởi công nghệ hỗ trợ."
+                  },
+                  {
+                    "label": "Hiện nhãn"
+                  },
+                  {},
+                  {},
+                  {},
+                  {},
+                  {
+                    "label": "Chọn các phần tử đúng"
+                  },
+                  {
+                    "label": "Độ mờ nền",
+                    "description": "Giảm độ mờ có thể dẫn đến độ tương phản không đủ và khiến nội dung không truy cập được."
+                  },
+                  {
+                    "label": "Gợi ý và phản hồi",
+                    "fields": [
+                      {
+                        "label": "Văn bản gợi ý"
+                      },
+                      {
+                        "label": "Thông báo hiển thị khi ghép đúng",
+                        "description": "Thông báo sẽ hiển thị bên dưới bài tập khi \"kiểm tra\" nếu ghép đúng phần tử thả."
+                      },
+                      {
+                        "label": "Thông báo hiển thị khi ghép sai",
+                        "description": "Thông báo sẽ hiển thị bên dưới bài tập khi \"kiểm tra\" nếu ghép sai."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vùng thả này chỉ có thể chứa một phần tử",
+                    "description": "Đảm bảo chỉ có một đáp án đúng cho vùng thả này"
+                  },
+                  {
+                    "label": "Bật Tự động căn chỉnh",
+                    "description": "Sẽ tự động căn chỉnh tất cả phần tử kéo được thả vào vùng này."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Phản hồi tổng thể",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Mặc định"
+            }
+          ],
+          "label": "Định nghĩa phản hồi tùy chỉnh cho bất kỳ khoảng điểm nào",
+          "description": "Nhấn nút \"Thêm khoảng\" để thêm nhiều khoảng điểm tùy ý. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm giỏi!",
+          "entity": "khoảng",
+          "field": {
+            "fields": [
+              {
+                "label": "Khoảng điểm"
+              },
+              {},
+              {
+                "label": "Phản hồi cho khoảng điểm đã định",
+                "placeholder": "Điền phản hồi"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Cài đặt hành vi",
+      "description": "Các tùy chọn này cho phép bạn kiểm soát hành vi bài tập.",
+      "fields": [
+        {
+          "label": "Bật \"Thử lại\""
+        },
+        {
+          "label": "Bật nút \"Kiểm tra\""
+        },
+        {
+          "label": "Cho một điểm cho toàn bài",
+          "description": "Tắt để cho một điểm cho mỗi phần tử kéo được đặt đúng."
+        },
+        {
+          "label": "Áp dụng hình phạt",
+          "description": "Áp dụng hình phạt cho phần tử thả sai vùng. Phải bật khi cùng phần tử có thể thả vào nhiều vùng, hoặc chỉ có một vùng thả. Nếu không bật, người học có thể ghép tất cả vào mọi vùng thả và luôn được điểm tối đa."
+        },
+        {
+          "label": "Bật giải thích điểm",
+          "description": "Hiển thị giải thích điểm cho người dùng khi kiểm tra đáp án (nếu tùy chọn 'Áp dụng hình phạt' đã được chọn)."
+        },
+        {
+          "label": "Độ mờ nền cho các phần tử kéo",
+          "description": "Nếu trường này được đặt, nó sẽ ghi đè độ mờ trên tất cả phần tử kéo. Giá trị từ 0 đến 100, trong đó 0 là hoàn toàn trong suốt và 100 là không trong suốt"
+        },
+        {
+          "label": "Làm nổi bật Vùng thả",
+          "description": "Chọn thời điểm làm nổi bật vùng thả.",
+          "options": [
+            {
+              "label": "Khi đang kéo"
+            },
+            {
+              "label": "Luôn luôn"
+            },
+            {
+              "label": "Không bao giờ"
+            }
+          ]
+        },
+        {
+          "label": "Khoảng cách cho Tự động căn chỉnh (đơn vị px)"
+        },
+        {
+          "label": "Bật Toàn màn hình",
+          "description": "Đánh dấu tùy chọn này để bật nút toàn màn hình."
+        },
+        {
+          "label": "Hiển thị điểm",
+          "description": "Hiện điểm đạt được cho mỗi câu trả lời. Không khả dụng khi tùy chọn 'Cho một điểm cho toàn bộ bài tập' được bật."
+        },
+        {
+          "label": "Hiện tiêu đề",
+          "description": "Bỏ chọn tùy chọn này nếu bạn không muốn hiển thị tiêu đề này. Tiêu đề chỉ hiển thị trong tóm tắt, thống kê, v.v."
+        }
+      ]
+    },
+    {
+      "label": "Bản địa hóa",
+      "fields": [
+        {
+          "label": "Nhãn toàn màn hình",
+          "default": "Toàn màn hình"
+        },
+        {
+          "label": "Nhãn thoát toàn màn hình",
+          "default": "Thoát toàn màn hình"
+        }
+      ]
+    },
+    {
+      "label": "Tiền tố phần tử nắm",
+      "default": "Phần tử nắm {num} trên {total}."
+    },
+    {
+      "label": "Hậu tố phần tử nắm",
+      "default": "Đã đặt vào vùng thả {num}."
+    },
+    {
+      "label": "Tiền tố vùng thả",
+      "default": "Vùng thả {num} trên {total}."
+    },
+    {
+      "label": "Nhãn không chọn vùng thả",
+      "default": "Không có vùng thả."
+    },
+    {
+      "label": "Nhãn cho nút hiển thị gợi ý",
+      "default": "Hiện gợi ý."
+    },
+    {
+      "label": "Nhãn cho tip available",
+      "default": "Có gợi ý"
+    },
+    {
+      "label": "Nhãn cho correct answer",
+      "default": "Đáp án đúng"
+    },
+    {
+      "label": "Nhãn cho incorrect answer",
+      "default": "Đáp án sai"
+    },
+    {
+      "label": "Tiêu đề cho bảng chứa phản hồi đáp án đúng/sai",
+      "default": "Phản hồi"
+    },
+    {
+      "label": "Biểu diễn văn bản của thanh điểm cho người dùng trình đọc màn hình",
+      "default": "Bạn đạt :num trên :total điểm"
+    },
+    {
+      "label": "Biểu diễn văn bản của nút giải thích điểm",
+      "default": "Hiện giải thích điểm"
+    },
+    {
+      "label": "Nhãn trợ năng cho \"Kiểm tra\" button",
+      "default": "Kiểm tra đáp án. The responses will be marked as correct, incorrect, or unanswered."
+    },
+    {
+      "label": "Nhãn trợ năng cho \"Thử lại\" button",
+      "default": "Thử lại bài tập. Đặt lại tất cả câu trả lời và làm lại từ đầu."
+    }
+  ]
+}

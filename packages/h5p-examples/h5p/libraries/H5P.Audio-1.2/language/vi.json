@@ -1,0 +1,99 @@
+{
+  "semantics": [
+    {
+      "label": "Tệp nguồn"
+    },
+    {
+      "label": "Chế độ phát",
+      "description": "Chọn bố cục trình phát.",
+      "options": [
+        {
+          "label": "Tối giản"
+        },
+        {
+          "label": "Đầy đủ"
+        },
+        {
+          "label": "Trong suốt"
+        }
+      ]
+    },
+    {
+      "label": "Vừa khung chứa"
+    },
+    {
+      "label": "Bật điều khiển",
+      "description": "Các điều khiển cho phép người dùng, ví dụ như tạm dừng âm thanh"
+    },
+    {
+      "label": "Bật tự động phát",
+      "description": "Với tự động phát, âm thanh bắt đầu phát ngay lập tức. Nếu tắt tự động phát, người dùng nhấn nút phát để bắt đầu âm thanh."
+    },
+    {
+      "label": "Thông tin bản quyền",
+      "fields": [
+        {
+          "label": "Tiêu đề",
+          "placeholder": "Für Elise"
+        },
+        {
+          "label": "Tác giả",
+          "placeholder": "Ludwig van Beethoven"
+        },
+        {
+          "label": "Nguồn",
+          "placeholder": "http://en.wikipedia.org/wiki/F%C3%BCr_Elise"
+        },
+        {
+          "label": "Giấy phép",
+          "options": [
+            {
+              "label": "Không công khai"
+            },
+            {
+              "label": "Ghi nguồn"
+            },
+            {
+              "label": "Ghi nguồn-Chia sẻ tương tự"
+            },
+            {
+              "label": "Ghi nguồn-Không phái sinh"
+            },
+            {
+              "label": "Ghi nguồn-Phi thương mại"
+            },
+            {
+              "label": "Ghi nguồn-Phi thương mại-Chia sẻ tương tự"
+            },
+            {
+              "label": "Ghi nguồn-Phi thương mại-Không phái sinh"
+            },
+            {
+              "label": "Giấy phép Công cộng Chung"
+            },
+            {
+              "label": "Phạm vi công cộng"
+            },
+            {
+              "label": "Giấy phép và cống hiến phạm vi công cộng"
+            },
+            {
+              "label": "Dấu hiệu phạm vi công cộng"
+            },
+            {
+              "label": "Bản quyền"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tên nội dung âm thanh",
+      "default": "Âm thanh"
+    },
+    {
+      "label": "Thông báo không hỗ trợ âm thanh",
+      "default": "Trình duyệt của bạn không hỗ trợ âm thanh này"
+    }
+  ]
+}

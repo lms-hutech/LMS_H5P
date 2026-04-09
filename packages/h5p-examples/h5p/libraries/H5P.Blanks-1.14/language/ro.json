@@ -1,0 +1,217 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Conținut media opțional de afișat deasupra întrebării."
+        },
+        {
+          "label": "Dezactivează zoom-ul pentru imagine"
+        }
+      ]
+    },
+    {
+      "label": "Descrierea sarcinii",
+      "default": "Completați cuvintele lipsă",
+      "description": "Un ghid care îi spune utilizatorului cum să rezolve această sarcină."
+    },
+    {
+      "label": "Blocuri de text",
+      "entity": "bloc de text",
+      "field": {
+        "label": "Linie de text",
+        "placeholder": "Oslo este capitala *Norvegiei*.",
+        "important": {
+          "description": "<ul><li>Spațiile goale se adaugă cu un asterisc (*) înaintea și în urma cuvântului/expresiei corecte.</li><li>Răspunsurile alternative se separă cu o bară oblică (/).</li><li>Puteți adăuga un indiciu textual, folosind două puncte (:) înaintea indiciului.</li></ul>",
+          "example": "Conținutul H5P poate fi editat folosind un *browser/navigator web:Ceva ce folosești zilnic*."
+        }
+      }
+    },
+    {
+      "label": "Feedback general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Implicit"
+            }
+          ],
+          "label": "Definiți feedback personalizat pentru orice interval de scor",
+          "description": "Faceți clic pe butonul \"Adaugă interval\" pentru a adăuga oricâte intervale aveți nevoie. Exemplu: 0-20% Scor slab, 21-91% Scor mediu, 91-100% Scor excelent!",
+          "entity": "interval",
+          "field": {
+            "fields": [
+              {
+                "label": "Interval de scor"
+              },
+              {},
+              {
+                "label": "Feedback pentru intervalul de scor definit",
+                "placeholder": "Completați feedback-ul"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Text pentru butonul \"Arată soluțiile\"",
+      "default": "Arată soluția"
+    },
+    {
+      "label": "Text pentru butonul \"Reîncearcă\"",
+      "default": "Reîncearcă"
+    },
+    {
+      "label": "Text pentru butonul \"Verifică\"",
+      "default": "Verifică"
+    },
+    {
+      "label": "Text pentru butonul \"Trimite\"",
+      "default": "Trimite"
+    },
+    {
+      "label": "Text pentru mesajul \"Necompletat\"",
+      "default": "Vă rugăm să completați toate spațiile goale pentru a vizualiza soluția"
+    },
+    {
+      "label": "Text pentru mesajul \"':ans' este corect\"",
+      "default": "':ans' este corect"
+    },
+    {
+      "label": "Text pentru mesajul \"':ans' este greșit\"",
+      "default": "':ans' este greșit"
+    },
+    {
+      "label": "Text pentru mesajul \"Răspuns corect\"",
+      "default": "Răspuns corect"
+    },
+    {
+      "label": "Text pentru mesajul \"Răspuns incorect\"",
+      "default": "Răspuns incorect"
+    },
+    {
+      "label": "Etichetă pentru tehnologia asistivă a soluției",
+      "default": "Răspuns corect:"
+    },
+    {
+      "label": "Etichetă pentru tehnologia asistivă a câmpului de intrare",
+      "description": "Folosiți @num și @total pentru a înlocui numărul curent și numărul total de spații goale",
+      "default": "Spațiu gol de completat @num din @total"
+    },
+    {
+      "label": "Etichetă pentru tehnologia asistivă care anunță că un câmp are un indiciu",
+      "default": "Indiciu disponibil"
+    },
+    {
+      "label": "Etichetă pictogramă indiciu",
+      "default": "Indiciu"
+    },
+    {
+      "label": "Setări de comportament",
+      "description": "Aceste opțiuni vă vor permite să controlați cum se comportă sarcina.",
+      "fields": [
+        {
+          "label": "Activează \"Reîncearcă\""
+        },
+        {
+          "label": "Allow \"Retry\" even if all answers were correct"
+        },
+        {
+          "label": "Activează butonul \"Arată soluția\""
+        },
+        {
+          "label": "Activează butonul \"Verifică\""
+        },
+        {
+          "label": "Verifică automat răspunsurile după introducere"
+        },
+        {
+          "label": "Sensibil la majuscule",
+          "description": "Asigură că răspunsul utilizatorului trebuie să fie identic cu soluția."
+        },
+        {
+          "label": "Solicită completarea tuturor câmpurilor înainte ca soluția să poată fi vizualizată"
+        },
+        {
+          "label": "Pune câmpurile de intrare pe linii separate"
+        },
+        {
+          "label": "Afișează dialog de confirmare la \"Verifică\"",
+          "description": "Această opțiune nu este compatibilă cu opțiunea \"Verifică automat răspunsurile după introducere\""
+        },
+        {
+          "label": "Afișează dialog de confirmare la \"Reîncearcă\""
+        },
+        {
+          "label": "Acceptă greșeli minore de ortografie",
+          "description": "Dacă este activată, un răspuns va fi considerat corect și cu greșeli minore de ortografie (3-9 caractere: 1 greșeală; peste 9 caractere: 2 greșeli)"
+        }
+      ]
+    },
+    {
+      "label": "Dialog de confirmare la verificare",
+      "fields": [
+        {
+          "label": "Text antet",
+          "default": "Finalizezi?"
+        },
+        {
+          "label": "Text corp",
+          "default": "Sunteți sigur că doriți să finalizați?"
+        },
+        {
+          "label": "Etichetă buton Anulare",
+          "default": "Anulează"
+        },
+        {
+          "label": "Etichetă buton Confirmare",
+          "default": "Finalizează"
+        }
+      ]
+    },
+    {
+      "label": "Dialog de confirmare la reîncercare",
+      "fields": [
+        {
+          "label": "Text antet",
+          "default": "Reîncerci?"
+        },
+        {
+          "label": "Text corp",
+          "default": "Sunteți sigur că doriți să reîncercați?"
+        },
+        {
+          "label": "Etichetă buton Anulare",
+          "default": "Anulează"
+        },
+        {
+          "label": "Etichetă buton Confirmare",
+          "default": "Confirmă"
+        }
+      ]
+    },
+    {
+      "label": "Reprezentarea textuală a barei de scor pentru cei care folosesc un cititor de ecran",
+      "default": "Ați obținut :num din :total puncte"
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă a butonului \"Verifică\"",
+      "default": "Verifică răspunsurile. Răspunsurile vor fi marcate ca fiind corecte, incorecte sau fără răspuns."
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă a butonului \"Arată Soluția\"",
+      "default": "Arată soluția. Sarcina va fi marcată cu soluția sa corectă."
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă a butonului \"Reîncearcă\"",
+      "default": "Reîncearcă sarcina. Resetează toate răspunsurile și începe sarcina din nou."
+    },
+    {
+      "label": "Descriere pentru tehnologia asistivă la pornirea sarcinii",
+      "default": "Mod de verificare"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.build.json",
+    "compilerOptions": {
+        "paths": {
+            "@lumieducation/h5p-server": ["../h5p-server/src"],
+            "@lumieducation/h5p-webcomponents": ["../h5p-webcomponents/src"]
+        }
+    }
+}
