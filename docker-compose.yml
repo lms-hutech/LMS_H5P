@@ -1,0 +1,103 @@
+version: '3.8'
+
+services:
+  # =====================================================
+  # H5P LTI Application
+  # =====================================================
+  h5p:
+    build:
+      context: .
+      dockerfile: packages/h5p-examples/Dockerfile
+    container_name: h5p-lti
+    ports:
+      - '8080:8080'
+    environment:
+      NODE_ENV: production
+      PORT: 8080
+
+      # MongoDB
+      MONGODB_URI: mongodb://mongodb:27017/h5p-lti
+
+      # H5P public URL (accessible from browser)
+      H5P_PUBLIC_URL: ${H5P_PUBLIC_URL:-http://localhost:8080}
+
+      # Canvas LMS URL
+      PLATFORM_URL: ${PLATFORM_URL:-http://localhost:3000}
+
+      # LTI config
+      LTI_KEY: ${LTI_KEY:-h5p-lti-dev-key-change-in-prod}
+      LTI_CLIENT_ID: ${LTI_CLIENT_ID:-10000000000001}
+
+      # Optional: override Canvas issuer if different from PLATFORM_URL
+      CANVAS_ISSUER: ${CANVAS_ISSUER:-}
+
+    volumes:
+      - h5p-content:/home/node/h5p-nodejs-library/h5p
+      - h5p-temp:/home/node/h5p-nodejs-library/tmp
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - h5p-network
+
+  # =====================================================
+  # MongoDB - LTI token store + H5P content metadata
+  # =====================================================
+  mongodb:
+    image: mongo:7
+    container_name: h5p-mongodb
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_DATABASE: h5p-lti
+    volumes:
+      - mongodb-data:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--eval', "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+    networks:
+      - h5p-network
+
+  # =====================================================
+  # MinIO - S3-compatible file storage for H5P content
+  # =====================================================
+  minio:
+    image: minio/minio:latest
+    container_name: h5p-minio
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:9000/minio/health/live']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - h5p-network
+
+volumes:
+  mongodb-data:
+    driver: local
+  minio-data:
+    driver: local
+  h5p-content:
+    driver: local
+  h5p-temp:
+    driver: local
+
+networks:
+  h5p-network:
+    driver: bridge
