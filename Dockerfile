@@ -1,7 +1,8 @@
 FROM node:24-bookworm-slim
 
-WORKDIR /app
+RUN mkdir -p /app && chown node:node /app
 
+WORKDIR /app
 COPY --chown=node:node . .
 
 USER node
