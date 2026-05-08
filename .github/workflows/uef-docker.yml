@@ -42,8 +42,3 @@ jobs:
             - name: Show container status
               if: always()
               run: docker compose ps
-
-            - name: Stop containers
-              if: always()
-              run: docker compose down --volumes
-
