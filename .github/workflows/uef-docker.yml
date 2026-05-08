@@ -21,10 +21,10 @@ jobs:
               uses: actions/checkout@v6
 
             - name: Build image
-              run: docker compose build
+              run: docker-compose build
 
             - name: Start container
-              run: docker compose up -d
+              run: docker-compose up -d
 
             - name: Wait for app
               run: |
@@ -36,10 +36,5 @@ jobs:
                       sleep 5
                   done
 
-                  docker compose logs
+                  docker-compose logs
                   exit 1
-
-            - name: Show container status
-              if: always()
-              run: docker compose ps
-#comment: The workflow builds the Docker image, starts the container, waits for the application to be ready, and shows the container status. If the application does not become ready within 30 attempts (5 minutes), it will show the logs and fail the workflow.
