@@ -3,11 +3,9 @@ name: UEF Docker
 on:
     push:
         branches:
-            - UEF
             - uef
     pull_request:
         branches:
-            - UEF
             - uef
     workflow_dispatch:
 
