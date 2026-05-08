@@ -42,3 +42,4 @@ jobs:
             - name: Show container status
               if: always()
               run: docker compose ps
+#comment: The workflow builds the Docker image, starts the container, waits for the application to be ready, and shows the container status. If the application does not become ready within 30 attempts (5 minutes), it will show the logs and fail the workflow.
