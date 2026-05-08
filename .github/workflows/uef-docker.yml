@@ -1,0 +1,50 @@
+name: UEF Docker
+
+on:
+    push:
+        branches:
+            - UEF
+            - uef
+    pull_request:
+        branches:
+            - UEF
+            - uef
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    docker-compose:
+        name: Build and run Docker Compose
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+
+            - name: Build image
+              run: docker compose build
+
+            - name: Start container
+              run: docker compose up -d
+
+            - name: Wait for app
+              run: |
+                  for i in {1..30}; do
+                      if curl --fail --silent --show-error http://localhost:8080/ > /dev/null; then
+                          exit 0
+                      fi
+                      docker compose ps
+                      sleep 5
+                  done
+
+                  docker compose logs
+                  exit 1
+
+            - name: Show container status
+              if: always()
+              run: docker compose ps
+
+            - name: Stop containers
+              if: always()
+              run: docker compose down --volumes

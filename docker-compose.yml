@@ -1,0 +1,35 @@
+services:
+    h5p:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: lms-h5p:latest
+        container_name: lms-h5p
+        restart: unless-stopped
+        environment:
+            NODE_ENV: production
+            PORT: 8080
+            TEMP_UPLOADS: 'true'
+        ports:
+            - '8080:8080'
+        volumes:
+            - h5p_content:/app/packages/h5p-examples/h5p/content
+            - h5p_user_data:/app/packages/h5p-examples/h5p/user-data
+            - h5p_temp:/app/packages/h5p-examples/h5p/temporary-storage
+        healthcheck:
+            test:
+                [
+                    'CMD',
+                    'node',
+                    '-e',
+                    "fetch('http://127.0.0.1:8080').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+                ]
+            interval: 30s
+            timeout: 10s
+            retries: 5
+            start_period: 60s
+
+volumes:
+    h5p_content:
+    h5p_user_data:
+    h5p_temp:
