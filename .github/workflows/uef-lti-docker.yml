@@ -1,0 +1,58 @@
+name: UEF LTI Docker
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - uef
+        paths:
+            - 'Dockerfile'
+            - 'docker-compose.lti.yml'
+            - 'packages/**'
+            - 'package.json'
+            - 'package-lock.json'
+            - '.github/workflows/uef-lti-docker.yml'
+
+permissions:
+    contents: read
+
+jobs:
+    docker-compose-lti:
+        name: Build and run LTI Docker Compose
+        runs-on: self-hosted
+        env:
+            H5P_PUBLIC_URL: ${{ secrets.H5P_PUBLIC_URL }}
+            LTI_KEY: ${{ secrets.LTI_KEY }}
+            LTI_CLIENT_ID: ${{ secrets.LTI_CLIENT_ID }}
+            PLATFORM_URL: ${{ secrets.PLATFORM_URL }}
+            CANVAS_ISSUER: ${{ secrets.CANVAS_ISSUER }}
+            CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+
+            - name: Check required secrets
+              run: |
+                  test -n "$H5P_PUBLIC_URL"
+                  test -n "$LTI_KEY"
+                  test -n "$LTI_CLIENT_ID"
+                  test -n "$PLATFORM_URL"
+
+            - name: Build image
+              run: sudo -E docker-compose -f docker-compose.lti.yml build
+
+            - name: Start LTI container
+              run: sudo -E docker-compose -f docker-compose.lti.yml up -d
+
+            - name: Wait for LTI keyset
+              run: |
+                  for i in {1..30}; do
+                      if curl --fail --silent --show-error http://localhost:8080/lti/keys > /dev/null; then
+                          exit 0
+                      fi
+                      sudo -E docker-compose -f docker-compose.lti.yml ps
+                      sleep 5
+                  done
+
+                  sudo -E docker-compose -f docker-compose.lti.yml logs
+                  exit 1
