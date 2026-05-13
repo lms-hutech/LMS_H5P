@@ -1,12 +1,6 @@
 name: UEF Docker
 
 on:
-    push:
-        branches:
-            - uef
-    pull_request:
-        branches:
-            - uef
     workflow_dispatch:
 
 permissions:
