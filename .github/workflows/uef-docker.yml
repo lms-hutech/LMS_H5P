@@ -1,0 +1,34 @@
+name: UEF Docker
+
+on:
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    docker-compose:
+        name: Build and run Docker Compose
+        runs-on: self-hosted
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+
+            - name: Build image
+              run: sudo docker-compose build
+
+            - name: Start container
+              run: sudo docker-compose up -d
+
+            - name: Wait for app
+              run: |
+                  for i in {1..30}; do
+                      if curl --fail --silent --show-error http://localhost:8080/ > /dev/null; then
+                          exit 0
+                      fi
+                      sudo docker-compose ps
+                      sleep 5
+                  done
+
+                  sudo docker-compose logs
+                  exit 1

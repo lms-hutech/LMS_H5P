@@ -1,15 +1,32 @@
 services:
+    mongo:
+        image: mongo:6
+        container_name: lms-h5p-mongo
+        restart: unless-stopped
+        volumes:
+            - h5p_mongo_data:/data/db
+
     h5p:
         build:
             context: .
             dockerfile: Dockerfile
-        image: lms-h5p:latest
-        container_name: lms-h5p
+        image: lms-h5p-lti:latest
+        container_name: lms-h5p-lti
         restart: unless-stopped
+        depends_on:
+            - mongo
+        command: npm run start:lti --workspace=packages/h5p-examples
         environment:
             NODE_ENV: production
             PORT: 8080
             TEMP_UPLOADS: 'true'
+            H5P_PUBLIC_URL: ${H5P_PUBLIC_URL}
+            MONGODB_URI: mongodb://mongo:27017/h5p-lti
+            LTI_KEY: ${LTI_KEY}
+            LTI_CLIENT_ID: ${LTI_CLIENT_ID}
+            PLATFORM_URL: ${PLATFORM_URL}
+            CANVAS_ISSUER: ${CANVAS_ISSUER:-${PLATFORM_URL}}
+            CANVAS_API_TOKEN: ${CANVAS_API_TOKEN:-}
         ports:
             - '8080:8080'
         volumes:
@@ -22,7 +39,7 @@ services:
                     'CMD',
                     'node',
                     '-e',
-                    "fetch('http://127.0.0.1:8080').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+                    "fetch('http://127.0.0.1:8080/lti/keys').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
                 ]
             interval: 30s
             timeout: 10s
@@ -33,3 +50,4 @@ volumes:
     h5p_content:
     h5p_user_data:
     h5p_temp:
+    h5p_mongo_data:
