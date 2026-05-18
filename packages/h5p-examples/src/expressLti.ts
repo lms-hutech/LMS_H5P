@@ -2179,26 +2179,31 @@ ${THEME_CSS}
     startQuizCleanup(h5pEditor.contentManager);
 
     // Register Canvas platform
+    // Always register (using a placeholder clientId if the real one is not set yet)
+    // so that ltijs generates the RSA key pair and the JWKS endpoint returns valid keys.
+    // Canvas requires a non-empty JWKS when creating a Developer Key.
     const LTI_CLIENT_ID = process.env.LTI_CLIENT_ID;
     const CANVAS_ISSUER = process.env.CANVAS_ISSUER || PLATFORM_URL;
 
+    await lti.registerPlatform({
+        url: CANVAS_ISSUER,
+        name: 'Canvas',
+        clientId: LTI_CLIENT_ID || 'pending-registration',
+        authenticationEndpoint: `${PLATFORM_URL}/api/lti/authorize_redirect`,
+        accesstokenEndpoint: `${PLATFORM_URL}/login/oauth2/token`,
+        authConfig: {
+            method: 'JWK_SET',
+            key: `${PLATFORM_URL}/api/lti/security/jwks`
+        }
+    });
+
     if (LTI_CLIENT_ID) {
-        await lti.registerPlatform({
-            url: CANVAS_ISSUER,
-            name: 'Canvas',
-            clientId: LTI_CLIENT_ID,
-            authenticationEndpoint: `${PLATFORM_URL}/api/lti/authorize_redirect`,
-            accesstokenEndpoint: `${PLATFORM_URL}/login/oauth2/token`,
-            authConfig: {
-                method: 'JWK_SET',
-                key: `${PLATFORM_URL}/api/lti/security/jwks`
-            }
-        });
         console.log('Canvas platform registered:');
         console.log('  Issuer:    %s', CANVAS_ISSUER);
         console.log('  Instance:  %s', PLATFORM_URL);
         console.log('  Client ID: %s', LTI_CLIENT_ID);
     } else {
+        console.log('Canvas platform registered with placeholder clientId.');
         console.log(
             'LTI_CLIENT_ID not set. Set it after creating a Developer Key in Canvas Admin.'
         );
