@@ -43,6 +43,9 @@ jobs:
             - name: Build image
               run: sudo -E docker compose -f docker-compose.lti.yml build
 
+            - name: Stop existing containers
+              run: sudo -E docker compose -f docker-compose.lti.yml down
+
             - name: Start LTI container
               run: sudo -E docker compose -f docker-compose.lti.yml up -d
 
