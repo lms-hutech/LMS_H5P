@@ -29,30 +29,35 @@ jobs:
             CANVAS_API_TOKEN: ${{ secrets.CANVAS_API_TOKEN }}
         steps:
             - name: Checkout
-              uses: actions/checkout@v6
+              uses: actions/checkout@v4
 
             - name: Check required secrets
               run: |
                   test -n "$H5P_PUBLIC_URL"
                   test -n "$LTI_KEY"
-                  test -n "$LTI_CLIENT_ID"
                   test -n "$PLATFORM_URL"
+                  if [ -z "$LTI_CLIENT_ID" ]; then
+                      echo "LTI_CLIENT_ID is empty. This is OK for the first deploy; add it after creating the Canvas Developer Key."
+                  fi
 
             - name: Build image
-              run: sudo -E docker-compose -f docker-compose.lti.yml build
+              run: sudo -E docker compose -f docker-compose.lti.yml build
 
             - name: Start LTI container
-              run: sudo -E docker-compose -f docker-compose.lti.yml up -d
+              run: sudo -E docker compose -f docker-compose.lti.yml up -d
 
             - name: Wait for LTI keyset
               run: |
                   for i in {1..30}; do
                       if curl --fail --silent --show-error http://localhost:8080/lti/keys > /dev/null; then
+                          echo "LTI keyset is ready at: ${H5P_PUBLIC_URL}/lti/keys"
+                          echo "Canvas login URL: ${H5P_PUBLIC_URL}/lti/login"
+                          echo "Canvas launch URL: ${H5P_PUBLIC_URL}/lti/launch"
                           exit 0
                       fi
-                      sudo -E docker-compose -f docker-compose.lti.yml ps
+                      sudo -E docker compose -f docker-compose.lti.yml ps
                       sleep 5
                   done
 
-                  sudo -E docker-compose -f docker-compose.lti.yml logs
+                  sudo -E docker compose -f docker-compose.lti.yml logs
                   exit 1
