@@ -44,7 +44,16 @@ jobs:
               run: sudo -E docker compose -f docker-compose.lti.yml build
 
             - name: Stop existing containers
-              run: sudo -E docker compose -f docker-compose.lti.yml down
+              run: |
+                  sudo -E docker compose -f docker-compose.lti.yml down --remove-orphans
+                  # Stop any other Docker container using port 8080
+                  CONTAINER=$(docker ps --filter "publish=8080" --quiet)
+                  if [ -n "$CONTAINER" ]; then
+                      docker stop $CONTAINER
+                  fi
+                  # Kill any remaining process holding port 8080
+                  sudo fuser -k 8080/tcp || true
+                  sleep 2
 
             - name: Start LTI container
               run: sudo -E docker compose -f docker-compose.lti.yml up -d
