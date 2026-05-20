@@ -288,7 +288,9 @@ const start = async (): Promise<void> => {
         /^\/favicon\.ico$/,
         /^\/hutech_logo\.png$/,
         { route: '/', method: 'GET' },
-        /^\/lti\/login$/
+        /^\/lti\/login$/,
+        /^\/fontawesome-free\/.*/,
+        /\.(js|css|png|jpg|jpeg|gif|ico|woff|woff2|ttf|eot|svg|map)(\?.*)?$/
     );
 
     // When Canvas sends OIDC login params to /lti/launch instead of /lti/login,
