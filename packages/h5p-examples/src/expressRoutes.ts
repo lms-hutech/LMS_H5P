@@ -123,11 +123,22 @@ export default function (
     );
 
     router.post('/edit/:contentId', async (req: IRequestWithUser, res) => {
+        const rawParams = req.body?.params;
+        const bodyParams =
+            typeof rawParams === 'string'
+                ? (() => {
+                      try {
+                          return JSON.parse(rawParams);
+                      } catch {
+                          return null;
+                      }
+                  })()
+                : rawParams;
         if (
             !req.body ||
-            !req.body.params ||
-            !req.body.params.params ||
-            !req.body.params.metadata ||
+            !bodyParams ||
+            !bodyParams.params ||
+            !bodyParams.metadata ||
             !req.body.library ||
             !req.user
         ) {
@@ -137,8 +148,8 @@ export default function (
         try {
             const contentId = await h5pEditor.saveOrUpdateContent(
                 req.params.contentId.toString(),
-                req.body.params.params,
-                req.body.params.metadata,
+                bodyParams.params,
+                bodyParams.metadata,
                 req.body.library,
                 req.user
             );
@@ -275,11 +286,22 @@ export default function (
     );
 
     router.post('/new', async (req: IRequestWithUser, res) => {
+        const rawParams = req.body?.params;
+        const bodyParams =
+            typeof rawParams === 'string'
+                ? (() => {
+                      try {
+                          return JSON.parse(rawParams);
+                      } catch {
+                          return null;
+                      }
+                  })()
+                : rawParams;
         if (
             !req.body ||
-            !req.body.params ||
-            !req.body.params.params ||
-            !req.body.params.metadata ||
+            !bodyParams ||
+            !bodyParams.params ||
+            !bodyParams.metadata ||
             !req.body.library ||
             !req.user
         ) {
@@ -289,8 +311,8 @@ export default function (
         try {
             const contentId = await h5pEditor.saveOrUpdateContent(
                 undefined,
-                req.body.params.params,
-                req.body.params.metadata,
+                bodyParams.params,
+                bodyParams.metadata,
                 req.body.library,
                 req.user
             );
