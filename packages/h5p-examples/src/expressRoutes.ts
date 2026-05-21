@@ -134,16 +134,22 @@ export default function (
             res.status(400).send('Malformed request').end();
             return;
         }
-        const contentId = await h5pEditor.saveOrUpdateContent(
-            req.params.contentId.toString(),
-            req.body.params.params,
-            req.body.params.metadata,
-            req.body.library,
-            req.user
-        );
-
-        res.send(JSON.stringify({ contentId }));
-        res.status(200).end();
+        try {
+            const contentId = await h5pEditor.saveOrUpdateContent(
+                req.params.contentId.toString(),
+                req.body.params.params,
+                req.body.params.metadata,
+                req.body.library,
+                req.user
+            );
+            res.send(JSON.stringify({ contentId }));
+            res.status(200).end();
+        } catch (error: any) {
+            console.error('Error saving content:', error);
+            res.status(500)
+                .json({ error: error.message || 'Internal server error' })
+                .end();
+        }
     });
 
     router.get(
@@ -280,16 +286,22 @@ export default function (
             res.status(400).send('Malformed request').end();
             return;
         }
-        const contentId = await h5pEditor.saveOrUpdateContent(
-            undefined,
-            req.body.params.params,
-            req.body.params.metadata,
-            req.body.library,
-            req.user
-        );
-
-        res.send(JSON.stringify({ contentId }));
-        res.status(200).end();
+        try {
+            const contentId = await h5pEditor.saveOrUpdateContent(
+                undefined,
+                req.body.params.params,
+                req.body.params.metadata,
+                req.body.library,
+                req.user
+            );
+            res.send(JSON.stringify({ contentId }));
+            res.status(200).end();
+        } catch (error: any) {
+            console.error('Error saving new content:', error);
+            res.status(500)
+                .json({ error: error.message || 'Internal server error' })
+                .end();
+        }
     });
 
     router.get('/delete/:contentId', async (req: IRequestWithUser, res) => {
