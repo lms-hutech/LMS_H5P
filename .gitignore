@@ -10,6 +10,9 @@ build-ide/
 coverage/
 typedoc/
 dist/
+# Allow pre-built dist files inside H5P libraries (distribution artifacts, not build output)
+!packages/h5p-examples/h5p/libraries/*/dist/
+!packages/h5p-examples/h5p/libraries/*/dist/**
 
 # Local environment and credentials
 .env
