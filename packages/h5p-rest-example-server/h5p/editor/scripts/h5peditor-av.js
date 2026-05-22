@@ -6,150 +6,6 @@
  */
 H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($) {
 
-  // ===== Google Drive Picker — Popup approach (about:blank, no domain leak) =====
-  var GDRIVE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID';
-  var GDRIVE_APP_ID = 'YOUR_GOOGLE_APP_ID';
-
-  // Store pending $urlField for postMessage callback
-  var _gdrivePendingUrlField = null;
-
-  // Listen for picked result from popup
-  if (typeof window !== 'undefined') {
-    window.addEventListener('message', function (e) {
-      if (e.data && e.data.type === 'gdrive-picked' && _gdrivePendingUrlField) {
-        var driveUrl = 'https://drive.google.com/file/d/' + e.data.fileId + '/view';
-        _gdrivePendingUrlField.val(driveUrl).trigger('change');
-        _gdrivePendingUrlField = null;
-      }
-    });
-  }
-
-  /**
-   * Open Google Drive Picker in a large about:blank popup.
-   * - No domain leak (URL bar shows about:blank)
-   * - No cross-origin iframe issues (popup is top-level)
-   * - Large window for easy browsing
-   *
-   * @param {jQuery} $urlField
-   */
-  function openGoogleDrivePicker($urlField) {
-    if (
-      GDRIVE_CLIENT_ID.indexOf('YOUR_GOOGLE_') === 0 ||
-      GDRIVE_APP_ID.indexOf('YOUR_GOOGLE_') === 0
-    ) {
-      alert('Google Drive Picker chưa được cấu hình. Hãy cập nhật GDRIVE_CLIENT_ID và GDRIVE_APP_ID trước khi dùng tính năng này.');
-      return;
-    }
-
-    _gdrivePendingUrlField = $urlField;
-
-    // Center popup on screen
-    var w = Math.min(1100, screen.width - 100);
-    var h = Math.min(720, screen.height - 100);
-    var left = Math.round((screen.width - w) / 2);
-    var top = Math.round((screen.height - h) / 2);
-
-    var popup = window.open('', 'gdrive_picker',
-      'width=' + w + ',height=' + h + ',left=' + left + ',top=' + top +
-      ',menubar=no,toolbar=no,location=no,status=no');
-
-    if (!popup) {
-      alert('Trình duyệt đã chặn popup. Vui lòng cho phép popup cho trang này.');
-      _gdrivePendingUrlField = null;
-      return;
-    }
-
-    var pickerHTML = [
-      '<!DOCTYPE html>',
-      '<html><head>',
-      '<title>Chọn Video từ Google Drive</title>',
-      '<style>',
-      '*{margin:0;padding:0;box-sizing:border-box}',
-      'body{font-family:"Google Sans",Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;background:#f8f9fa}',
-      '.container{text-align:center;color:#5f6368}',
-      '.spinner{width:48px;height:48px;border:4px solid #e0e0e0;border-top-color:#1a73e8;border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 16px}',
-      '@keyframes spin{to{transform:rotate(360deg)}}',
-      'h2{font-size:18px;font-weight:400;margin:0 0 8px}',
-      'p{font-size:13px;color:#80868b;margin:0 0 24px}',
-      '.auth-btn{display:none;padding:14px 36px;font-size:16px;font-weight:500;color:#fff;background:#1a73e8;border:none;border-radius:8px;cursor:pointer;font-family:inherit;transition:background .2s,box-shadow .2s}',
-      '.auth-btn:hover{background:#1557b0;box-shadow:0 2px 8px rgba(26,115,232,.3)}',
-      '.gdrive-icon{width:24px;height:24px;vertical-align:middle;margin-right:8px}',
-      '.picker-dialog-bg{z-index:1000!important}',
-      '.picker-dialog{z-index:1001!important}',
-      '</style>',
-      '</head><body>',
-      '<div class="container" id="container">',
-      '<div class="spinner" id="spinner"></div>',
-      '<h2 id="status">Đang tải Google Drive...</h2>',
-      '<p id="sub">Vui lòng đợi trong giây lát</p>',
-      '<button class="auth-btn" id="authBtn" onclick="doAuth()">',
-      '<svg class="gdrive-icon" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg"><path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/><path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-20.4 35.3c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#00ac47"/><path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.5l5.85 13.35z" fill="#ea4335"/><path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/><path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/><path d="m73.4 26.5-10.1-17.5c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 23.5h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/></svg>',
-      'Đăng nhập Google Drive',
-      '</button>',
-      '</div>',
-      '<script src="https://apis.google.com/js/api.js"></' + 'script>',
-      '<script src="https://accounts.google.com/gsi/client"></' + 'script>',
-      '<script>',
-      'var CLIENT_ID="' + GDRIVE_CLIENT_ID + '";',
-      'var APP_ID="' + GDRIVE_APP_ID + '";',
-      'var gapiReady=false,gisReady=false,tokenClient;',
-      '',
-      'function onReady(){',
-      '  if(gapiReady&&gisReady){',
-      '    document.getElementById("spinner").style.display="none";',
-      '    document.getElementById("status").textContent="Sẵn sàng!";',
-      '    document.getElementById("sub").textContent="Bấm nút bên dưới để chọn video";',
-      '    document.getElementById("authBtn").style.display="inline-block";',
-      '  }',
-      '}',
-      '',
-      'gapi.load("picker",function(){gapiReady=true;onReady();});',
-      '',
-      'tokenClient=google.accounts.oauth2.initTokenClient({',
-      '  client_id:CLIENT_ID,',
-      '  scope:"https://www.googleapis.com/auth/drive.readonly",',
-      '  callback:function(r){',
-      '    if(r.error){document.getElementById("status").textContent="Lỗi: "+r.error;return;}',
-      '    showPicker(r.access_token);',
-      '  }',
-      '});',
-      'gisReady=true;onReady();',
-      '',
-      'function doAuth(){',
-      '  document.getElementById("authBtn").style.display="none";',
-      '  document.getElementById("spinner").style.display="block";',
-      '  document.getElementById("status").textContent="Đang xác thực...";',
-      '  document.getElementById("sub").textContent="";',
-      '  tokenClient.requestAccessToken({prompt:"consent"});',
-      '}',
-      '',
-      'function showPicker(token){',
-      '  var view=new google.picker.DocsView(google.picker.ViewId.DOCS);',
-      '  view.setMimeTypes("video/mp4,video/webm,video/ogg,video/avi,video/mov,video/mkv,video/x-matroska,video/quicktime");',
-      '  var picker=new google.picker.PickerBuilder()',
-      '    .setOAuthToken(token)',
-      '    .addView(view)',
-      '    .addView(new google.picker.DocsUploadView())',
-      '    .setAppId(APP_ID)',
-      '    .setSize(window.innerWidth,window.innerHeight)',
-      '    .setCallback(function(data){',
-      '      if(data.action==="picked"){',
-      '        window.opener.postMessage({type:"gdrive-picked",fileId:data.docs[0].id},"*");',
-      '        window.close();',
-      '      }',
-      '      if(data.action==="cancel")window.close();',
-      '    }).build();',
-      '  document.getElementById("container").style.display="none";',
-      '  picker.setVisible(true);',
-      '}',
-      '</' + 'script>',
-      '</body></html>'
-    ].join('\n');
-
-    popup.document.write(pickerHTML);
-    popup.document.close();
-  }
-
   /**
    * Constructor.
    *
@@ -384,15 +240,6 @@ H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($)
     }
 
     var $url = this.$url = this.$addDialog.find('.h5p-file-url');
-
-    var $gDriveBtn = this.$addDialog.find('.h5p-gdrive-picker-btn');
-    if ($gDriveBtn.length) {
-      $gDriveBtn.click(function (e) {
-        e.preventDefault();
-        openGoogleDrivePicker($url);
-      });
-    }
-
     this.$addDialog.find('.h5p-cancel').click(function () {
       self.updateIndex = undefined;
       self.closeDialog();
@@ -502,24 +349,24 @@ H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($)
     if (this.field.enableCustomQualityLabel === true && !isProvider) {
       fileHtml = '<li class="h5p-av-row">' +
         '<div class="h5p-thumbnail">' +
-        '<div class="h5p-type" title="' + file.mime + '">' + file.mime.split('/')[1] + '</div>' +
-        '<div role="button" tabindex="0" class="h5p-remove" title="' + H5PEditor.t('core', 'removeFile') + '">' +
-        '</div>' +
+          '<div class="h5p-type" title="' + file.mime + '">' + file.mime.split('/')[1] + '</div>' +
+            '<div role="button" tabindex="0" class="h5p-remove" title="' + H5PEditor.t('core', 'removeFile') + '">' +
+          '</div>' +
         '</div>' +
         '<div class="h5p-video-quality">' +
-        '<div class="h5p-video-quality-title">' + H5PEditor.t('core', 'videoQuality') + '</div>' +
-        '<label class="h5peditor-field-description" for="' + rowInputId + '">' + H5PEditor.t('core', 'videoQualityDescription') + '</label>' +
-        '<input id="' + rowInputId + '" class="h5peditor-text" type="text" maxlength="60" value="' + qualityName + '">' +
+          '<div class="h5p-video-quality-title">' + H5PEditor.t('core', 'videoQuality') + '</div>' +
+          '<label class="h5peditor-field-description" for="' + rowInputId + '">' + H5PEditor.t('core', 'videoQualityDescription') + '</label>' +
+          '<input id="' + rowInputId + '" class="h5peditor-text" type="text" maxlength="60" value="' + qualityName + '">' +
         '</div>' +
-        '</li>';
+      '</li>';
     }
     else {
       fileHtml = '<li class="h5p-av-cell">' +
         '<div class="h5p-thumbnail">' +
-        '<div class="h5p-type" title="' + file.mime + '">' + file.mime.split('/')[1] + '</div>' +
-        '<div role="button" tabindex="0" class="h5p-remove" title="' + H5PEditor.t('core', 'removeFile') + '">' +
+          '<div class="h5p-type" title="' + file.mime + '">' + file.mime.split('/')[1] + '</div>' +
+          '<div role="button" tabindex="0" class="h5p-remove" title="' + H5PEditor.t('core', 'removeFile') + '">' +
         '</div>' +
-        '</li>';
+      '</li>';
     }
 
     // Insert file element in appropriate order
@@ -565,7 +412,7 @@ H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($)
     // Create remove file dialog
     var confirmRemovalDialog = new H5P.ConfirmationDialog({
       headerText: H5PEditor.t('core', 'removeFile'),
-      dialogText: H5PEditor.t('core', 'confirmRemoval', { ':type': 'file' })
+      dialogText: H5PEditor.t('core', 'confirmRemoval', {':type': 'file'})
     }).appendTo(document.body);
 
     // Remove file on confirmation
@@ -714,11 +561,11 @@ H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($)
   C.createInsertDialog = function (content, disableInsert, id, hasDescription) {
     return '<div role="button" tabindex="0" id="' + id + '"' + (hasDescription ? ' aria-describedby="' + ns.getDescriptionId(id) + '"' : '') + ' class="h5p-add-file" title="' + H5PEditor.t('core', 'addFile') + '"></div>' +
       '<div class="h5p-dialog-anchor"><div class="h5p-add-dialog">' +
-      '<div class="h5p-add-dialog-table">' + content + '</div>' +
-      '<div class="h5p-buttons">' +
-      '<button class="h5peditor-button-textual h5p-insert"' + (disableInsert ? ' disabled' : '') + '>' + H5PEditor.t('core', 'insert') + '</button>' +
-      '<button class="h5peditor-button-textual h5p-cancel">' + H5PEditor.t('core', 'cancel') + '</button>' +
-      '</div>' +
+        '<div class="h5p-add-dialog-table">' + content + '</div>' +
+        '<div class="h5p-buttons">' +
+          '<button class="h5peditor-button-textual h5p-insert"' + (disableInsert ? ' disabled' : '') + '>' + H5PEditor.t('core', 'insert') + '</button>' +
+          '<button class="h5peditor-button-textual h5p-cancel">' + H5PEditor.t('core', 'cancel') + '</button>' +
+        '</div>' +
       '</div></div>';
   };
 
@@ -737,15 +584,14 @@ H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($)
         const id = 'av-upload-' + C.getNextId();
         return '<h3 id="' + id + '">' + H5PEditor.t('core', isAudio ? 'uploadAudioTitle' : 'uploadVideoTitle') + '</h3>' +
           '<div class="h5p-file-drop-upload" tabindex="0" role="button" aria-labelledby="' + id + '">' +
-          '<div class="h5p-file-drop-upload-inner ' + type + '"></div>' +
+            '<div class="h5p-file-drop-upload-inner ' + type + '"></div>' +
           '</div>';
 
       case 'InputLinkURL':
         return '<h3>' + H5PEditor.t('core', isAudio ? 'enterAudioTitle' : 'enterVideoTitle') + '</h3>' +
           '<div class="h5p-file-url-wrapper ' + type + '">' +
-          '<input type="text" placeholder="' + H5PEditor.t('core', isAudio ? 'enterAudioUrl' : 'enterVideoUrl') + '" class="h5p-file-url h5peditor-text"/>' +
+            '<input type="text" placeholder="' + H5PEditor.t('core', isAudio ? 'enterAudioUrl' : 'enterVideoUrl') + '" class="h5p-file-url h5peditor-text"/>' +
           '</div>' +
-          (isAudio ? '' : '<button type="button" class="h5p-gdrive-picker-btn" style="margin-top: 10px; display: inline-block; padding: 0.5em 1em; cursor: pointer; border: 1px solid #dadce0; border-radius: 4px; background: #fff; color: #1a73e8; font-family: sans-serif; font-size: 14px; font-weight: normal;"><svg style="vertical-align: text-bottom; margin-right: 6px;" viewBox="0 0 512 512" width="16" height="16"><path fill="#FFC107" d="M170.6,341.3h170.7L256,482.1L170.6,341.3z"/><path fill="#1976D2" d="M341.3,341.3l85.3-140.8l85.3,140.8H341.3z"/><path fill="#4CAF50" d="M170.6,341.3l85.3-140.8L170.6,59.7L0,341.3H170.6z"/></svg>Chọn Video từ Google Drive</button>') +
           (isAudio ? '' : '<div class="h5p-errors"></div><div class="h5peditor-field-description">' + H5PEditor.t('core', 'addVideoDescription') + '</div>');
 
       default:
@@ -803,16 +649,16 @@ H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($)
   C.createAdd = function (type, id, hasDescription) {
     return C.createInsertDialog(
       '<div class="h5p-dialog-box">' +
-      C.createTabContent('BasicFileUpload', type) +
+        C.createTabContent('BasicFileUpload', type) +
       '</div>' +
       '<div class="h5p-or-vertical">' +
-      '<div class="h5p-or-vertical-line"></div>' +
-      '<div class="h5p-or-vertical-word-wrapper">' +
-      '<div class="h5p-or-vertical-word">' + H5PEditor.t('core', 'or') + '</div>' +
-      '</div>' +
+        '<div class="h5p-or-vertical-line"></div>' +
+        '<div class="h5p-or-vertical-word-wrapper">' +
+          '<div class="h5p-or-vertical-word">' + H5PEditor.t('core', 'or') + '</div>' +
+        '</div>' +
       '</div>' +
       '<div class="h5p-dialog-box">' +
-      C.createTabContent('InputLinkURL', type) +
+          C.createTabContent('InputLinkURL', type) +
       '</div>',
       false, id, hasDescription
     );
@@ -839,9 +685,9 @@ H5PEditor.widgets.video = H5PEditor.widgets.audio = H5PEditor.AV = (function ($)
       aspectRatio: '16:9',
     },
     {
-      name: 'Echo360',
-      regexp: /^[^\/]+:\/\/(echo360[^\/]+)\/media\/([^\/]+)\/h5p.*$/i,
-      aspectRatio: '16:9',
+        name: 'Echo360',
+        regexp: /^[^\/]+:\/\/(echo360[^\/]+)\/media\/([^\/]+)\/h5p.*$/i,
+        aspectRatio: '16:9',
     },
   ];
 

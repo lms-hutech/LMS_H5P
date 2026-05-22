@@ -3,9 +3,11 @@ name: UEF CI/CD
 on:
   push:
     branches:
+      - uef
       - UEF
   pull_request:
     branches:
+      - uef
       - UEF
 
 jobs:
@@ -32,16 +34,16 @@ jobs:
 
       - name: Run linting
         run: npm run lint
-        continue-on-error: true
 
       - name: Run tests
         run: npm test
-        continue-on-error: true
 
   docker-build-and-push:
     runs-on: ubuntu-latest
     needs: build-and-test
     if: github.event_name == 'push'
+    env:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
 
     steps:
       - uses: actions/checkout@v4
@@ -50,23 +52,54 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Log in to Docker Hub
-        if: ${{ secrets.DOCKER_USERNAME != '' }}
+        if: env.DOCKER_USERNAME != ''
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ env.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./packages/h5p-examples/Dockerfile
-          push: ${{ secrets.DOCKER_USERNAME != '' }}
+          file: ./Dockerfile
+          push: ${{ env.DOCKER_USERNAME != '' }}
           tags: |
-            ${{ secrets.DOCKER_USERNAME != '' && format('{0}/h5p-lti:latest', secrets.DOCKER_USERNAME) || 'h5p-lti:latest' }}
-            ${{ secrets.DOCKER_USERNAME != '' && format('{0}/h5p-lti:uef-{1}', secrets.DOCKER_USERNAME, github.sha) || '' }}
+            ${{ env.DOCKER_USERNAME != '' && format('{0}/h5p-lti:latest', env.DOCKER_USERNAME) || 'h5p-lti:latest' }}
+            ${{ env.DOCKER_USERNAME != '' && format('{0}/h5p-lti:uef-{1}', env.DOCKER_USERNAME, github.sha) || 'h5p-lti:uef-local' }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: docker-build-and-push
+    if: github.event_name == 'push'
+    env:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+
+    steps:
+      - name: Deploy to server via SSH
+        if: env.DOCKER_USERNAME != ''
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            cd /opt/h5p
+            cat > .env <<'EOF'
+            H5P_IMAGE=${{ env.DOCKER_USERNAME }}/h5p-lti:latest
+            H5P_PUBLIC_URL=${{ secrets.H5P_PUBLIC_URL }}
+            PLATFORM_URL=${{ secrets.PLATFORM_URL }}
+            LTI_CLIENT_ID=${{ secrets.LTI_CLIENT_ID }}
+            LTI_KEY=${{ secrets.LTI_KEY }}
+            CANVAS_ISSUER=${{ secrets.CANVAS_ISSUER }}
+            CANVAS_API_TOKEN=${{ secrets.CANVAS_API_TOKEN }}
+            NODE_ENV=production
+            EOF
+            docker compose -f docker-compose.lti.yml pull h5p
+            docker compose -f docker-compose.lti.yml up -d --force-recreate h5p
 
   integration-test:
     runs-on: ubuntu-latest
@@ -117,7 +150,6 @@ jobs:
 
       - name: Run integration tests
         run: npm run test:integration
-        continue-on-error: true
         env:
           MONGODB_URI: mongodb://localhost:27017/h5p-test
           S3_ENDPOINT: http://localhost:9000

@@ -1,4 +1,4 @@
-FROM node:24-bookworm-slim
+FROM node:20-bookworm-slim
 
 RUN mkdir -p /app && chown node:node /app
 

@@ -12,13 +12,13 @@ jobs:
         runs-on: self-hosted
         steps:
             - name: Checkout
-              uses: actions/checkout@v6
+              uses: actions/checkout@v4
 
             - name: Build image
-              run: sudo docker-compose build
+              run: sudo docker compose build
 
             - name: Start container
-              run: sudo docker-compose up -d
+              run: sudo docker compose up -d
 
             - name: Wait for app
               run: |
@@ -26,9 +26,9 @@ jobs:
                       if curl --fail --silent --show-error http://localhost:8080/ > /dev/null; then
                           exit 0
                       fi
-                      sudo docker-compose ps
+                      sudo docker compose ps
                       sleep 5
                   done
 
-                  sudo docker-compose logs
+                  sudo docker compose logs
                   exit 1

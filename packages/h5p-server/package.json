@@ -9,7 +9,7 @@
     },
     "scripts": {
         "build:watch": "npx tsc -w -p ./tsconfig.build.json",
-        "build": "sh build.sh",
+        "build": "node scripts/build.mjs",
         "clean": "rm -rf h5p && rm -rf build && rm -rf coverage && rm -rf node_modules",
         "test:coverage": "vitest run --config vitest.config.ts --coverage",
         "test:integration": "vitest run --config vitest.integration.config.ts",

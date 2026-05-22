@@ -10,7 +10,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        image: lms-h5p-lti:latest
+        image: ${H5P_IMAGE:-lms-h5p-lti:latest}
         container_name: lms-h5p-lti
         restart: unless-stopped
         depends_on:
