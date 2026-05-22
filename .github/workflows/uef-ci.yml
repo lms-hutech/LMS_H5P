@@ -16,7 +16,6 @@ jobs:
 
     container:
       image: node:20
-      options: --user root
 
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +27,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Download test fixtures
+        run: |
+          npm run download:content-type-cache
+          npm run download:content
 
       - name: Verify H5P library assets
         run: npm run verify:h5p-libraries
@@ -153,6 +157,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Download integration test fixtures
+        run: |
+          npm run download:content-type-cache
+          npm run download:content
 
       - name: Verify H5P library assets
         run: npm run verify:h5p-libraries
