@@ -12,6 +12,10 @@ coverage
 typedoc
 dist
 
+# Keep prebuilt distribution assets inside H5P libraries.
+!packages/h5p-examples/h5p/libraries/*/dist/
+!packages/h5p-examples/h5p/libraries/*/dist/**
+
 logs
 *.log
 npm-debug.log*
