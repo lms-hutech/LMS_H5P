@@ -66,10 +66,13 @@ const downloadH5pPackages = async (contentTypeCacheFilePath, directoryPath) => {
                     })
                     .catch((error) => {
                         downloadsFinished += 1;
-                        console.error(
-                            `${downloadsFinished}/${machineNames.length} Error downloading ${contentType}: ${error.response.status} ${error.response.statusText}`
+                        const status = error.response
+                            ? `${error.response.status} ${error.response.statusText}`
+                            : error.message;
+                        console.warn(
+                            `${downloadsFinished}/${machineNames.length} Warning: could not download ${contentType}: ${status} (skipping)`
                         );
-                        return Promise.reject();
+                        return null;
                     })
             )
     );
@@ -83,10 +86,14 @@ console.log(`Using content types from ${contentTypeCacheFile}`);
 console.log(`Downloading to ${directory}`);
 
 downloadH5pPackages(contentTypeCacheFile, directory)
-    .then((files) => {
-        console.log(`Download finished! Downloaded ${files.length} files.`);
+    .then((results) => {
+        const downloaded = results.filter(Boolean).length;
+        const skipped = results.length - downloaded;
+        console.log(
+            `Download finished! Downloaded ${downloaded} files, skipped ${skipped} due to errors.`
+        );
     })
     .catch((error) => {
-        console.log(`There was an error downloading files: ${error}`);
+        console.error(`Unexpected error during download: ${error}`);
         process.exit(1);
     });
