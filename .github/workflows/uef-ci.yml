@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify H5P library assets
+        run: npm run verify:h5p-libraries
+
       - name: Build h5p-server first
         run: npm run build:h5p-server
 
@@ -144,6 +147,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Verify H5P library assets
+        run: npm run verify:h5p-libraries
 
       - name: Build packages
         run: npm run build:h5p-server ; npm run build
