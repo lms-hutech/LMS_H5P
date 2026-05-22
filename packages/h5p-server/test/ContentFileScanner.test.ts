@@ -1,4 +1,5 @@
 import jsonpath from 'jsonpath';
+import { existsSync } from 'fs';
 import * as path from 'path';
 import { withDir } from 'tmp-promise';
 import { mkdir } from 'fs/promises';
@@ -61,79 +62,89 @@ describe('ContentFileScanner', () => {
         };
     }
 
-    it('finds the image in H5P.Blanks example', async () => {
-        await withDir(
-            async ({ path: tmpDirPath }) => {
-                const user = new User();
+    const blanksFixture = path.resolve('test/data/hub-content/H5P.Blanks.h5p');
+    const questionnaireFixture = path.resolve(
+        'test/data/hub-content/H5P.Questionnaire.h5p'
+    );
 
-                const { contentScanner, contentId, contentManager } =
-                    await createContentFileScanner(
-                        path.resolve('test/data/hub-content/H5P.Blanks.h5p'),
+    it.skipIf(!existsSync(blanksFixture))(
+        'finds the image in H5P.Blanks example',
+        async () => {
+            await withDir(
+                async ({ path: tmpDirPath }) => {
+                    const user = new User();
+
+                    const { contentScanner, contentId, contentManager } =
+                        await createContentFileScanner(
+                            blanksFixture,
+                            user,
+                            tmpDirPath
+                        );
+
+                    const { params, mainLibraryName } = await getContentDetails(
+                        contentId,
                         user,
-                        tmpDirPath
+                        contentManager
                     );
 
-                const { params, mainLibraryName } = await getContentDetails(
-                    contentId,
-                    user,
-                    contentManager
-                );
-
-                const foundImages = await contentScanner.scanForFiles(
-                    params,
-                    mainLibraryName
-                );
-
-                expect(foundImages.length).toEqual(1);
-                expect(path.normalize(foundImages[0].filePath)).toEqual(
-                    path.normalize('images/file-5885c18261805.jpg')
-                );
-                const parameters = await contentManager.getContentParameters(
-                    contentId,
-                    user
-                );
-                expect(
-                    jsonpath.query(
-                        parameters,
-                        foundImages[0].context.jsonPath
-                    )[0].path
-                ).toEqual(foundImages[0].filePath);
-            },
-            { keep: false, unsafeCleanup: true }
-        );
-    });
-
-    it('finds the image in H5P.Questionnaire example (= weird group single fields entry behaviour)', async () => {
-        await withDir(
-            async ({ path: tmpDirPath }) => {
-                const user = new User();
-
-                const { contentScanner, contentId, contentManager } =
-                    await createContentFileScanner(
-                        path.resolve(
-                            'test/data/hub-content/H5P.Questionnaire.h5p'
-                        ),
-                        user,
-                        tmpDirPath
+                    const foundImages = await contentScanner.scanForFiles(
+                        params,
+                        mainLibraryName
                     );
 
-                const { params, mainLibraryName } = await getContentDetails(
-                    contentId,
-                    user,
-                    contentManager
-                );
+                    expect(foundImages.length).toEqual(1);
+                    expect(path.normalize(foundImages[0].filePath)).toEqual(
+                        path.normalize('images/file-5885c18261805.jpg')
+                    );
+                    const parameters =
+                        await contentManager.getContentParameters(
+                            contentId,
+                            user
+                        );
+                    expect(
+                        jsonpath.query(
+                            parameters,
+                            foundImages[0].context.jsonPath
+                        )[0].path
+                    ).toEqual(foundImages[0].filePath);
+                },
+                { keep: false, unsafeCleanup: true }
+            );
+        }
+    );
 
-                const foundImages = await contentScanner.scanForFiles(
-                    params,
-                    mainLibraryName
-                );
+    it.skipIf(!existsSync(questionnaireFixture))(
+        'finds the image in H5P.Questionnaire example (= weird group single fields entry behaviour)',
+        async () => {
+            await withDir(
+                async ({ path: tmpDirPath }) => {
+                    const user = new User();
 
-                expect(foundImages.length).toEqual(1);
-                expect(path.normalize(foundImages[0].filePath)).toEqual(
-                    path.normalize('images/file-5a4d06a8cbabc.jpg')
-                );
-            },
-            { keep: false, unsafeCleanup: true }
-        );
-    });
+                    const { contentScanner, contentId, contentManager } =
+                        await createContentFileScanner(
+                            questionnaireFixture,
+                            user,
+                            tmpDirPath
+                        );
+
+                    const { params, mainLibraryName } = await getContentDetails(
+                        contentId,
+                        user,
+                        contentManager
+                    );
+
+                    const foundImages = await contentScanner.scanForFiles(
+                        params,
+                        mainLibraryName
+                    );
+
+                    expect(foundImages.length).toEqual(1);
+                    expect(path.normalize(foundImages[0].filePath)).toEqual(
+                        path.normalize('images/file-5a4d06a8cbabc.jpg')
+                    );
+                },
+                { keep: false, unsafeCleanup: true }
+            );
+        }
+    );
 });

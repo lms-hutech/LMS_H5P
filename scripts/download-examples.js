@@ -26,6 +26,58 @@ const downloadH5pPackages = async (contentTypeCacheFilePath, directoryPath) => {
     // Counts how many downloads have been finished
     let downloadsFinished = 0;
 
+    /**
+     * Downloads a single H5P package with retry support.
+     * Returns the filename on success, null if all attempts fail.
+     */
+    const downloadOne = async (contentType, maxRetries = 3) => {
+        for (let attempt = 1; attempt <= maxRetries; attempt++) {
+            try {
+                const response = await axios.default.get(
+                    `http://api.h5p.org/v1/content-types/${contentType}`,
+                    { responseType: 'stream' }
+                );
+                await new Promise((resolve, reject) => {
+                    const filePath = path.join(
+                        directoryPath,
+                        `${contentType}.h5p`
+                    );
+                    const file = createWriteStream(filePath);
+                    file.on('error', reject);
+                    response.data.on('error', (err) => {
+                        file.destroy();
+                        reject(err);
+                    });
+                    file.on('finish', resolve);
+                    response.data.pipe(file);
+                });
+                downloadsFinished += 1;
+                console.log(
+                    `Downloaded example ${downloadsFinished}/${machineNames.length}: ${contentType}.h5p`
+                );
+                return `${contentType}.h5p`;
+            } catch (error) {
+                const status = error.response
+                    ? `${error.response.status} ${error.response.statusText}`
+                    : error.message;
+                if (attempt < maxRetries) {
+                    console.warn(
+                        `Attempt ${attempt}/${maxRetries} failed for ${contentType}: ${status}. Retrying in ${attempt * 2}s...`
+                    );
+                    await new Promise((resolve) =>
+                        setTimeout(resolve, attempt * 2000)
+                    );
+                } else {
+                    downloadsFinished += 1;
+                    console.warn(
+                        `${downloadsFinished}/${machineNames.length} Warning: could not download ${contentType} after ${maxRetries} attempts: ${status} (skipping)`
+                    );
+                    return null;
+                }
+            }
+        }
+    };
+
     // Promise.all allows parallel downloads
     return await Promise.all(
         machineNames
@@ -44,37 +96,7 @@ const downloadH5pPackages = async (contentTypeCacheFilePath, directoryPath) => {
                 );
                 return false;
             })
-            .map((contentType) =>
-                axios.default
-                    .get(`http://api.h5p.org/v1/content-types/${contentType}`, {
-                        responseType: 'stream'
-                    })
-                    .then((response) => {
-                        return new Promise((resolve) => {
-                            const file = createWriteStream(
-                                `${directoryPath}/${contentType}.h5p`
-                            );
-                            file.on('finish', () => {
-                                downloadsFinished += 1;
-                                console.log(
-                                    `Downloaded example ${downloadsFinished}/${machineNames.length}: ${contentType}.h5p`
-                                );
-                                resolve(`${contentType}.h5p`);
-                            });
-                            response.data.pipe(file);
-                        });
-                    })
-                    .catch((error) => {
-                        downloadsFinished += 1;
-                        const status = error.response
-                            ? `${error.response.status} ${error.response.statusText}`
-                            : error.message;
-                        console.warn(
-                            `${downloadsFinished}/${machineNames.length} Warning: could not download ${contentType}: ${status} (skipping)`
-                        );
-                        return null;
-                    })
-            )
+            .map((contentType) => downloadOne(contentType))
     );
 };
 

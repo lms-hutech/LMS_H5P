@@ -1,3 +1,4 @@
+import { existsSync } from 'fs';
 import * as path from 'path';
 import { withDir } from 'tmp-promise';
 import { mkdir } from 'fs/promises';
@@ -80,78 +81,86 @@ export async function getContentDetails(
     return { mainLibraryName, params };
 }
 
+const blanksFixture = path.resolve('test/data/hub-content/H5P.Blanks.h5p');
+
 describe('ContentScanner', () => {
-    it('scans the semantic structure of H5P.Blanks example', async () => {
-        await withDir(
-            async ({ path: tmpDirPath }) => {
-                const user = new User();
+    it.skipIf(!existsSync(blanksFixture))(
+        'scans the semantic structure of H5P.Blanks example',
+        async () => {
+            await withDir(
+                async ({ path: tmpDirPath }) => {
+                    const user = new User();
 
-                // initialize content manager
-                const { contentScanner, contentManager, contentId } =
-                    await createContentScanner(
-                        path.resolve('test/data/hub-content/H5P.Blanks.h5p'),
+                    // initialize content manager
+                    const { contentScanner, contentManager, contentId } =
+                        await createContentScanner(
+                            blanksFixture,
+                            user,
+                            tmpDirPath
+                        );
+
+                    const { mainLibraryName, params } = await getContentDetails(
+                        contentId,
                         user,
-                        tmpDirPath
+                        contentManager
                     );
 
-                const { mainLibraryName, params } = await getContentDetails(
-                    contentId,
-                    user,
-                    contentManager
-                );
-
-                const calledJsonPaths: string[] = [];
-                await contentScanner.scanContent(
-                    params,
-                    mainLibraryName,
-                    (semantics, subParams, jsonPath) => {
-                        calledJsonPaths.push(jsonPath);
-                        return false;
-                    }
-                );
-                expect(calledJsonPaths.sort()).toMatchSnapshot();
-            },
-            { keep: false, unsafeCleanup: true }
-        );
-    });
-
-    it('aborts scanning when requested', async () => {
-        await withDir(
-            async ({ path: tmpDirPath }) => {
-                const user = new User();
-
-                const { contentScanner, contentId, contentManager } =
-                    await createContentScanner(
-                        path.resolve('test/data/hub-content/H5P.Blanks.h5p'),
-                        user,
-                        tmpDirPath
-                    );
-
-                const { mainLibraryName, params } = await getContentDetails(
-                    contentId,
-                    user,
-                    contentManager
-                );
-
-                const calledJsonPaths: string[] = [];
-                await contentScanner.scanContent(
-                    params,
-                    mainLibraryName,
-                    (semantics, subParams, jsonPath) => {
-                        calledJsonPaths.push(jsonPath);
-                        if (
-                            semantics.name === 'media' ||
-                            semantics.name === 'behaviour' ||
-                            semantics.name === 'confirmCheck'
-                        ) {
-                            return true;
+                    const calledJsonPaths: string[] = [];
+                    await contentScanner.scanContent(
+                        params,
+                        mainLibraryName,
+                        (semantics, subParams, jsonPath) => {
+                            calledJsonPaths.push(jsonPath);
+                            return false;
                         }
-                        return false;
-                    }
-                );
-                expect(calledJsonPaths.sort()).toMatchSnapshot();
-            },
-            { keep: false, unsafeCleanup: true }
-        );
-    });
+                    );
+                    expect(calledJsonPaths.sort()).toMatchSnapshot();
+                },
+                { keep: false, unsafeCleanup: true }
+            );
+        }
+    );
+
+    it.skipIf(!existsSync(blanksFixture))(
+        'aborts scanning when requested',
+        async () => {
+            await withDir(
+                async ({ path: tmpDirPath }) => {
+                    const user = new User();
+
+                    const { contentScanner, contentId, contentManager } =
+                        await createContentScanner(
+                            blanksFixture,
+                            user,
+                            tmpDirPath
+                        );
+
+                    const { mainLibraryName, params } = await getContentDetails(
+                        contentId,
+                        user,
+                        contentManager
+                    );
+
+                    const calledJsonPaths: string[] = [];
+                    await contentScanner.scanContent(
+                        params,
+                        mainLibraryName,
+                        (semantics, subParams, jsonPath) => {
+                            calledJsonPaths.push(jsonPath);
+                            if (
+                                semantics.name === 'media' ||
+                                semantics.name === 'behaviour' ||
+                                semantics.name === 'confirmCheck'
+                            ) {
+                                return true;
+                            }
+                            return false;
+                        }
+                    );
+                    expect(calledJsonPaths.sort()).toMatchSnapshot();
+                },
+                { keep: false, unsafeCleanup: true }
+            );
+        }
+    );
 });
