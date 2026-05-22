@@ -24,6 +24,12 @@ const getClient = (config: IH5PConfig): AxiosInstance => {
         proxyAgent = new HttpsProxyAgent(process.env.HTTPS_PROXY);
     }
 
+    // Use the shared axios instance when no proxy is configured so test
+    // mocks that target `axios` continue to intercept HTTP calls.
+    if (!proxyAgent) {
+        return axios;
+    }
+
     return axios.create({
         proxy: proxyAgent ? false : undefined,
         httpsAgent: proxyAgent
