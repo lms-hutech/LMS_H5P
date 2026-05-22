@@ -1,3 +1,5 @@
+import { writeFileSync } from 'fs';
+import path from 'path';
 import { Readable } from 'stream';
 import { withDir } from 'tmp-promise';
 import { readdir } from 'fs/promises';
@@ -43,7 +45,22 @@ describe('FileContentStorage (repository that saves content objects to a local d
     });
 
     it('throws an error if the passed path is not writable', async () => {
-        expect(() => new FileContentStorage('/*:%illegal-path')).toThrow();
+        await withDir(
+            async ({ path: tempDirPath }) => {
+                // Place a regular file at a path, then attempt to create
+                // FileContentStorage inside it — mkdirSync throws ENOTDIR on
+                // every OS and regardless of the current user (including root).
+                const blockerPath = path.join(tempDirPath, 'blocker-file');
+                writeFileSync(blockerPath, '');
+                expect(
+                    () =>
+                        new FileContentStorage(
+                            path.join(blockerPath, 'content')
+                        )
+                ).toThrow();
+            },
+            { keep: false, unsafeCleanup: true }
+        );
     });
 
     it('throws an error if you add content to non-existent contentId', async () => {
