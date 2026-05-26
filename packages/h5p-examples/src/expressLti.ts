@@ -707,7 +707,54 @@ ${THEME_CSS}
             }
         }
 
+        const renderCanvasEditor = async (editorContentId?: string) => {
+            let page = await h5pEditor.render(
+                editorContentId,
+                'vi',
+                user as any
+            );
+            page = page.replace(
+                'window.H5PIntegration = parent.H5PIntegration ||',
+                'window.H5PIntegration = (function() { try { return parent.H5PIntegration; } catch(e) { return null; } })() ||'
+            );
+            page = page.replace(
+                '<head>',
+                '<head><script>window.H5PEditor=window.H5PEditor||{};H5PEditor.language=H5PEditor.language||{};H5PEditor.language.core=H5PEditor.language.core||{};</script>'
+            );
+            page = page.replace('</head>', THEME_CSS + '</head>');
+            page = page.replace('<body>', '<body>' + editorHeader());
+
+            const saveUrl = editorContentId
+                ? `/h5p/edit/${editorContentId}`
+                : '/h5p/new';
+            page = page.replace(
+                "type: 'POST'",
+                `type: 'POST',\n                          url: '${saveUrl}'`
+            );
+
+            const ltik = res.locals.ltik || req.query?.ltik || '';
+            page = page.replace(
+                /window\.location\.href\s*=\s*['"][^'"]*\/play\/['"].*?parsedResult\.contentId;/s,
+                `var ltik = ${JSON.stringify(ltik)};
+                          window.location.href = '/lti/launch?contentId=' + encodeURIComponent(parsedResult.contentId) + (ltik ? '&ltik=' + encodeURIComponent(ltik) : '');`
+            );
+            page = page.replace(
+                /h5peditor\.js\?version=([^"']+)/g,
+                'h5peditor.js?version=$1.fix4'
+            );
+            page = page.replace(
+                /h5peditor-([^.]+)\.js\?version=([^"']+)/g,
+                'h5peditor-$1.js?version=$2.fix4'
+            );
+            page = page.replace('value="Create"', 'value="L\u01b0u"');
+            return page;
+        };
+
         try {
+            if (contentId && isInstructor) {
+                return res.send(await renderCanvasEditor(contentId));
+            }
+
             if (contentId) {
                 const h5pPage = await h5pPlayer.render(
                     contentId,
@@ -1025,42 +1072,9 @@ ${THEME_CSS}
                 }
 
                 return res.send(page);
-            } else {
-                // No contentId — render editor for creating new content
-                let page = await h5pEditor.render(undefined, 'vi', user as any);
-                // Fix cross-origin parent access in Canvas iframe
-                page = page.replace(
-                    'window.H5PIntegration = parent.H5PIntegration ||',
-                    'window.H5PIntegration = (function() { try { return parent.H5PIntegration; } catch(e) { return null; } })() ||'
-                );
-                // Shim H5PEditor before vi.js
-                page = page.replace(
-                    '<head>',
-                    '<head><script>window.H5PEditor=window.H5PEditor||{};H5PEditor.language=H5PEditor.language||{};H5PEditor.language.core=H5PEditor.language.core||{};</script>'
-                );
-                // Fix form submit URL (default = current page, which is /lti/launch)
-                page = page.replace(
-                    "type: 'POST'",
-                    "type: 'POST',\n                          url: '/h5p/new'"
-                );
-                // After save: redirect to player view with new contentId
-                const ltik = res.locals.ltik || '';
-                page = page.replace(
-                    /window\.location\.href\s*=\s*['"][^'"]*\/play\/['"].*?parsedResult\.contentId;/s,
-                    `window.location.href = '/lti/launch?contentId=' + parsedResult.contentId + '&ltik=${ltik}';`
-                );
-                // Cache bust + Vietnamese label
-                page = page.replace(
-                    /h5peditor\.js\?version=([^"']+)/g,
-                    'h5peditor.js?version=$1.fix3'
-                );
-                page = page.replace(
-                    /h5peditor-([^.]+)\.js\?version=([^"']+)/g,
-                    'h5peditor-$1.js?version=$2.fix3'
-                );
-                page = page.replace('value="Create"', 'value="L\u01b0u"');
-                return res.send(page);
             }
+
+            return res.send(await renderCanvasEditor());
         } catch (error: any) {
             const statusCode = error.httpStatusCode || 500;
             const isNotFound =
